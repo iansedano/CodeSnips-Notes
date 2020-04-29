@@ -1,0 +1,78 @@
+#connect to mySQL
+
+	mysql -u root -p
+
+	you should get the shell mysql>
+
+
+#Create a database.
+	mysql> create database [databasename];
+
+#List all databases on the server.
+	mysql> show databases;
+#Switch to a database.
+	mysql> use [db name];
+#To see all the tables in the db.
+	mysql> show tables;
+#To see table's field formats.
+	mysql> describe [table name];
+#To delete a db.
+	mysql> drop database [database name];
+#To delete a table.
+	mysql> drop table [table name];
+#Show all data from a table.
+	mysql> SELECT * FROM [table name];
+#To return columns and column information.
+	mysql> show columns from [table name];
+#Show particular rows with the given value.
+	mysql> SELECT * FROM [table name] WHERE [field name] = "value";
+#Creating a new user. 
+	Login as root. Switch to the MySQL db. Make the user. Update privs.
+	mysql -u root -p
+	mysql> use mysql;
+	mysql> INSERT INTO user (Host,User,Password) VALUES('%','username',PASSWORD('password'));
+	mysql> flush privileges;
+
+#Change a users password from unix shell.
+	[mysql dir]/bin/mysqladmin -u username -h hostname -ppassword 'new-password'
+
+#Change a users password from MySQL prompt. Login as root. Set the password. Update privileges.
+	mysql -u root -p
+	mysql> SET PASSWORD FOR 'user'@'hostname' = PASSWORD('password');
+	mysql> flush privileges;
+#Recover a MySQL root password. Stop the MySQL server process. Start again with no grant tables. Login to MySQL as root. Set new password. Exit MySQL and restart MySQL server.
+	/etc/init.d/mysql stop
+	mysqld_safe --skip-grant-tables
+	mysql -u root
+	mysql> use mysql;
+	mysql> update user set password=PASSWORD("newpassword") where User='root';
+	mysql> flush privileges;
+	mysql> quit
+	/etc/init.d/mysql stop
+	/etc/init.d/mysql start
+
+#Set a root password if there is no root password.
+	mysqladmin -u root password newpassword
+# Update a root password.
+	mysqladmin -u root -p oldpassword newpassword
+
+#Allow the user "Someone" to connect to the server from localhost using the password "passwd". Login as root. Switch to the MySQL db. Give privs. Update privs.
+	mysql -u root -p
+	mysql> use mysql;
+	mysql> grant usage on *.* to Someone@localhost identified by 'passwd';
+	mysql> flush privileges;
+
+#Load a CSV file into a table.
+	mysql> LOAD DATA INFILE '/tmp/filename.csv' replace INTO TABLE [table name] FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (field1,field2,field3);
+#Dump all databases for backup. Backup file is sql commands to recreate all db's.
+	mysqldump -u username -ppassword --opt > /tmp/alldatabases.sql
+#Dump one database for backup.
+	mysqldump -u username -ppassword --databases databasename > /tmp/databasename.sql
+#Dump a table from a database.
+	mysqldump -u username -ppassword databasename tablename > /tmp/databasename.tablename.sql
+#Restore database (or database table) from backup.
+	mysql -u username -ppassword databasename < /tmp/databasename.sql
+#Create Table Example 1.
+	mysql> CREATE TABLE [table name] (name VARCHAR(20));
+#Create Table Example 2.
+	mysql> create table [table name] (personid int(50) not null auto_increment primary key,firstname varchar(35),middlename varchar(50),lastnamevarchar(50) default 'somethiing');
