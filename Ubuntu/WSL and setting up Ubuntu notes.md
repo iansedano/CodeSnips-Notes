@@ -27,6 +27,8 @@ to apply
 
 	source ~/.bashrc
 
+The above `source ~/.bashrc` command should be added to the profile so that it runs everytime you start!
+
 Setting Clipboard
 MobaXterm Settings > X11 > clipboard disable copy on select.
 
