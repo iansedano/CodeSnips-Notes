@@ -11,6 +11,15 @@
 
 `mysqldump -u root -p sakila > sakila_backup.sql` dumps to current folder
 
+`mysql> drop schema sakila;` deletes!
+`show databases;`
+
+backing up
+create empty schema `create schema sakila;`
+`exit`
+
+`mysql -u root -p sakila < sakila_backup.sql`
+
 #Dump all databases for backup. Backup file is sql commands to recreate all db's.
     mysqldump -u username -ppassword --opt > /tmp/alldatabases.sql
 #Dump one database for backup.
