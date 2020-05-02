@@ -29,6 +29,10 @@ to apply
 
 The above `source ~/.bashrc` command should be added to the profile so that it runs everytime you start!
 
+DO NOT MODIFY LINUX FILES FROM WINDOWS!!
+
+Install Visual Studio Code and get the connection to WSL to do so, or edit them directly from the WSL bash.
+
 Setting Clipboard
 MobaXterm Settings > X11 > clipboard disable copy on select.
 
@@ -68,3 +72,4 @@ to access the environment via explorer
 
 	\\wsl$\
 
+DO NOT MODIFY LINUX FILES FROM WINDOWS!!

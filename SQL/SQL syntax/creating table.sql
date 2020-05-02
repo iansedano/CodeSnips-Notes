@@ -1,3 +1,8 @@
+-- to create the database
+CREATE schema SocialDB;
+
+
+--to create tables
 CREATE TABLE `SocialDB`.`Users` (
 `UserId` INT NOT NULL AUTO_INCREMENT,
   `FirstName` VARCHAR(100) NOT NULL,

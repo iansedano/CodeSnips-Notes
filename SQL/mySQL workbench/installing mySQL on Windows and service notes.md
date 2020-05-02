@@ -1,6 +1,6 @@
 get web community edition from website
 
-install
+`install`
 
 configure as service is fine
 
@@ -8,7 +8,7 @@ if not
 
 Start cmd
 Go to the "C:\Program Files\MySQL\MySQL Server xxxx\bin"
-type mysqld --install  // or mysqld-nt.exe --install
+type `mysqld --install`  // or `mysqld-nt.exe --install`
 
 
 // to find service name run 'services.msc', look for MySQL and click on properties
