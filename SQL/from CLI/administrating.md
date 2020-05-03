@@ -8,6 +8,10 @@ you should get the shell `mysql>`
 #Create a database.
     `create database [databasename];`
 
+    `create schema [dbname]`
+
+These two commands are equivalent as of MySQL 5.0.2
+
 #List all databases on the server.
     `show databases;`
 

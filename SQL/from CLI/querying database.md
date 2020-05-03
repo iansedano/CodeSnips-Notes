@@ -1,4 +1,4 @@
-
+CREA
 #To delete a table.
 	mysql> drop table [table name];
 #connect to mySQL
@@ -17,3 +17,5 @@
 	mysql> CREATE TABLE [table name] (name VARCHAR(20));
 #Create Table Example 2.
 	mysql> create table [table name] (personid int(50) not null auto_increment primary key,firstname varchar(35),middlename varchar(50),lastnamevarchar(50) default 'somethiing');
+
+
