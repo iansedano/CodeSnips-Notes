@@ -72,5 +72,11 @@ Try
 
 `gpg: can't connect to the agent: IPC connect call failed`
 
-DAMN!
+DAMN! Looks like this is a common WSL bug
+
+after installing WSL 2 (see WSL and setting up ubuntu notes)
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8C718D3B5072E1F5`
+worked!
+
+
 

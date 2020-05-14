@@ -1,5 +1,3 @@
-#Configuring fresh Ubuntu install
-
 
 ##RUBY
 
@@ -35,6 +33,7 @@ Apr 8, 2016 · 3 min read
  `add user ian` (should already be added)
 2. Install mandatory packages
  `apt-get install -y build-essential git libreadline-dev`
+ `apt-get install -y libssl-dev`
 libreadline is important for rdoc your build will fail if not installed
 3. su with this user
  `su -l ian`
@@ -46,18 +45,27 @@ libreadline is important for rdoc your build will fail if not installed
  `git clone https://github.com/rkh/rbenv-use.git ~/.rbenv/plugins/rbenv-use`
 6. Compile rbenv utility
  `cd ~/.rbenv && src/configure && make -C src`
-7. add rbenv to path
- `echo ‘export PATH=$HOME/.rbenv/bin:$PATH”’ >> ~/.bash_profile`
+7. add rbenv to path in bash profile
+ `$HOME/.rbenv/bin`
 8. set completion > edit ~/.bash_profile add at the end of file:
- `eval "$(rbenv init -)"``
+ `eval "$(rbenv init -)"` added at end of bash profile
 9. exit from user and re-su to check all is ok
  `exit`
  `su -l ian`
 -l is important to simulate a login
+
+check rbenv is all ok
+`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash`
+
+`cd ~/.rbenv`
+`git pull` for latest version
+`cd ~/.rbenv/plugins/ruby-build`
+`git pull`
+
 10. check rbenv (list all available ruby versions)
  `rbenv install -l`
 11. install a version of ruby
- `rbenv install 2.3.0`
+ `rbenv install 2.6.6`
 it will make some times….
 you can check the log in /tmp/ruby-build.xx.log xxx is a timestamp. Check for errors if it fails
 12. Install shims after an installation of a version
@@ -76,6 +84,10 @@ or
 18. Show the version of gem
  `gem -v`
  `which gem`
+
+`gem install bundler`
+`gem install pessimize`  for adding versions and cleaning gemfiles
+
 19. Write a simple web server in ruby
 create a file myserver.rb with this code
 

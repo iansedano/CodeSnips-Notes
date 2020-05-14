@@ -35,9 +35,21 @@ to access the environment via explorer
 
 
 ### Upgrading to WSL2
-`[ $(grep -oE 'gcc version ([0-9]+)' /proc/version | awk '{print $3}') -gt 5 ] && \ echo "WSL2" || echo "WSL1"`
+`[ $(grep -oE 'gcc version ([0-9]+)' /proc/version | awk '{print $3}') -gt 5 ] && \ echo "WSL2"|| echo "WSL1"` only seems to work in WSL1
 
 in POWERSHELL
 `wsl --list --running`
 
-`wsl --terminate Ubuntu`
+`wsl -l -v` if this doesnt show then you have WSL1
+
+Need to go to settings in windows and updates, make sure you have proper build i.e 2004, build not year. Accesible via the windows insider program.
+
+Will require installing windows updates.
+
+after which
+`wsl -l -v` should work
+to convert
+`wsl --set-version Ubuntu 2`
+
+but you need to go into regedit
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\Path. So by running regedit and filing this entery and putting quotations around anything with non compatible paths, including parenthesis or spaces ... and rebooting the system, the problem should be gone.
