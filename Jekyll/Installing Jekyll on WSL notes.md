@@ -19,7 +19,7 @@ Finally, install Jekyll:
 
 --
 
-####quickstart
+####quick start
 
 ```
 jekyll new my-site
