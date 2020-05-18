@@ -8,6 +8,16 @@ grid = [
     [1, 1, 1, 2, 2, 2, 3, 1],
     [1, 8, 8, 2, 2, 2, 5, 3]
 ]
+
+'''
+grid = [
+    [1],
+    [2],
+    [8],
+    [1],
+    [1]
+]
+'''
 # country value - positions in country
 # 1 - 3
 # 2 - 12
@@ -38,56 +48,32 @@ class Country:
                 if (
                         c != 'edge' and
                         c not in self.positions and
-                        c not in checked_list and
                         two_layer_array[c[0]][c[1]] == self.number):
-                    neighbours_to_check.append(c)
-
-                if (
-                        c != 'edge' and
-                        c not in self.positions and
-                        c != self.starting_pos and
-                        two_layer_array[c[0]][c[1]] == self.number):
-                    self.positions.append(c)
+                    if c not in checked_list:
+                        neighbours_to_check.append(c)
+                    if c != self.starting_pos:
+                        self.positions.append(c)
 
             checked_list.append(n)
 
     def get_cardinals(self, pos):
 
-        N, E, S, W = '', '', '', ''
+        N, E, S, W = [*['edge']*4]
 
-        if (pos[0] == 0):
-            W = "edge"
-        elif (pos[0] == (self.world_size[0] - 1)):
-            E = "edge"
-
-        if (pos[1] == (self.world_size[1] - 1)):
-            S = "edge"
-        elif (pos[1] == 0):
-            N = "edge"
-
-        if N != "edge":
+        if pos[1] != 0:
             N = [pos[0], pos[1] - 1]
-        if E != "edge":
+        if pos[0] != (self.world_size[0] - 1):
             E = [pos[0] + 1, pos[1]]
-        if S != "edge":
+        if pos[1] != (self.world_size[1]) - 1:
             S = [pos[0], pos[1] + 1]
-        if W != "edge":
+        if pos[0] != 0:
             W = [pos[0] - 1, pos[1]]
 
         return [N, E, S, W]
 
 
-def make_pos_list(two_layer_array):
-    pos_list = []
-    for row_num, row in enumerate(two_layer_array, start=0):
-        for col_num, val in enumerate(row, start=0):
-            pos_list.append((row_num, col_num))
-    return(pos_list)
-
-
 def build_countries(two_layer_array):
     world_size = (len(two_layer_array), len(two_layer_array[0]))
-    pos_list = make_pos_list(two_layer_array)
     countries = []
     checked_list = []
     for row_num, row in enumerate(two_layer_array, start=0):
