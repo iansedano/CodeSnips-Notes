@@ -32,8 +32,8 @@ Apr 8, 2016 · 3 min read
 1. Add a user, your install will be only for this user not for system wide
  `add user ian` (should already be added)
 2. Install mandatory packages
- `apt-get install -y build-essential git libreadline-dev`
- `apt-get install -y libssl-dev`
+ `sudo apt-get install -y build-essential git libreadline-dev`
+ `sudo apt-get install -y libssl-dev`
 libreadline is important for rdoc your build will fail if not installed
 3. su with this user
  `su -l ian`

@@ -25,5 +25,10 @@ This will create Gemfile
 then create jekyll or use template jekyll sites as per website...
 
 
+20200521 
+
+Auto regen only works when the site lives within the wsl, not on mnt drives.
+
+
 
 
