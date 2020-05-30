@@ -34,6 +34,7 @@ Apr 8, 2016 · 3 min read
 2. Install mandatory packages
  `sudo apt-get install -y build-essential git libreadline-dev`
  `sudo apt-get install -y libssl-dev`
+ `sudo apt-get install -y zlib1g-dev`
 libreadline is important for rdoc your build will fail if not installed
 3. su with this user
  `su -l ian`
@@ -45,10 +46,13 @@ libreadline is important for rdoc your build will fail if not installed
  `git clone https://github.com/rkh/rbenv-use.git ~/.rbenv/plugins/rbenv-use`
 6. Compile rbenv utility
  `cd ~/.rbenv && src/configure && make -C src`
-7. add rbenv to path in bash profile
- `$HOME/.rbenv/bin`
-8. set completion > edit ~/.bash_profile add at the end of file:
- `eval "$(rbenv init -)"` added at end of bash profile
+7. add to .bash_profile or .profile
+```
+source ~/.bashrc
+export PATH=$PATH:$HOME/.rbenv/bin
+
+eval "$(rbenv init -)"
+```
 9. exit from user and re-su to check all is ok
  `exit`
  `su -l ian`
@@ -73,12 +77,12 @@ you can check the log in /tmp/ruby-build.xx.log xxx is a timestamp. Check for er
 13. list installed version
  `rbenv versions`
 14. set the local version of
- `rbenv local 2.3.0`
+ `rbenv local 2.6.6`
 or
 15. set global version of ruby
- `rbenv global 2.3.0`
+ `rbenv global 2.6.6`
 16. Use a version of ruby (rbenv-use plugin)
-`ruby use 2.3.0`
+`ruby use 2.6.6`
 17. Show the version of ruby
  `ruby -v`
 18. Show the version of gem
