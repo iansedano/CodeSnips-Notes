@@ -1,0 +1,8 @@
+Divisibility tests
+
+2 - look at last digit
+3 - add all the numbers in number and check if divisible by 3
+4 - last two digits
+5 - last digit
+6 - div by both 2 & 3
+9 - add all digits similar to 3
