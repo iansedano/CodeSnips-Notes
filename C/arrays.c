@@ -13,3 +13,7 @@ int main() {
 
   return 0;
 }
+
+
+// initializing empty array [] creates size automatically
+char name[] = "John Smith"; // empty [] creates array size automatically
