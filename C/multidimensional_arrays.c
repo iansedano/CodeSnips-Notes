@@ -13,7 +13,7 @@ int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
 #include <stdio.h>
 
 int main() {
-    /* TODO: declare the 2D array grades here */
+
     float average;
     int i;
     int j;
@@ -31,17 +31,18 @@ int main() {
     grades[1][3] = 82;
     grades[1][4] = 87;
 
-    /* TODO: complete the for loop with appropriate terminating conditions */
-    for (i = 0; i < 1 ; i++) {
+    for (i = 0; i < 2 ; i++) {
         average = 0;
-        for (j = 0; j < 4 ; j++) {
+        for (j = 0; j < 5 ; j++) {
             average += grades[i][j];
         }
-
-        
-        /* TODO: compute the average marks for subject i */
+        average = average / 5;
         printf("The average marks obtained in subject %d is: %.2f\n", i, average);
     }
 
     return 0;
 }
+
+// OUTPUT
+// The average marks obtained in subject 0 is: 78.80
+// The average marks obtained in subject 1 is: 82.80

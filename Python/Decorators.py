@@ -7,7 +7,6 @@ the behavior of it without explicitly modifying it.
 
 '''
 
-
 def decorator_func(initial_func):
     def wrapper_func():
         print("ive modified the function!")
@@ -16,30 +15,27 @@ def decorator_func(initial_func):
 
 
 # instead of this
+
+# initial function
 def give_thanks():
     print("thanks")
 
+# assigning extended function to conversation
+# conversation = decorator_func(give_thanks)
+# conversation()
 
-conversation = decorator_func(give_thanks)
-
-conversation()
 
 # instead of all that you can
-
-
 @decorator_func
 def give_thanks():
     print("thanks")
-
 
 give_thanks()  # this now does the same as 'conversation' function above
 
 # it becomes a sort of sub-function, or an add-on
 
-
 @decorator_func
 def complain():
     print("I was fine the way I was")
-
 
 complain()
