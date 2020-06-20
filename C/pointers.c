@@ -16,7 +16,6 @@ A pointer is a simple integer variable that holds a MEMORY ADDRESS
 
 */
 
-
 char * name = "John";
 
 /*

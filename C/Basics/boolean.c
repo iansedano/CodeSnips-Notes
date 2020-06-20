@@ -22,7 +22,12 @@ typedef int bool;
 
 /*
 Explanation
-Option 1 will work only if you use C99 and it's the "standard way" to do it. Choose this if possible.
-Options 2, 3 and 4 will have in practice the same identical behavior. #2 and #3 don't use #defines though, which in my opinion is better.
+
+Option 1 will work only if you use C99 and it's the
+"standard way" to do it. Choose this if possible.
+Options 2, 3 and 4 will have in practice the same
+identical behavior. #2 and #3 don't use #defines
+though, which in my opinion is better.
+
 If you are undecided, go with #1!
 */
