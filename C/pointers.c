@@ -83,3 +83,24 @@ int main() {
 }
 
 // Output => Done!
+
+
+//////
+
+int i; 
+int k, *ip; // integer and pointer
+
+ip = &i; // & reference operator. ip is pointer/address to i.
+printf("%d\n", ip); // OUTPUT XXX
+printf("%p\n", ip); // OUTPUT 0x55ea19d098c8 - varies between systems...
+i = 100;
+k = *ip; // * deference operator - gets value of reference
+printf("%p\n", k); // OUTPUT XXX
+printf("%d\n", k); // OUTPUT 100
+k = k + 2;
+i = *(&k);
+*(&k) = 200;
+printf("%d\n", k); // OUTPUT 102
+printf("%d\n", i); // OUTPUT 102
+
+
