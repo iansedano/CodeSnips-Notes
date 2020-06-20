@@ -17,3 +17,15 @@ int main() {
 
 // initializing empty array [] creates size automatically
 char name[] = "John Smith"; // empty [] creates array size automatically
+
+//
+
+// This is valid
+
+#define MONTHS 12
+int array[MONTHS];
+
+// This is not (in most compilers)
+
+const int MONTHS = 12;
+int array[MONTHS];
