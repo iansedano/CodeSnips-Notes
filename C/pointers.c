@@ -12,11 +12,9 @@ used for:
 
 A pointer is a simple integer variable that holds a MEMORY ADDRESS
 
-
-
 */
 
-char * name = "John";
+char *name = "John";
 
 /*
 
@@ -30,7 +28,6 @@ It will go over the string until it reaches the "null" character noted as "\0"
 
 
 /*
-
 DEREFERENCING
 
 This is a bit of a confusing name, because what it refers to
@@ -47,7 +44,7 @@ The & operator can be used:
 
 int a = 1;
 
-int * pointer_to_a = &a;
+int *pointer_to_a = &a;
 
 printf("The value a is %d\n", a);
 
@@ -69,7 +66,7 @@ printf("The value of a is also %d\n", *pointer_to_a);
 int main() {
   int n = 10;
 
-  int * pointer_to_n = &n;
+  int *pointer_to_n = &n;
 
   *pointer_to_n += 1;
 
@@ -103,3 +100,33 @@ printf("%d\n", k); // OUTPUT 102
 printf("%d\n", i); // OUTPUT 102
 
 
+
+///
+
+int x[6];
+
+x == &x[0]
+
+
+///
+
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    int sum, diff;
+    sum = *a + *b;
+    diff = abs(*a - *b);
+    *a = sum;
+    *b = diff;
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
