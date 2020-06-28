@@ -1,0 +1,14 @@
+I ended up adding an alias to my .gitconfig file:
+
+[alias]
+    cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	
+Usage: git cmp "Long commit message goes here"
+
+Adds all files, then uses the comment for the commit message and pushes it up to origin.
+
+I think it's a better solution because you have control over what the commit message is.
+
+The alias can be also defined from command line, this adds it to your .gitconfig:
+
+git config --global alias.cmp '!f() { git add -A && git commit -m "$@" && git push; }; f'
