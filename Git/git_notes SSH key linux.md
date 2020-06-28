@@ -32,6 +32,7 @@ Highlight and copy the output, which starts with ssh-rsa and ends with your emai
 #Testing your key
 Follow the directions in this article from GitHub to verify your SSH connection. If the output doesn’t correctly match up, then try going through these steps again or come to the Discord chat to ask for help.
 
+`ssh -T git@github.com`
 
 https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
 
@@ -45,4 +46,5 @@ Now, switch back over to the terminal
 
     git remote add origin <SSH URL from above>
     git push -u origin master
+
 
