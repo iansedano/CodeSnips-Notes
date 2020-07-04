@@ -1,6 +1,3 @@
-
-
-
 #BRANCHING
 
 	git branch -a
@@ -33,3 +30,4 @@ delete branch
 "force" master branch back three commits
 
 	git branch -f master HEAD~3
+
