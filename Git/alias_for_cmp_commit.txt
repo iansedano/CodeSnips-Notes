@@ -12,3 +12,8 @@ I think it's a better solution because you have control over what the commit mes
 The alias can be also defined from command line, this adds it to your .gitconfig:
 
 git config --global alias.cmp '!f() { git add -A && git commit -m "$@" && git push; }; f'
+
+
+On Windows, I needed to escape the double quotes around $1 to get it to work from PowerShell (using ... \"$1\" ...)
+
+git config --global alias.cmp '!f() { git add -A && git commit -m \"$@\" && git push; }; f'
