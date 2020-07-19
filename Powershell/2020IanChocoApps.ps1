@@ -1,6 +1,8 @@
 $chocolateyAppList = "`
 				7zip,`
 				everything,`
+				keepass,`
+				keepass-keepasshttp,`
 				googlechrome,`
 				ungoogled-chromium,`
 				fsviewer,`
