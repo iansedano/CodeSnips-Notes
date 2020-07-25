@@ -1,0 +1,6 @@
+ls | xargs -I{} git -C {} status
+
+To do it in parallel:
+
+ls | xargs -P10 -I{} git -C {} status
+
