@@ -4,3 +4,7 @@ To do it in parallel:
 
 ls | xargs -P10 -I{} git -C {} status
 
+////
+
+
+for i in */.git; do ( echo $i; cd $i/..; git status; ); done
