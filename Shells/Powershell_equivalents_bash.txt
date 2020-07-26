@@ -31,4 +31,7 @@ https://mathieubuisson.github.io/powershell-linux-bash/
 `rm`: `Remove-Item`
 	
 
-	
+`touch`: `New-Item` `ni`
+
+ `touch MyFile{1..4}` >> Myfile1 Myfile2 Myfile3 ..  -- BASH
+ `1..4 | ForEach-Object { New-Item -ItemType File -Name "MyFile$_" }` -- PS
