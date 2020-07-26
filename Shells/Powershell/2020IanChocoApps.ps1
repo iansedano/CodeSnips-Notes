@@ -19,6 +19,7 @@ $chocolateyAppList = "`
 				scribus,`
 				python,`
 				git,`
+				hub,`
 				clink,`
 				conemu,`
 				dropbox,`

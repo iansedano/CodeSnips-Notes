@@ -1,0 +1,34 @@
+https://mathieubuisson.github.io/powershell-linux-bash/
+
+`pwd`: `Get-Location`, `pwd`, `gl`
+
+`cd`: `Set-Locatio`n, `cd`, `sl`, `chdir`
+
+`ls`: `Get-ChildItem`, `ls`, `dir`
+	`ls -ltr` (sorts most recently modified)
+	
+`find`: `Get-ChildItem`
+	but now with `Include` or `Filter` and `Recurse` parameters
+	
+	files which have case-insensitive string:
+	
+	`find . -type f -iname "azure"` - BASH
+	
+	Powershell case insensitive in general
+	
+	`Get-Childitem -Filter "*azure*" -Recurse -File`  - PS
+	
+`cp`: `Copy-Item`, `cp`, `copy`, `cpi`
+
+	copy folder with all files and subfolders to home directory
+	
+	`cp -R Tools ~/` BASH
+	`Copy-Item -Path '.\Tools\' -Destination $env:USERPROFILE -Recurse` PS
+	`Copy-Item '.\Tools\' $env:USERPROFILE -Recurse` PS
+	
+	Second PS shorter because arguments can be named or positional.
+	
+`rm`: `Remove-Item`
+	
+
+	
