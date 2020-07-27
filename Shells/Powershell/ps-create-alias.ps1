@@ -6,6 +6,8 @@ $Alias:Edit
 
 Set-Alias Edit Notepad.exe
 
+Set-Alias n "C:\Program Files (x86)\Notepad++\notepad++.exe"
+
 #Just check if this Edit alias created successfully or not.
 
 PS E:\scripts\Powershell> $Alias:Edit
