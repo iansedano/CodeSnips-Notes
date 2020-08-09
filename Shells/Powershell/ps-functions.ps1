@@ -29,3 +29,11 @@ function printme {
 	
 	write-host $a
 }
+
+
+function Add-Values ($value1 , $value2)
+{
+   $value3 = $value1 + $value2
+   $value3
+}
+Add-Values -value1 12 -value2 22
