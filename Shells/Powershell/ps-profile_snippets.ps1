@@ -12,3 +12,12 @@ function git-recurse ($command)
 	$command}
 }
 
+function Prompt
+{
+    $promptString = "PS " + $(Get-Location) + ">"
+    Write-Host $promptString -NoNewline -ForegroundColor Yellow
+    return " "
+}
+
+
+Import-Module ZLocation
