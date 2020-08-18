@@ -7,6 +7,9 @@ $	Item numbering
 td[rowspan=2]	Custom attributes
 {}	Text
 
+elem#id
+elem.class
+
 HTML
 !	html5 template
 link:css	link css file
