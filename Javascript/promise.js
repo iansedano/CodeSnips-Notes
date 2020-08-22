@@ -2,6 +2,7 @@
 https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md
 https://blog.bitsrc.io/understanding-javascript-async-and-await-with-examples-a010b03926ea
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://medium.com/@armando_amador/how-to-make-http-requests-using-fetch-api-and-promises-b0ca7370a444
 
 A promise is an object that represents either
 completion of failure of a user task.

@@ -1,3 +1,5 @@
+// https://medium.com/@armando_amador/how-to-make-http-requests-using-fetch-api-and-promises-b0ca7370a444
+
 // Fetch uses GET by default
 // Response is an OBJECT, a 'PROMISE'
 
