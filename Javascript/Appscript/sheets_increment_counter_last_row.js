@@ -4,7 +4,6 @@ function myCounter()
   ----------------------------------------------------------------
   It adds +1 in the last row of the column D of the active sheet.
   https://myengineeringworld.net/2018/09/gas-triggers-events.html
-   https://myengineeringworld.net/2018/09/gas-triggers-events.html
   ----------------------------------------------------------------
   */
   

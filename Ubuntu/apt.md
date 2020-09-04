@@ -8,7 +8,7 @@ Ubuntu is derived from Debian hence the .deb packages to install
 APT (Advanced Package Tool) is the command line tool to interact with the system. There are dpkg commands to manage it, but apt is more user friendly.
 
 `apt-get` is for installing, upgrading and cleaning
-`apt-chache` is good for finding new packages
+`apt-cache` is good for finding new packages
 
 ### apt-get
 
