@@ -34,4 +34,4 @@ function colToRow (col) {
     output.push(col[i][0]);
   }
   return output
-}
+} 
