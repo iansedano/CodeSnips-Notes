@@ -7,4 +7,5 @@ git remote show origin
 ```
 
 
-
+git pull --all
+git fetch --all
