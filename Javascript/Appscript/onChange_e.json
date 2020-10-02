@@ -1,0 +1,47 @@
+{ authMode:
+    { toString: [Function: toString],
+      name: [Function: toString],
+      toJSON: [Function: toString],
+      ordinal: [Function: ordinal],
+      compareTo: [Function: compareTo],
+      NONE:
+       { toString: [Function: toString],
+         name: [Function: toString],
+         toJSON: [Function: toString],
+         ordinal: [Function: ordinal],
+         compareTo: [Function: compareTo],
+         NONE: [Circular],
+         CUSTOM_FUNCTION: [Object],
+         LIMITED: [Object],
+         FULL: [Circular] },
+      CUSTOM_FUNCTION:
+       { toString: [Function: toString],
+         name: [Function: toString],
+         toJSON: [Function: toString],
+         ordinal: [Function: ordinal],
+         compareTo: [Function: compareTo],
+         NONE: [Object],
+         CUSTOM_FUNCTION: [Circular],
+         LIMITED: [Object],
+         FULL: [Circular] },
+      LIMITED:
+       { toString: [Function: toString],
+         name: [Function: toString],
+         toJSON: [Function: toString],
+         ordinal: [Function: ordinal],
+         compareTo: [Function: compareTo],
+         NONE: [Object],
+         CUSTOM_FUNCTION: [Object],
+         LIMITED: [Circular],
+         FULL: [Circular] },
+      FULL: [Circular] },
+   changeType: 'EDIT',
+   source: {},
+   triggerUid: '462914124836110714',
+   user: { email: 'codeandtao@egs-sbt095.eu', nickname: 'codeandtao' } }
+   
+   
+   // e
+   [authMode, changeType, source, triggerUid, user]
+   
+   // source
