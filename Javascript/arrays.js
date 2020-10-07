@@ -17,3 +17,4 @@ var myVar = myArray.pop() // removes last item from array and also assigns it to
 myArray.shift() // removes first item
 myArray.unshift(["item"]) // adds item to start 
 
+\
