@@ -14,10 +14,10 @@ public class Quickstart {
         System.out.println(myFloat + " is a float");
 
 
-        byte myByte = -127; // to 127
-        short myShort = -32768; // to 32768
-        int myInt = -2147483648 // to 2147483648
-        long myLong = -9223372036854775808 // to 9223372036854775808
+        byte myByte = -127; // to 127 8bit
+        short myShort = -32768; // to 32768 16bit
+        int myInt = -2147483648 // to 2147483648 32bit
+        long myLong = -9223372036854775808 // to 9223372036854775808 64bit
         double myDouble = 19.99d // 1.7e−308 to 1.7e+308 , precision of 15 digits
 
     }
