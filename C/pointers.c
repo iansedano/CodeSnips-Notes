@@ -39,7 +39,7 @@ array[0]
 is the same as dereferencing a pointer
 
 
-The & operator can be used:
+The & operator (address of operator) can be used:
 */
 
 int a = 1;
