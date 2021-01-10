@@ -9,6 +9,8 @@ int main(){
 
 	const std::string greeting = "Hello, " + name + "o!";
 
+	// This looks like a function, but it is a way to construct a string.
+	// It takes a number and a character.
 	const std::string spaces (greeting.size(), ' ');
 	const std::string second = "* " + spaces + " *";
 
