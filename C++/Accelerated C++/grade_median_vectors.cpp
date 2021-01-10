@@ -17,3 +17,11 @@ if (size == 0) {
 	                "Please try again." << endl;
 	return 1;
 }
+
+sort(homework.begin(), homework.end());
+
+vec_sz mid = size / 2; // floor result is assigned
+double median;
+median = size % 2 == 0 ? (homework[mid] + homework[mid + 1]) / 2
+                       : homework[mid];
+
