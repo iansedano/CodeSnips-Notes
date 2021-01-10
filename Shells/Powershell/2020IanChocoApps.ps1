@@ -34,9 +34,10 @@ $chocolateyAppList = " `
 				docfetcher, `
 				freecad, `
 				shotcut, `
+				ffmpeg, `
 				avidemux, `
 				virtualdub, `
-				paint.net, `
+				paint.net `
 				
 				"
 $dismAppList = ""

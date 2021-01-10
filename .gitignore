@@ -3,3 +3,4 @@
 *.code-workspace
 *.xlsx
 *__pycache__/*
+*.exe
