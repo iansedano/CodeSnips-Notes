@@ -9,14 +9,14 @@
 #include "Student_info.h"
 
 using std::cin;
-using std::cout;
-using std::domain_error;
-using std::endl;
-using std::max;
 using std::setprecision;
+using std::cout;
 using std::sort;
+using std::domain_error;
 using std::streamsize;
+using std::endl;
 using std::string;
+using std::max;
 using std::vector;
 
 

@@ -3,7 +3,7 @@
 using std::istream;
 using std::vector;
 
-bool compare(const Student_info& x, const Student_info y)
+bool compare(const Student_info& x, const Student_info& y)
 {
 	return x.name < y.name;
 }
@@ -17,8 +17,7 @@ istream& read(istream& is, Student_info& s)
 
 istream& read_hw(istream& in, vector<double>& hw)
 {
-	if (in)
-	{
+	if (in) {
 		hw.clear();
 		double grade;
 		while (in >> grade)
