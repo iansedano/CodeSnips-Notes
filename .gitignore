@@ -5,3 +5,10 @@
 *__pycache__/*
 *.exe
 *.o
+
+# dotnet
+bin
+obj
+packages
+*.suo
+*.user
