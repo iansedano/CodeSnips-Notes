@@ -33,20 +33,29 @@ int main()
 
 	sort(students.begin(), students.end(), compare);
 
-	for (vector<Student_info>::size_type i = 0;
-		i != students.size(); i++) {
+	streamsize prec = cout.precision();
+	cout << setprecision(3);
+
+	for
+	(
+		vector<Student_info>::size_type i = 0;
+		i != students.size();
+		i++
+	)
+	{
 		cout << students[i].name
-			 << string(maxlen + 1 - students[i].name.size(), ' ');
+			 << string(maxlen + 2 - students[i].name.size(), ' ');
 
 		try {
 			double final_grade = grade(students[i]);
-			streamsize prec = cout.precision();
-			cout << setprecision(3) << final_grade
-				 << setprecision(prec);
+			cout <<  final_grade;
 		} catch (domain_error e){
 			cout << e.what();
 		}
 		cout << endl;
 	}
+
+	cout << setprecision(prec);
+
 	return 0;
 }
