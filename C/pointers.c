@@ -84,7 +84,7 @@ int main() {
 //////
 
 int i; 
-int k, *ip; // integer and pointer
+int k, *ip; // initializing and integer and pointer
 
 ip = &i; // & reference operator. ip is pointer/address to i.
 printf("%d\n", ip); // OUTPUT XXX
