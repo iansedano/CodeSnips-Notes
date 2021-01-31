@@ -1,0 +1,1 @@
+Computer\HKEY_CURRENT_USER\Control Panel\Desktop\ActiveWndTrkTimeout
