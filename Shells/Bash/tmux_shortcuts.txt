@@ -1,6 +1,5 @@
 http://linuxcommand.org/lc3_adv_termmux.php
 
-
 invocation
 tmux new -s "my session" -n "window 1"
 
@@ -72,3 +71,38 @@ r           Force redraw of the attached client.
 s           Select a new session for the attached client interactively.
 t           Show the time.
 w           Choose the current window interactively.
+
+
+https://gist.github.com/jonhattan/52d26f00e4e069b4ac67
+# tmux quickstart
+
+`$ tmux`
+
+`CTRL+B C` -> create new pane
+
+`CTRL+B [num]` -> go to a pane
+
+`CTRL+D` -> finish bash session, closes the pane. Closing all panes will destroy the window and thus the tmux
+
+`CTRL+B x` -> close pane (in case bash got stalled).
+
+`CTRL+B ,` -> rename a pane
+
+`CTRL+B D` -> detach from the tmux (the tmux --all windows-- is still alive)
+
+`CTRL+B ALTGR+[` -> Enter "copy" mode. Move up/down in the window with cursors or PgUp/PgDown. Press `q` to quit copy mode.
+
+# Reuse tmux
+
+`$ tmux new -s foo` -> create a tmux named foo
+
+`$ tmux ls` -> list all tmux available
+
+`$ tmux at -t foo` -> reattach to the foo tmux
+
+
+
+# More info
+* https://tmux.github.io/
+* https://tmuxcheatsheet.com/
+* https://tmate.io/
