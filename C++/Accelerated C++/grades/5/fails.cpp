@@ -84,3 +84,33 @@ vector<Student_info> extract_fails(vector<Student_info>& students)
  * <list>
  * optimized for fast index based insertion and deletion 
  */
+
+
+/**
+ * How to get a list of words from a long string.
+*/
+#include <cctype>
+#include <string>
+
+vector<string> split(const string& s)
+{
+	vector<string> ret;
+	typedef string::size_type string_size;
+	string_size i = 0;
+
+	while (i != s.size()) {
+		while (i != s.size() && isspace(s[i]))
+			++i;
+		
+		string_size j = i;
+
+		while (j != s.size() && !isspace(s[j]))
+			++j;
+		
+		if (i != j) {
+			ret.push_back(s.substr(i, j - i));
+			i = j;
+		}
+	}
+	return ret;
+}

@@ -1,6 +1,7 @@
 *.sublime-project
 *.sublime-workspace
 *.code-workspace
+*.vscode*
 *.xlsx
 *__pycache__/*
 *.exe
