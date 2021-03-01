@@ -5,6 +5,7 @@ This requires
 
 ```
 sudo apt-get install rename
+sudo dnf install prename
 ```
 
 
@@ -14,3 +15,8 @@ find . -name "*.todo" -exec rename 's/.todo/.md/' {} \;
 ```
 
 find in this folder the name *.todo then execute the command `rename` with perl regular expression `s/.todo/.md/` with the file represented by `{}` and do it once per file `\;`
+
+
+```
+find . -name "*.txt" -exec rename 's/.txt/.md/' {} \;
+```
