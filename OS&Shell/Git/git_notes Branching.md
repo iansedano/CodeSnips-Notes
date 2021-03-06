@@ -1,8 +1,10 @@
 # BRANCHING
 
-	git branch -a
+To find what branches are available and what one you are on.
 
-create a new branch named "feature_x" and switch to it using
+	git branch
+
+To create a new branch named "feature_x" and switch to it
 
 	git checkout -b feature_x
 
@@ -31,3 +33,8 @@ delete branch
 
 	git branch -f master HEAD~3
 
+if you are on a branch but want to commit the changes you have made to another branch then
+
+    git stash
+    git checkout branch I wanna commit to
+    git stash pop
