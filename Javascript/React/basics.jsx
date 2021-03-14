@@ -27,7 +27,7 @@ THE FOLLOWING IS AN EXAMPLE OF index.jsx
 */
 
 
-import React from "react" // needed to recognize JSX
+import React from "react"
 import ReactDom from "react-dom"
 
 import MyInfo from "./components/MyInfo"
