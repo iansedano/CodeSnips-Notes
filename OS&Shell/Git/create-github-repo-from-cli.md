@@ -10,3 +10,5 @@ git add .
 git commit
 git push origin master
 
+git remote add origin <github url>
+git push -u origin master
