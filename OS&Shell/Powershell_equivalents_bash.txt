@@ -1,4 +1,4 @@
-https://mathieubuisson.github.io/powershell-linux-bash/
+\https://mathieubuisson.github.io/powershell-linux-bash/
 
 `pwd`: `Get-Location`, `pwd`, `gl`
 
