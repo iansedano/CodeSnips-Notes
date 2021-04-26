@@ -38,3 +38,16 @@ if you are on a branch but want to commit the changes you have made to another b
     git stash
     git checkout branch I wanna commit to
     git stash pop
+
+To get a remote branch
+
+    git switch branchName
+
+or
+
+    git checkout --track origin/branchName
+
+or
+
+    git fetch <remote> <rbranch>:<lbranch>
+    git checkout <lbranch>
