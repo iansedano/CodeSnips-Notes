@@ -1,0 +1,19 @@
+:root {
+	--i-font-size: 11px;
+}
+
+.backlink-pane * {
+	font-size:var(--i-font-size);
+}
+
+.nav-files-container * {
+	font-size:var(--i-font-size);
+}
+
+.workspace-leaf-content[data-type=search] * {
+	font-size:var(--i-font-size);
+}
+
+.workspace-leaf {
+	min-width: 50px;
+}

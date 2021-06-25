@@ -1,0 +1,14 @@
+Stack is area of memory which stores temporary variables created by a function.
+Variables are declared, stored and initialized at runtime.
+Temporary storage, once task is complete, it is erased.
+Mostly contains METHODS, LOCAL VARIABLES and REFERECE VARIABLES.
+
+Last in First out
+
+Linear Data Structure
+Will not become fragmented
+Danger of memory shortage
+Can't change sizes, not flexible
+Faster than a [[Heap]].
+
+In JS Variables and Functions are stored in Stack.
