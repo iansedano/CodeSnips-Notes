@@ -4,11 +4,20 @@ folder_names_to_exclude = [
 	"Snippets",
 	"snippets",
 	"Accelerated C++",
-	"chrome_extensions"
+	"chrome_extensions",
+	"Appscript",
+	"Learning_Csharp_2005",
+	"counting_cows",
+	"minimal_setup",
+	"Official Tutorial 2020",
+	"Algorithms",
+	"Powershell",
+	"Git"
 ]
 
 extensions_to_convert = {
 	".js": "javascript",
+	".jsx": "jsx",
 	".c": "c",
 	".cpp": "cpp",
 	".cs": "csharp",
@@ -29,11 +38,11 @@ def convertSourceFilesToMarkdown(root_path):
 	for path in root.iterdir():
 		print(path)
 
-		# UnicodeDecodeError
-		# UnicodeEncodeError
-
 		if path.is_dir():
-			convertSourceFilesToMarkdown(path)
+			if path.name not in folder_names_to_exclude:
+				convertSourceFilesToMarkdown(path)
+			else:
+				print("excluding folder!")
 
 		elif path.is_file() and path.suffix in extensions_to_convert:
 			print("converting!")
