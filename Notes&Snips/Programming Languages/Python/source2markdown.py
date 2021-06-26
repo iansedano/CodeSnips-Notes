@@ -54,6 +54,6 @@ def convertSourceFilesToMarkdown(root_path):
 		elif path.is_file() and path.suffix == ".txt":
 			path.replace(path.with_suffix('.md'))
 
-root_dir = "D:\\Dropbox\\Desktop\\Notes&Snips"
+root_dir = " C:\\Dev\\CodeSnips-Notes"
 
 convertSourceFilesToMarkdown(root_dir)
