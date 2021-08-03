@@ -1,10 +1,10 @@
 {
   "main": {
-    "id": "cdd0e806caacee75",
+    "id": "3188ce72d1c56701",
     "type": "split",
     "children": [
       {
-        "id": "64cd4df6dabd67d6",
+        "id": "e442e6c009ac1f5a",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -15,15 +15,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1b1798e6653769d2",
+    "id": "5e3810de142072f4",
     "type": "split",
     "children": [
       {
-        "id": "093508b76d7e507f",
+        "id": "6428a46b1fb0e71f",
         "type": "tabs",
         "children": [
           {
-            "id": "903c71747015b973",
+            "id": "79c9e2647af3ffe3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,15 +31,15 @@
             }
           },
           {
-            "id": "aaf300b2824617ca",
+            "id": "ea6c843fc703643b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "classes",
-                "matchingCase": false,
+                "query": "google ",
+                "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -49,39 +49,67 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 225.5
   },
   "right": {
-    "id": "17858696b0ec25c5",
+    "id": "2693a6f202e187ca",
     "type": "split",
     "children": [
       {
-        "id": "3dd6a0bf0e2d2dbb",
+        "id": "99b28541b61d55cd",
         "type": "tabs",
         "children": [
           {
-            "id": "c45874edbc0952c8",
+            "id": "9fa00a2f7f2b6113",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
+          },
+          {
+            "id": "4f1bc4702fc87aac",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "2b791f98685aa5ef",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 123.33275604248047,
     "collapsed": true
   },
-  "active": "64cd4df6dabd67d6",
-  "lastOpenFiles": []
+  "active": "e442e6c009ac1f5a",
+  "lastOpenFiles": [
+    "IDX/Writings IDX.md",
+    "IDX/UNA IDX.md",
+    "IDX/TGH IDX.md",
+    "IDX/Psychology.md",
+    "IDX/Programming.md",
+    "IDX/PRG IDX.md",
+    "IDX/Philosophy.md",
+    "IDX/PEOPLE IDX.md",
+    "IDX/JNK IDX.md",
+    "IDX/Electronics IDX.md"
+  ]
 }
