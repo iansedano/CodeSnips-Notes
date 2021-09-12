@@ -1,3 +1,5 @@
 {
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes&Snips/0 UNPROCESSED"
 }

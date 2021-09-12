@@ -18,23 +18,20 @@
 
 [[Imperative v Declarative]]
 [[Object Oriented vs Functional]]
-[[React Gotchas]]
 [[React Virtual DOM]]
 [[JSX gotchas]]
-[[React Prop Gotchas]]
 [[Props in Function components]]
 
 [[State Management in React]]
 [[useReducer]]
 
 [https://technologyadvice.github.io/where-flux-went-wrong/](https://technologyadvice.github.io/where-flux-went-wrong/)
-[[Grocery Store state analogy]]
 [[Redux]]
 
-- Memoization
-- useCallback
-- useMemo
-
+[[React hooks]]
+[[useCallback]]
+[[useMemo]]
+[[useEffect]]
 
 [[Promises & Async in React]]
 
