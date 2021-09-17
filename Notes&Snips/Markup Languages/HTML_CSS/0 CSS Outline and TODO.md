@@ -34,7 +34,7 @@
 
 [https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS\_layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout)
 - Normal flow
-- Flexbox
+- [[Flexbox]]
 - Grids [[CSS Grid]]
 - Floats
 - Legacy layout

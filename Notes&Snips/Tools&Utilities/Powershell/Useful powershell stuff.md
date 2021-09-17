@@ -1,0 +1,1 @@
+CTRL + R for interactive history search. https://serverfault.com/questions/891265/how-to-search-powershell-command-history-from-previous-sessions/991256#991256
