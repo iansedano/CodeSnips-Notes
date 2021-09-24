@@ -33,3 +33,21 @@ Which is a *dependency array*
 
 If you leave the array blank, then the effect will be fired the first time it is rendered, on *mount* and once the component is no longer rendered at all, on *unmount*. It won't run if it is rerendered with different dependencies.
 
+
+### Order of operations
+
+Runs callback _after_ flushing changes to DOM and letting the browser paint.
+
+- STATE calculations
+- UI-component calculation
+- Update UI Tree
+- Browser DOM Update
+- `useEffect`
+
+- click - set new state
+- new state produced
+- refresh UI model
+- new components return
+- update UI model
+- Browser repaints
+- `useEffect`
