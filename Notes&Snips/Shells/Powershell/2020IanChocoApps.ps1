@@ -37,8 +37,8 @@ $chocolateyAppList = " `
 				ffmpeg, `
 				avidemux, `
 				virtualdub, `
-				paint.net `
-				
+				paint.net, `
+				putty
 				"
 $dismAppList = ""
 
