@@ -32,6 +32,7 @@
 [[useCallback]]
 [[useMemo]]
 [[useEffect]]
+[[React memo]]
 
 [[Promises & Async in React]]
 
