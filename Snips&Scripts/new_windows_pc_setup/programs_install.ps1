@@ -2,9 +2,7 @@ $chocolateyAppList = " `
 				7zip, `
 				everything, `
 				keepass, `
-				keepass-keepasshttp, `
 				googlechrome, `
-				ungoogled-chromium, `
 				fsviewer, `
 				fsresizer.install, `
 				greenshot, `
@@ -15,17 +13,19 @@ $chocolateyAppList = " `
 				deluge, `
 				sublimetext3, `
 				sublimetext3.packagecontrol, `
+				vscode, `
 				krita, `
 				inkscape, `
 				scribus, `
 				python, `
+				pyenv-win, `
 				git, `
-				hub, `
+				gh, `
 				clink, `
 				conemu, `
 				dropbox, `
 				manictime, `
-				thunderbird, `
+				ffmpeg, `
 				reaper, `
 				reaper-sws-extension, `
 				foobar2000, `
@@ -34,7 +34,6 @@ $chocolateyAppList = " `
 				docfetcher, `
 				freecad, `
 				shotcut, `
-				ffmpeg, `
 				avidemux, `
 				virtualdub, `
 				paint.net, `
@@ -43,3 +42,5 @@ $chocolateyAppList = " `
 $dismAppList = ""
 
 Invoke-Expression "InstallApps.ps1 ""$chocolateyAppList"" ""$dismAppList"""
+
+# https://github.com/vors/ZLocation

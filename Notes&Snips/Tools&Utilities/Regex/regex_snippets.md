@@ -1,3 +1,0 @@
-rm square bracket content
-
-\[(.*?)\]
