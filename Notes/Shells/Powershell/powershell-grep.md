@@ -19,3 +19,11 @@ out-string outputs input objects as stream - needed because get-alias returns ob
 
 select-string now functions similar to grep
 
+
+or add to profile:
+
+```powershell
+function grep {
+  $input | out-string -stream | select-string $args
+}
+```

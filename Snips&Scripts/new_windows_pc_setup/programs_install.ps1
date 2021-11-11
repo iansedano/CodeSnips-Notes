@@ -17,7 +17,6 @@ $chocolateyAppList = " `
 				krita, `
 				inkscape, `
 				scribus, `
-				python, `
 				pyenv-win, `
 				git, `
 				gh, `
