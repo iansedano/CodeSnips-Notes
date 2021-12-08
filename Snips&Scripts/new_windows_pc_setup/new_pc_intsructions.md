@@ -19,9 +19,20 @@ cd c:\dev
 gh auth login
 gh repo clone CodeSnips-Notes
 
-git config --global user.email "iansedano@gmail.com"
-git config --global user.name "Ian"
-git config --global alias.cmp '!f() { git add -A && git commit -m \"$@\" && git push; }; f'
+[alias]
+	pushall = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	commitall = "!f() { git add -A && git commit -m \"$@\"; }; f"
+	ammendpush = "!f() { git add -A && git commit --amend --no-edit && git push -f; }; f"
+	amm = commit --amend --no-edit
+	ll = log --oneline --graph
+	last = log -1
+	recent = log -5 --oneline --graph
+	s = status
+
+[user]
+	email = iansedano@gmail.com
+	name = Ian
+
 
 to get powershell profile
 
