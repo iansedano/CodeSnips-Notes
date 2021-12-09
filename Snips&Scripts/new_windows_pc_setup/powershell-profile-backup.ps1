@@ -12,7 +12,8 @@ function git-recurse ($command)
 }
 
 function grep {
-	$input | out-string -stream | select-string $args
+  $input | out-string -stream | select-string $args
 }
 
 Set-poshprompt -theme hotstick.minimal
+Enable-PoshTransientPrompt

@@ -92,5 +92,12 @@
         }
       ]
     }
-  ]
+	
+  ],
+  "transient_prompt": {
+        "background": "#A3A3A3",
+        "foreground": "#1A1A16",
+        "template": "\n{{ .Shell }}> "
+    }
+  
 }
