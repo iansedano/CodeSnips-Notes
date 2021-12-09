@@ -1,7 +1,5 @@
-Import-Module ZLocation
-
 Set-Alias n notepad++
-Set-Alias subl "C:\Program Files\Sublime Text 3\subl.exe"
+Set-Alias subl "C:\Program Files\Sublime Text 4\subl.exe"
 
 function git-recurse ($command)
 {
@@ -14,5 +12,7 @@ function git-recurse ($command)
 }
 
 function grep {
-  $input | out-string -stream | select-string $args
+	$input | out-string -stream | select-string $args
 }
+
+Set-poshprompt -theme hotstick.minimal

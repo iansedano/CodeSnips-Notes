@@ -1,7 +1,9 @@
 I ended up adding an alias to my .gitconfig file:
 
+```bash
 [alias]
     cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+```
 	
 Usage: git cmp "Long commit message goes here"
 
@@ -11,9 +13,13 @@ I think it's a better solution because you have control over what the commit mes
 
 The alias can be also defined from command line, this adds it to your .gitconfig:
 
+```bash
 git config --global alias.cmp '!f() { git add -A && git commit -m "$@" && git push --all; }; f'
+```
 
 
 On Windows, I needed to escape the double quotes around $1 to get it to work from PowerShell (using ... \"$1\" ...)
 
+```powershell
 git config --global alias.cmp '!f() { git add -A && git commit -m \"$@\" && git push; }; f'
+```
