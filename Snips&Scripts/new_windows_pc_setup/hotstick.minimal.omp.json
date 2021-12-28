@@ -87,9 +87,9 @@
 	
   ],
   "transient_prompt": {
-        "background": "#A3A3A3",
-        "foreground": "#1A1A16",
-        "template": "\n{{ .Path }}>"
+        "background": "transparent",
+        "foreground": "#A3A3A3",
+        "template": "\n{{ .Path }}> "
     }
   
 }
