@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 
-rpm-domain="https://download1.rpmfusion.org/"
-free-repo="free/fedora/rpmfusion-free-release"
-nonfree-repo="nonfree/fedora/rpmfusion-nonfree-release"
+rpm-domain="https://mirrors.rpmfusion.org/"
+free-repo="free/fedora/rpmfusion-free-release-$(rpm -E %fedora)"
+nonfree-repo="nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora)"
 
 free-path="$rpm-domain$free-repo"
 nonfree-path="$rpm-domain$nonfree-repo"
