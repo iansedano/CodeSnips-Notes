@@ -1,17 +1,126 @@
+First steps:
+
+```bash
+dnf upgrade
+```
+
+Check ssh `ssh` or `sudo dnf install ssh`
+Install git `sudo dnf install git`
+Install `curl vim terminator`
+
+Make ssh keys:
+
+```bash
+ssh-keygen -C iansedano@gmail.com
+cat ~/.ssh/id_rsa.pub
+# Add key to GH account
+ssh -T git@github.com # check connection
+git config --global user.email "iansedano@gmail.com"
+git config --global user.name "Ian"
+```
+
+from home
+
+```bash
+mkdir dev
+git clone git@github.com:iansedano/CodeSnips-Notes.git
+```
+
+If want to set hostname and timezone:
+
+```bash
+hostnamectl set-hostname $new-hostname
+timedatectl list-timezones
+timedatectl set-timezone Europe/Madrid
+```
+
+`reboot`
+
+```
+mkdir tools
+cd tools
+git clone git@github.com:rupa/z.git
+```
+
+add `. ~/tools/z/z.sh` to .bashrc
+
+### Add repos to RPM
+
+```bash
+rpmdomain="https://mirrors.rpmfusion.org/"
+freerepo="free/fedora/rpmfusion-free-release-$(rpm -E %fedora)"
+nonfreerepo="nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora)"
+
+freeurl="$rpmdomain$freerepo.noarch.rpm"
+nonfreeurl="$rpmdomain$nonfreerepo.noarch.rpm"
+
+dnf install -y freeurl
+dnf install -y nonfreeurl
+
+dnf install -y fedora-workstation-repositories
+dnf config-manager --set-enabled google-chrome
+
+dnf upgrade
+```
+
+install:
+
+```
+google-chrome-stable
+ripcord
+keepassx.x86_64
+nautilus-dropbox
+```
+
+run google chrome and set as default
+run dropbox from start menu and sign in
+
+```
+reboot
+```
+
+https://code.visualstudio.com/docs/setup/linux
+https://www.sublimetext.com/docs/linux_repositories.html
+https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+
+```
+sudo dnf upgrade
+```
+
+Install:
+
+```bash
+gh # then login
+sublime-text
+code
+featherpad
+pinta
+xclip
+ksnip
+gcc-c++.x86_64
+```
+
+For waiting for DB to download
+
+```bash
+while true; do dropbox status; sleep 10; done
+# Ctrl + C to exit
+```
+
+vscode settings
+
+to edit the openbox theme (for example for window border handle)
+
+```
+usr/share/themes/...
+```
+
 Keyboard Shortcuts
 
 ```
 ~/.config/openbox/lxde-rc.xml
 ```
 
-```
-!-- Launch LXTerminal with Ctrl+Alt+t-->
-    <keybind key="C-A-t">
-      <action name="Execute">
-        <command>lxterminal</command>
-      </action>
-    </keybind>
-```
 
 For touchpad tap to click:
   
