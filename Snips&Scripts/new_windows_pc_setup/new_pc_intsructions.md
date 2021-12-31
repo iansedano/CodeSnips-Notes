@@ -1,9 +1,17 @@
+Open edge to install chrome.
+
+With windows store update "App Installer" this will let winget work in powershell
+
+```
+winget install Microsoft.Powershell
+```
+
 start powershell and run the commands in InstallChocolatey.ps1, probably manually
 
 run the following command
 $env:PATH =$env:PATH+";."
 
-and then run essential_programs_install.ps1
+and then run essential_programs_install.ps1...
 
 Do not start Conemu as admin! Or else you won't be able to save settings
 
@@ -12,6 +20,14 @@ log into dropbox and select folders
 wait for sync... ~2 hrs?
 
 open keepass
+set up everything
+set up conemu and posh prompt
+set up startup:
+
+- dropbox sys
+- keepass
+- autohotkey shortcuts
+- virtual desktop enhancer
 
 then make dev directory at root
 mkdir c:\dev

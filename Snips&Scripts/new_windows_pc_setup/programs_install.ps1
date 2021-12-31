@@ -15,6 +15,3 @@ $chocolateyAppList = " `
 				virtualdub, `
 				putty
 				"
-$dismAppList = ""
-
-Invoke-Expression "InstallApps.ps1 ""$chocolateyAppList"" ""$dismAppList"""

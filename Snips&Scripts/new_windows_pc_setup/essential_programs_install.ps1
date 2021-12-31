@@ -1,6 +1,5 @@
 $chocolateyAppList = " `
 				dropbox, `
-				googlechrome, `
 				7zip, `
 				everything, `
 				keepass, `
@@ -19,12 +18,24 @@ $chocolateyAppList = " `
 				foobar2000, `
 				obs-studio, `
 				paint.net, `
-				powershell-core, `
 				notepadplusplus, `
 				sublimetext4, `
 				powertoys, `
-				ripcord
+				ripcord,
+				processhacker,
+				licecap,
+				drawio
 				"
-$dismAppList = ""
 
-Invoke-Expression "InstallApps.ps1 ""$chocolateyAppList"" ""$dismAppList"""
+
+if ([string]::IsNullOrWhiteSpace($chocolateyAppList) -eq $false){   
+    Write-Host "Chocolatey Apps Specified"  
+    
+    $appsToInstall = $chocolateyAppList -split "," | foreach { "$($_.Trim())" }
+
+    foreach ($app in $appsToInstall)
+    {
+        Write-Host "Installing $app"
+        & choco install $app /y | Write-Output
+    }
+}
