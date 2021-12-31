@@ -54,11 +54,11 @@ nonfreerepo="nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora)"
 freeurl="$rpmdomain$freerepo.noarch.rpm"
 nonfreeurl="$rpmdomain$nonfreerepo.noarch.rpm"
 
-dnf install -y freeurl
-dnf install -y nonfreeurl
+sudo dnf install -y $freeurl
+sudo dnf install -y $nonfreeurl
 
-dnf install -y fedora-workstation-repositories
-dnf config-manager --set-enabled google-chrome
+sudo dnf install -y fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
 
 dnf upgrade
 ```
@@ -74,6 +74,11 @@ nautilus-dropbox
 
 run google chrome and set as default
 run dropbox from start menu and sign in
+
+Go to /etc/dnf/dnf.conf and add
+max_parallel_downloads=10
+fastestmirror=True
+  
 
 ```
 reboot
