@@ -151,7 +151,22 @@ and finally
 
 git@github.com:rupa/z.git
 git@github.com:iansedano/CodeSnips-Notes.git
-git@github.com:iansedano/linux_configs.git
+
+
+create symbolic links (from obsolete linux configs repo)
+```
+ln -sf source target
+```
+link symbolic force(replace target) source(file in repo) target (config loc read by os)
+
+file_list=$(find . * | grep -P "\./\.\w+$")
+echo $file_list
+
+for f in $file_list
+do
+	ln -sf $(pwd)${f#?} $HOME/
+done
+```
 
 
 edit `/etc/dnf/dnf.conf` and add `fastestmirror=true` `max_parallel_downloads=10`
