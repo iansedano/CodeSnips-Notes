@@ -24,3 +24,8 @@ bind 'set completion-ignore-case on'
 	then
 		source /usr/share/fzf/shell/key-bindings.bash
 	fi
+
+open () {
+	($1 &) &> /dev/null
+}
+

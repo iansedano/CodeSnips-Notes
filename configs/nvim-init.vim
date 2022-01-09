@@ -32,5 +32,7 @@ call plug#begin()
 	Plug 'dense-analysis/ale'
 	Plug 'vim-airline/vim-airline'
 	Plug 'mattn/emmet-vim'
+	
+	Plug 'tpope/vim-surround'
 
 call plug#end()
