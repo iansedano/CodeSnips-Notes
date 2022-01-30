@@ -145,18 +145,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
     <keybind key="C-S-Left">
       <action name="SendToDesktop">
         <to>left</to>
@@ -168,81 +156,6 @@
         <to>right</to>
         <wrap>no</wrap>
       </action>
-    </keybind>
-    <keybind key="C-S-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-S-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-F1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="W-F4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <keybind key="W-F5">
-      <action name="GoToDesktop">
-        <to>5</to>
-      </action>
-    </keybind>
-    <keybind key="W-F6">
-      <action name="GoToDesktop">
-        <to>6</to>
-      </action>
-    </keybind>
-    <keybind key="W-F7">
-      <action name="GoToDesktop">
-        <to>7</to>
-      </action>
-    </keybind>
-    <keybind key="W-F8">
-      <action name="GoToDesktop">
-        <to>8</to>
-      </action>
-    </keybind>
-    <keybind key="W-F9">
-      <action name="GoToDesktop">
-        <to>9</to>
-      </action>
-    </keybind>
-    <keybind key="W-F10">
-      <action name="GoToDesktop">
-        <to>10</to>
-      </action>
-    </keybind>
-    <keybind key="W-F11">
-      <action name="GoToDesktop">
-        <to>11</to>
-      </action>
-    </keybind>
-    <keybind key="W-F12">
-      <action name="GoToDesktop">
-        <to>12</to>
-      </action>
-    </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop" />
     </keybind>
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
@@ -307,16 +220,6 @@
     <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
-      </action>
-    </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind>
   </keyboard>
