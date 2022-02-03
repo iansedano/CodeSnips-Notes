@@ -32,6 +32,7 @@ $chocolateyAppList = " `
 				pyenv-win, `
 				git, `
 				gh, `
+				fzf, `
 				clink, `
 				conemu, `
 				foobar2000, `

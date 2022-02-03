@@ -17,5 +17,3 @@ function grep {
 
 Set-poshprompt -theme hotstick.minimal
 Enable-PoshTransientPrompt
-
-Import-Module PSFzf
