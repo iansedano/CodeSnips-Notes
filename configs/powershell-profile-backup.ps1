@@ -1,5 +1,5 @@
 Set-Alias n notepad++
-Set-Alias subl "C:\Program Files\Sublime Text 4\subl.exe"
+Set-Alias subl "C:\Program Files\Sublime Text\subl.exe"
 
 function git-recurse ($command)
 {
