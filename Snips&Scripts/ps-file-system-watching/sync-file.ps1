@@ -19,7 +19,8 @@ $watcher.EnableRaisingEvents = $true
 
 # Action after event.
 $action = {
-    Write-Host "Change detected"
+    $time = Get-Date -Format 'HH:mm'
+    Write-Host "Change detected $time"
     Copy-Item -Force -Path $args[1].FullPath -Destination $event.MessageData
 }
 
