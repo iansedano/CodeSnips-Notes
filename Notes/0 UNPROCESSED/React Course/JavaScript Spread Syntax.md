@@ -55,5 +55,3 @@ or
 arr.slice(-1).pop()
 ```
 
-
-#reactcourse
