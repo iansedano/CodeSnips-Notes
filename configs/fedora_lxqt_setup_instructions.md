@@ -103,6 +103,10 @@ pinta
 xclip
 ksnip
 gcc-c++.x86_64
+peek
+feh
+nomacs
+neovim
 ```
 
 For waiting for DB to download
