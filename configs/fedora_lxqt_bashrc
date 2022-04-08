@@ -11,36 +11,28 @@ then
 fi
 export PATH
 
-alias la='ls -A'
 
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
-
 bind 'set completion-ignore-case on'
 
 . ~/tools/z/z.sh
 
 # fzf on Fedora
-	if [ -x "$(command -v fzf)"  ]
-	then
-		source /usr/share/fzf/shell/key-bindings.bash
-	fi
+if [ -x "$(command -v fzf)"  ]
+then
+	source /usr/share/fzf/shell/key-bindings.bash
+fi
 
 open () {
-	($1 &) &> /dev/null
+	($*) > /dev/null 2>&1 &
 }
 
-# ibus key booster
-
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
+alias la='ls -A'
+alias explorer='open dolphin . --new-window'
+alias desktop='cd ~/Dropbox/Desktop'
+alias dev='cd ~/dev'
+alias dropdev='cd !/Dropbox/dev'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-export RPMONTHLY_USER_ID=5ffae127da9ef56a504acc0a
-export RPMONTHLY_API_KEY=f2f5d3e276b8bb80bded0fffea9c6d40
-export RPMONTHLY_API_TOKEN=f7f7468e6544532b841cae87d387dcd7773c62a33c072ebf8c69cee03e73d6c1
