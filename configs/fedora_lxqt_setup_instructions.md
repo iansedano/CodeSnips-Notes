@@ -98,14 +98,11 @@ Install:
 gh # then login
 sublime-text
 code
-featherpad
 pinta
-xclip
 ksnip
 gcc-c++.x86_64
 peek
 feh
-nomacs
 neovim
 ```
 
@@ -170,3 +167,9 @@ edit `/etc/dnf/dnf.conf` and add `fastestmirror=true` `max_parallel_downloads=10
 sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install gh
 
+## Extra Programs
+
+```shell
+sudo dnf install -y libreoffice obs-studio inkscape gimp 
+
+```

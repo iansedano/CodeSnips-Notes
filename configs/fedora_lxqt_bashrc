@@ -28,11 +28,16 @@ open () {
 }
 
 alias la='ls -A'
-alias explorer='open dolphin . --new-window'
+alias explore='open nautilus . --new-window &'
 alias desktop='cd ~/Dropbox/Desktop'
 alias dev='cd ~/dev'
-alias dropdev='cd !/Dropbox/dev'
+alias dropdev='cd ~/Dropbox/dev'
+alias s="subl -n"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(pyenv init -)"
+
+PATH="~/tools:$PATH"

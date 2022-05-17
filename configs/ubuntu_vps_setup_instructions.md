@@ -3,6 +3,11 @@ Putty generate SSH key
 - open puttygen not putty
 - select RSA
 - Generate
+- Or use existing and copy with
+
+```shell
+ssh-copy-id username@remote_host
+```
 
 Bash Commands
 
