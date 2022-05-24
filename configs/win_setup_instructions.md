@@ -2,7 +2,15 @@ Open edge to install chrome.
 
 With windows store update "App Installer" this will let winget work in powershell
 
+https://github.com/jdhitsolutions/PSReleaseTools
+
 ```
+Install-Module PSReleaseTools -Force
+Install-Powershell
+```
+
+```
+Maybe use PSReleaseTools instead
 winget install Microsoft.Powershell
 ```
 
