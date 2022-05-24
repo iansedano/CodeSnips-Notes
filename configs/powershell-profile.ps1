@@ -1,5 +1,5 @@
 Set-Alias n notepad++
-Set-Alias subl "C:\Program Files\Sublime Text\subl.exe"
+Set-Alias subl "C:\Program Files\Sublime Text 4\subl.exe"
 
 function git-recurse ($command)
 {
@@ -19,3 +19,8 @@ Set-poshprompt -theme hotstick.minimal
 Enable-PoshTransientPrompt
 
 Import-Module PSFzf
+
+function dropdev(){cd "D:\Dropbox\dev"}
+function dev(){cd "C:\dev"}
+
+C:\Users\Philistine\Documents\Powershell\env.ps1

@@ -1,18 +1,12 @@
-https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
+https://winaero.com/create-symbolic-link-windows-10-powershell/
 
-Enable Developer Mode from
+elevated PowerShell
 
-Settings > Update & Security > For Developers (may be different as windows are always changing their structure)
+New-Item -ItemType SymbolicLink -Path "Link" -Target "Target"
 
-Needs to be command prompt
+Turn on Developer Mode to not require admin privileges when making links with New-Item
 
-Soft link:
-```
-mklink Link Target
-```
 
-Soft link to dir:
-```
-mklink /D Link Target
-```
-
+SymbolicLink
+Junction
+HardLink
