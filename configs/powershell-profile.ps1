@@ -1,5 +1,9 @@
 Set-Alias n notepad++
-Set-Alias subl "C:\Program Files\Sublime Text 4\subl.exe"
+Set-Alias subl "$Env:PROGRAMFILES\Sublime Text 4\subl.exe"
+
+$DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop | ConvertFrom-Json | % 'personal' | % 'path'
+
+& $Env:USERPROFILE\Documents\Powershell\env.ps1
 
 function git-recurse ($command)
 {
@@ -20,7 +24,8 @@ Enable-PoshTransientPrompt
 
 Import-Module PSFzf
 
-function dropdev(){cd "D:\Dropbox\dev"}
+function dropdev(){cd "$DropboxPath\dev"}
 function dev(){cd "C:\dev"}
 
-C:\Users\Philistine\Documents\Powershell\env.ps1
+function notebook(){cd "$DropboxPath\0 Notebook"}
+function codesnip(){cd "C:\Dev\CodeSnips-Notes"}
