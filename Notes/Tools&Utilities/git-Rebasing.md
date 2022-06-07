@@ -1,5 +1,4 @@
-
-#REBASING
+# REBASING
 
 For example, have branched and developed feature, and want it to look like developed linearly, on new branch, do
 

@@ -1,6 +1,7 @@
 # Setting up WSL windows 10
 
-##Enable WSL
+## Enable WSL
+
 Search for windows features, enable Windows Subsystem for Linux
 **ENABLE WSL 2 before installing UBUNTU**
 
@@ -9,15 +10,15 @@ Download and Install Ubuntu for Windows from Microsoft store.
 **DO NOT MODIFY LINUX FILES FROM WINDOWS!!**  
 Install Visual Studio **Code** and get the connection to WSL to do so, or edit them directly from the WSL bash.
 
-##Terminal replacement - ConEmu
+## Terminal replacement - ConEmu
 ConEmu Settings, Startup, Specified names task {Bash::bash}
 
-##MobaXterm - to run Graphical Linux Apps
+## MobaXterm - to run Graphical Linux Apps
 It can run an X server session
 Download, install free version
 always run MobaXterm before, and in top righthand corener should say X-server running, if its not runnin click the button.
 
-###Set the DISPLAY in WSL
+### Set the DISPLAY in WSL
 Need to config WSL to send display to windows.
 run `nano ~/.bashrc` then add this to bottom of file `export DISPLAY=:0`  to apply `source ~/.bashrc`
 

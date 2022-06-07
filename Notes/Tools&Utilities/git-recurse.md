@@ -1,5 +1,6 @@
 
 ### BASH
+
 in gitconfig:
 
 ```bash

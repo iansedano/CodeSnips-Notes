@@ -44,12 +44,27 @@ PS> cat ~/.ssh/id_rsa.pub
 
 Copy the output and go to GitHub to link to your account.
 
+Test
+
+```powershell
+PS> ssh -T git@github.com
+```
+
+## Download Config Repo
+
+```powershell
+PS> git@github.com:iansedano/CodeSnips-Notes.git
+```
+
+set up conemu and posh prompt
+
 ## Bulk software install
 
 ```powershell
 PS> choco install choco-packages.config
 ```
 
+Set up everything with keybinding
 Do not start Conemu as admin! Or else you won't be able to save settings
 
 log into dropbox and select folders
@@ -57,8 +72,6 @@ log into dropbox and select folders
 wait for sync... ~2 hrs?
 
 open keepass
-set up everything
-set up conemu and posh prompt
 
 ## Powershell Setup
 
@@ -105,9 +118,10 @@ pyenv-win
 
 Start > Manage App Execution Aliases > Disable Python related ones
 
-pyenv update
-pyenv install 3.10.0
-
+```powershell
+PS> pyenv update
+PS> pyenv install 3.10.4
+```
 
 
 

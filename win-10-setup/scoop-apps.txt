@@ -1,0 +1,3 @@
+7zip (v:21.07) [main]
+less (v:590) [main]
+supabase (v:0.20.7) [supabase]

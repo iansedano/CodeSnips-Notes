@@ -7,6 +7,8 @@ General syntax
 `td[rowspan=2]`	Custom attributes
 `{}`	Text
 
+`ul>li*5`   Unordered list with 5 list items
+
 `elem#id`
 `elem.class`
 

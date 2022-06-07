@@ -1,4 +1,3 @@
-# This is the syntax that defines a function
 
 Function hello-world {
 
@@ -6,7 +5,6 @@ write-host "hello world"
 
 }
 
-hello-world
 
 function Get-TimesResult {
 	Param ([int]$a, [int]$b)

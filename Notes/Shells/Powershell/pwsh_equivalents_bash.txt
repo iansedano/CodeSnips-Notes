@@ -29,7 +29,7 @@
 	Second PS shorter because arguments can be named or positional.
 	
 `rm`: `Remove-Item`
-	
+	rm -rf => rm -r -fo some_dir
 
 `touch`: `New-Item` `ni`
 
