@@ -33,6 +33,13 @@ PS> iwr -useb community/chocolatey.org/install.ps1 | iex
 PS> choco feature enable -n allowGlobalConfirmation
 ```
 
+## Get Scoop
+
+```powershell
+PS> irm get.scoop.sh | iex
+PS> scoop-apps.ps1
+```
+
 ## Essentials
 
 ```powershell
@@ -50,13 +57,19 @@ Test
 PS> ssh -T git@github.com
 ```
 
-## Download Config Repo
+## Download Config Repo and Setup Powershell
 
 ```powershell
 PS> git@github.com:iansedano/CodeSnips-Notes.git
 ```
 
 set up conemu and posh prompt
+
+```powershell
+PS> Install-Module ZLocation -Scope CurrentUser
+PS> Install-Module oh-my-posh -Scope CurrentUser
+PS> Install-Module -Name PSFzf # Requires fzf install (choco install fzf)
+```
 
 ## Bulk software install
 
@@ -73,13 +86,6 @@ wait for sync... ~2 hrs?
 
 open keepass
 
-## Powershell Setup
-
-```powershell
-PS> Install-Module ZLocation -Scope CurrentUser
-PS> Install-Module oh-my-posh -Scope CurrentUser
-PS> Install-Module -Name PSFzf # Requires fzf install (choco install fzf)
-```
 
 set up startup:
 
@@ -93,8 +99,6 @@ mkdir c:\dev
 cd c:\dev
 gh auth login
 gh repo clone CodeSnips-Notes
-
-
 
 
 to get powershell profile
@@ -114,130 +118,22 @@ Import settings conemu
 Set up settings sync vscode
 
 
-pyenv-win
-
 Start > Manage App Execution Aliases > Disable Python related ones
 
 ```powershell
 PS> pyenv update
-PS> pyenv install 3.10.4
+PS> pyenv install 3.10.4 3.9.12
 ```
 
 
+## Old Notes
 
-(From old file)
+### HARDWARE
 
-#Programs for fresh install
-
-### Updated 20200607
-
-###FIRST THINGS FIRST
-
-Install Windows from Recovery Pen, that way, no bloatware.
-Need Windows Key and Office Key - see keepass
-For cavetop see keepass cavetop windows key
-
-###HARDWARE
-* BIOS
-	* Heat warnings
-	* Fan warnings
-	* Fans
-* Mouse
-* Keyboard
-* USB Hub
 * Graphics Card
 * Audio Driver
 * Wacom Tablet
-* Winaro Tweaker! - clean up windows (don't turn off updates and windows store for WSL)
-	
-### PROGRAMS ON DROPBOX to copy to USB Drive
-* 	RevoUninstaller
-* 	System Monitoring
-* 		CPU-Z
-* 		Open Hardware Monitor
-* 		Autoruns
-* 	Keepass
-* 	Virtual Desktop Enhancements
-	
-Maybe NINITE to install
-	
-### ESSENTIALS
-* Chrome
-* 	Plugins
-* 		Session Box (stopped using)
-* 		Tabs
-* Everything
-* 7z
-* Fast Stone Photo Viewer
-* Fast Stone Photo resizer
-* Greenshot
-* Fences
-* VLC
-* Autohotkey
-* Deluge
-* QTTab Bar (stopped using tabs when moved to dual screen)
-* Icon Restorer (stopped using when strated with fences.)
-* Krita
-* Gimp
-* Inkscape
-* Glass2k - transparency
 
-* Abricotine (md editor)
-* Scribus
-
-### CODING
-* Sublime
-* 	package manager etc
-* 	packagesync - sync in coding library
-* 	SublimeREPL
-* 		Ctrl+Shift+P -> PC: Add Repository
-* 		Add next: https://github.com/wuub/SublimeREPL.git
-* 		Ctrl+Shift+P -> PC: Advanced Install Package -> SublimeREPL
-* 	javascriptlint - jsl (dropbox)
-* 	pycodestyle (pip install)
-* 
-* Python (make sure its 64bit!!)
-* 	virtualenv
-* 	virtualenvwrapper-win
-* 	pylinter check sublime
-* Node.js
-* mySQL
-* Text Editor Anywhere (for editing VBA projects)
-* git
-* git-XL
-* Filezilla?
-* 
-* CMD
-* 	Clink
-* 	Autojump
-* 	conEMU ?
-* 
-* WSL (WSL2)
-* 	Autojump
-* 	python > virtualenvwrapper
-* 	virtualenvwrapper
-* 	pyspread (needs Moba XTerm)
-* 	rbenv > ruby > bundler > jekyll
-* 	picoc (c interpreter)
-
-
-### PRODUCTIVITY
-* Office - try to unselect Skype and Onedrive especially
-* Skype can use online version
-* Dropbox (takes a few days to sync)
-* Google Drive Sync
-* 	ian.currie.bcn
-* 	iansedano
-* 	PSI
-* PDFSam
-* PDF X-Change
-* ManicTime
-* 	Set up Database in Dropbox?
-* Dia Diagram - on dropbox
-* gridmove
-* Thunderbird
-
-	
 ### MUSIC
 * Reaper
 	* SWS extensions
@@ -273,37 +169,3 @@ Maybe NINITE to install
 * Yamaha THR Editor
 * Bome Midi Translator
 * Resonic (sample manager)
-
-	
-### UTILITY
-* FreeFileSync
-* OBS Studio
-* TeamViewer
-* Youtube DLG Version 0.4
-* DocFetcher
-
-* ExtractNow (batch unzipper)
-
-* FreeCad
-	
-
-### VIDEO
-
-* Shotcut
-* Avidemux
-* Virtualdub
-* EyeFrame Converter
-* K-lite codecs
-
-
-Virtual Clone Drive
-Paint.NET
-JPEGtoPDF.exe
-
-Calibre
-
-
-http://www.nirsoft.net for free utilities
-
-
-
