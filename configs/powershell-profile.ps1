@@ -23,9 +23,15 @@ Set-poshprompt -theme hotstick.minimal
 Enable-PoshTransientPrompt
 
 Import-Module PSFzf
+Import-Module posh-git
 
-function dropdev(){cd "$DropboxPath\dev"}
-function dev(){cd "C:\dev"}
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
 
-function notebook(){cd "$DropboxPath\0 Notebook"}
-function codesnip(){cd "C:\Dev\CodeSnips-Notes"}
+function dropdev(){Set-Location "$DropboxPath\dev"}
+function dev(){Set-Location "C:\dev"}
+
+function notebook(){Set-Location "$DropboxPath\0 Notebook"}
+function codesnip(){Set-Location "C:\Dev\CodeSnips-Notes"}

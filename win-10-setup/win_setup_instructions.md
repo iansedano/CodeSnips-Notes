@@ -1,14 +1,33 @@
 # Windows Setup Instructions
 
+## Notes
+
+```powershell
+PS> # to save content of a page to a file
+PS> iwr -useb bit.ly/3NEMheH | Add-Content test.txt
+PS> # to run content of an online script
+PS> iwr -useb bit.ly/3NEMheH | iex
+
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+
+
+$PSVersionTable
+powershell -version 2.0
+
+$Env:HOMEPATH
+$Env:HOMEDRIVE
+
+Create powershell profile...
+```
+
 ## First Steps
 
 Do all the Windows updates possible
 
 In the Windows Store, install
 
-- App Installer (which is `winget`)
+- App Installer (which is `winget`) (Maybe not even necessary....)
 - Windows Terminal (if not included already)
-- Powershell (if you don't mind certain [restrictions](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#known-limitations))
 
 If search for store not working, ++Ctrl+R++ Run `wsreset.exe`.
 
@@ -29,7 +48,7 @@ Explorer > This PC > File > Change Folder and Search Options > View
 install choco:
 
 ```powershell
-PS> iwr -useb community/chocolatey.org/install.ps1 | iex
+PS> iwr -useb community.chocolatey.org/install.ps1 | iex
 PS> choco feature enable -n allowGlobalConfirmation
 ```
 
@@ -69,6 +88,7 @@ set up conemu and posh prompt
 PS> Install-Module ZLocation -Scope CurrentUser
 PS> Install-Module oh-my-posh -Scope CurrentUser
 PS> Install-Module -Name PSFzf # Requires fzf install (choco install fzf)
+PS> Install-Module posh-git -Scope CurrentUser -Force
 ```
 
 ## Bulk software install
