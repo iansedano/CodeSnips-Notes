@@ -28,7 +28,7 @@ open () {
 }
 
 alias la='ls -A'
-alias explore='open nautilus . --new-window &'
+alias explore='open pcmanfm-qt . --new-window &'
 alias desktop='cd ~/Dropbox/Desktop'
 alias dev='cd ~/dev'
 alias dropdev='cd ~/Dropbox/dev'
@@ -41,3 +41,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(pyenv init -)"
 
 PATH="~/tools:$PATH"
+
+source .myenv
+
