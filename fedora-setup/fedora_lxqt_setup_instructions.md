@@ -104,6 +104,11 @@ gcc-c++.x86_64
 peek
 feh
 neovim
+gnome-boxes
+kamoso
+simplescreenrecorder
+obs-studio
+screenkey
 ```
 
 For waiting for DB to download

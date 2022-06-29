@@ -26,14 +26,9 @@ Do all the Windows updates possible
 
 In the Windows Store, install
 
-- App Installer (which is `winget`) (Maybe not even necessary....)
 - Windows Terminal (if not included already)
 
 If search for store not working, ++Ctrl+R++ Run `wsreset.exe`.
-
-```powershell
-PS> winget install Microsoft.Powershell
-```
 
 ## Explorer Settings
 
@@ -50,6 +45,7 @@ install choco:
 ```powershell
 PS> iwr -useb community.chocolatey.org/install.ps1 | iex
 PS> choco feature enable -n allowGlobalConfirmation
+PS> choco install powershell-core
 ```
 
 ## Get Scoop
