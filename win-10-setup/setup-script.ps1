@@ -1,43 +1,102 @@
+$StartTime = Get-Date
+
+Invoke-RestMethod get.scoop.sh | Invoke-Expression
+scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
+scoop bucket add nerd-fonts
+
+scoop install less cowsay
+scoop install supabase
+scoop install CascadiaCode-NF
+scoop install gsudo
+scoop install gh
+scoop install pyenv
+scoop install nvm
+scoop install fzf
+
+pyenv update
+pyenv install --quiet 3.10.5 3.9.12
+
+nvm install lts
+
+
 Write-Output "Downloading and installing Chocolatey"
 Invoke-WebRequest -useb community.chocolatey.org/install.ps1 | Invoke-Expression
-
-Write-Output "Configuring Chocolatey"
 choco feature enable -n allowGlobalConfirmation
 
 Write-Output "Installing Chocolatey Packages"
 choco install powershell-core
 choco install vscode
 choco install git --package-parameters="/NoAutoCrlf /NoShellIntegration"
-choco install pyenv-win
+choco install keepass
+choco install dropbox
+choco install 7zip
+choco install everything --package-parameters="/client-service /run-on-system-startup"
+choco install greenshot
+choco install veracrypt
+choco install vlc
+choco install autohotkey
+choco install foobar2000 --package-parameters="/NoShortcut"
+choco install processhacker
+choco install activitywatch
 
-# The Google Chrome package often gets out of sync because it updates so
-# frequently. Ignoring checksums is a way to force install it.
+choco install winaero-tweaker
+choco install bulk-crap-uninstaller
+
+choco install pyenv-win
+choco install nvm
+choco install fzf
+
+choco install ffmpeg
+choco install clink
+choco install conemu
+choco install notepadplusplus
+choco install sublimetext4
+choco install vscode
+choco install mysql
+choco install mysql-cli
+choco install mysql.workbench
+choco install filezilla
+choco install fsviewer
+choco install fsresizer.install
+choco install paint.net
+choco install drawio
+choco install licecap
+choco install obs-studio
+choco install sharex
+choco install krita
+choco install inkscape
+choco install scribus
+choco install steam-client
+choco install autoruns
+
+choco install reaper
+choco install feecad
+choco install shotcut
+choco install avidemux
+choco install deluge
+choco install ripcord
+
+choco install pdfxchangeeditor --version 7.0.328.2 --package-parameters="/NoDesktopShortcuts /NoViewInBrowsers"
+choco pin add -n pdfxchangeeditor
 choco install googlechrome --ignore-checksums
-# Google Chrome auto-updates so you can pin it to prevent Chocolatey from
-# trying to upgrade it and inadvertently downgrading it.
-# You could also add VS Code here if you like
 choco pin add -n googlechrome
 
-refreshenv
+# Delete new desktop shortcuts
+$Desktops = "$env:PUBLIC\Desktop", "$env:USERPROFILE\Desktop"
+$Desktops | Get-ChildItem -Filter "*.lnk" -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt $StartTime } | Remove-Item
 
-# The refreshenv command usually doesn't work on first install.
-# This is a way to make sure that the PATH gets updated for the following
-# operations that require PATH to be refreshed.
+# refreshenv (choc replacement because it won't work on same session as install)
 # Source: https://stackoverflow.com/a/22670892/10445017
-foreach ($level in "Machine", "User") {
-    [Environment]::GetEnvironmentVariables($level).GetEnumerator() | ForEach-Object {
-        if ($_.Name -match 'Path$') { 
-            $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select-Object -unique) -join ';'
-        }
-        $_
-    } | Set-Content -Path { "Env:$($_.Name)" }
-}
+# foreach ($level in "Machine", "User") {
+#     [Environment]::GetEnvironmentVariables($level).GetEnumerator() | ForEach-Object {
+#         if ($_.Name -match 'Path$') { 
+#             $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select-Object -unique) -join ';'
+#         }
+#         $_
+#     } | Set-Content -Path { "Env:$($_.Name)" }
+# }
 
-Write-Output "Setting up pyenv and installing Python"
-pyenv update
-pyenv install --quiet 3.10.5 3.9.12
 
-Write-Output "Generating SSH key"
 ssh-keygen -C [YOUR-EMAIL]@gmail.com -P '""' -f "$HOME/.ssh/id_rsa"
 Get-Content $HOME/.ssh/id_rsa.pub | clip
 

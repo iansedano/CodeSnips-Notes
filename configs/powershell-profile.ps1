@@ -1,9 +1,16 @@
 Set-Alias n notepad++
 Set-Alias subl "$Env:PROGRAMFILES\Sublime Text 4\subl.exe"
 
-$DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop | ConvertFrom-Json | % 'personal' | % 'path'
-
+$DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop |
+    ConvertFrom-Json |
+    ForEach-Object 'personal' |
+    ForEach-Object 'path'
+    
 & $Env:USERPROFILE\Documents\Powershell\env.ps1
+
+$ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
+$ConfigFolder = (get-item $ProfileTarget).Directory
+$CodeSnipRepo = $ConfigFolder.Parent
 
 function git-recurse ($command)
 {
@@ -20,6 +27,8 @@ function grep {
 }
 
 Set-poshprompt -theme hotstick.minimal
+
+oh-my-posh init pwsh --config $ConfigFolder/posh.omp.json | Invoke-Expression
 Enable-PoshTransientPrompt
 
 Import-Module PSFzf
@@ -34,4 +43,4 @@ function dropdev(){Set-Location "$DropboxPath\dev"}
 function dev(){Set-Location "C:\dev"}
 
 function notebook(){Set-Location "$DropboxPath\0 Notebook"}
-function codesnip(){Set-Location "C:\Dev\CodeSnips-Notes"}
+function codesnip(){Set-Location $CodeSnipRepo}
