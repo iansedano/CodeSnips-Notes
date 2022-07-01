@@ -23,8 +23,6 @@ choco install activitywatch
 choco install winaero-tweaker
 choco install bulk-crap-uninstaller
 
-choco install pyenv-win
-choco install nvm
 choco install fzf
 
 choco install ffmpeg
@@ -51,10 +49,9 @@ choco install steam-client
 choco install autoruns
 
 choco install reaper
-choco install feecad
+choco install freecad
 choco install shotcut
 choco install avidemux
-choco install deluge
 choco install ripcord
 
 choco install pdfxchangeeditor --version 7.0.328.2 --package-parameters="/NoDesktopShortcuts /NoViewInBrowsers"

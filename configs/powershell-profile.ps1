@@ -1,12 +1,12 @@
 Set-Alias n notepad++
-Set-Alias subl "$Env:PROGRAMFILES\Sublime Text 4\subl.exe"
+Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
 $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop |
     ConvertFrom-Json |
     ForEach-Object 'personal' |
     ForEach-Object 'path'
     
-& $Env:USERPROFILE\Documents\Powershell\env.ps1
+& $Env:USERPROFILE\env.ps1
 
 $ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
 $ConfigFolder = (get-item $ProfileTarget).Directory
@@ -26,10 +26,8 @@ function grep {
   $input | out-string -stream | select-string $args
 }
 
-Set-poshprompt -theme hotstick.minimal
-
-oh-my-posh init pwsh --config $ConfigFolder/posh.omp.json | Invoke-Expression
-Enable-PoshTransientPrompt
+oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
+# Enable-PoshTransientPrompt
 
 Import-Module PSFzf
 Import-Module posh-git

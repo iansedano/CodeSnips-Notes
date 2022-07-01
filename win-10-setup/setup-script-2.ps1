@@ -29,6 +29,6 @@ if (($repo_root -split '\\')[-1] -eq $REPOSITORY_NAME)
     # the target of the symbolic link is this repository's version.
     
     foreach ($i in $configs) {
-        New-Item -ItemType SymbolicLink -Path $i[0] -Target "$config_root\$i[1]" -Force
+        New-Item -ItemType SymbolicLink -Path "$($i[0])" -Target "$config_root\$($i[1])" -Force
     }
 }
