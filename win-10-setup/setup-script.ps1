@@ -23,7 +23,7 @@ choco install activitywatch
 choco install winaero-tweaker
 choco install bulk-crap-uninstaller
 
-choco install fzf
+choco install sizer
 
 choco install ffmpeg
 choco install clink
@@ -47,6 +47,7 @@ choco install inkscape
 choco install scribus
 choco install steam-client
 choco install autoruns
+choco install docker-desktop
 
 choco install reaper
 choco install freecad

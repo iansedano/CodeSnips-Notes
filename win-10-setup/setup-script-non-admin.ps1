@@ -12,6 +12,8 @@ scoop install pyenv
 scoop install nvm
 scoop install fzf
 scoop install imagemagick
+scoop install zoom
+scoop install make
 
 scoop install extras/deluge
 
