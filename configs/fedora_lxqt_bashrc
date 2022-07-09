@@ -44,5 +44,5 @@ eval "$(pyenv init -)"
 
 PATH="~/tools:$PATH"
 
-source "~/.myenv"
+source ~/.myenv
 
