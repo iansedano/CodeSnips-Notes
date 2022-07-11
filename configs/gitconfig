@@ -11,3 +11,5 @@
 	last = log -1
 	recent = log -5 --oneline --graph
 	s = status
+[safe]
+	directory = *
