@@ -67,13 +67,18 @@ $Desktops | Get-ChildItem -Filter "*.lnk" -ErrorAction SilentlyContinue | Where-
 # refreshenv (choc replacement because it won't work on same session as install)
 # Source: https://stackoverflow.com/a/22670892/10445017
 # foreach ($level in "Machine", "User") {
-#     [Environment]::GetEnvironmentVariables($level).GetEnumerator() | ForEach-Object {
-#         if ($_.Name -match 'Path$') { 
-#             $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select-Object -unique) -join ';'
+#     [Environment]::GetEnvironmentVariables($level).GetEnumerator() |
+#     ForEach-Object {
+#         if ($_.Name -match 'Path$') {
+#             $combined_path = (Get-Content "Env:$($_.Name)") + ";$($_.Value)"
+#             $_.Value = (
+#               ($combined_path -split ';' | Select-Object -unique) -join ';'
+#             )
 #         }
 #         $_
 #     } | Set-Content -Path { "Env:$($_.Name)" }
 # }
+
 
 
 ssh-keygen -C [YOUR-EMAIL]@gmail.com -P '""' -f "$HOME/.ssh/id_rsa"
