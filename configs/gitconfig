@@ -13,3 +13,5 @@
 	s = status
 [safe]
 	directory = *
+[core]
+	autocrlf = true

@@ -14,6 +14,9 @@ scoop install fzf
 scoop install imagemagick
 scoop install zoom
 scoop install make
+scoop install which
+scoop install aws-sam-cli
+scoop install aws
 
 scoop install extras/deluge
 

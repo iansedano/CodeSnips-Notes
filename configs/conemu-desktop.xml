@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2022-07-11 10:31:16" build="220418">
+		<key name=".Vanilla" modified="2022-07-26 10:11:06" build="220418">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data='set PATH="%ConEmuBaseDirShort%\wsl";%PATH% &amp; wsl -d ubuntu'/>
@@ -152,16 +152,16 @@
 			<value name="UserScreenTransparent" type="hex" data="01"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
-			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="AutoSaveSizePos" type="hex" data="01"/>
+			<value name="UseCurrentSizePos" type="hex" data="00"/>
+			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="2655"/>
-			<value name="ConWnd Y" type="long" data="856"/>
+			<value name="ConWnd X" type="long" data="1710"/>
+			<value name="ConWnd Y" type="long" data="549"/>
 			<value name="LastMonitor" type="string" data="0,0,3378,1440"/>
-			<value name="ConWnd Width" type="dword" data="0000004c"/>
-			<value name="ConWnd Height" type="dword" data="00000019"/>
+			<value name="ConWnd Width" type="dword" data="0000004f"/>
+			<value name="ConWnd Height" type="dword" data="0000001e"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
@@ -662,14 +662,14 @@
 					<value name="Cmd1" type="string" data='&gt; "%windir%\system32\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is Native cmd.exe"'/>
 					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
 				</key>
-				<key name="Task5" modified="2021-11-13 08:40:57" build="210912">
+				<key name="Task5" modified="2022-07-20 08:56:45" build="220418">
 					<value name="Name" type="string" data="{Shells::PowerShell}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data="-new_console:d:C:\Dev pwsh.exe"/>
+					<value name="Cmd1" type="string" data="-new_console:d:C:\dev pwsh.exe"/>
 				</key>
 				<key name="Task6" modified="2021-11-13 08:40:57" build="210912">
 					<value name="Name" type="string" data="{Shells::PowerShell (Admin)}"/>
