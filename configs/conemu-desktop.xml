@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2022-07-27 08:58:16" build="220418">
+		<key name=".Vanilla" modified="2022-07-30 08:33:51" build="220418">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data='set PATH="%ConEmuBaseDirShort%\wsl";%PATH% &amp; wsl -d ubuntu'/>
@@ -157,11 +157,11 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="2607"/>
-			<value name="ConWnd Y" type="long" data="731"/>
+			<value name="ConWnd X" type="long" data="2437"/>
+			<value name="ConWnd Y" type="long" data="473"/>
 			<value name="LastMonitor" type="string" data="0,0,3378,1440"/>
-			<value name="ConWnd Width" type="dword" data="0000004e"/>
-			<value name="ConWnd Height" type="dword" data="0000001c"/>
+			<value name="ConWnd Width" type="dword" data="00000062"/>
+			<value name="ConWnd Height" type="dword" data="00000029"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
