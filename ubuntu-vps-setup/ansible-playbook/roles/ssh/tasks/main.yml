@@ -1,8 +1,8 @@
 - name: Add local public key for key-based SSH authentication
   authorized_key:
-    user: ""
+    user: "{{ username }}"
     state: present
-    key: ""
+    key: "{{ public_key }}"
 
 - name: Harden sshd configuration
   lineinfile:

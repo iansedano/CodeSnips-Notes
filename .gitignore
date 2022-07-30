@@ -14,7 +14,7 @@ __pycache__/
 # dotnet
 bin
 obj
-packages
+# packages
 *.suo
 *.user
 
