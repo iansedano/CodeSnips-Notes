@@ -1,5 +1,5 @@
 {
-	"font_size": 16,
+	"font_size": 14,
 	"save_on_focus_lost": true,
 	"hot_exit": "disabled",
 	"remember_workspace": false,
@@ -15,4 +15,8 @@
 		80
 	],
 	"preview_on_click": true,
+	"font_face": "Caskaydia Cove Nerd Font Complete Windows Compatible",
+	"word_wrap": "true",
+	"wrap_width": 80,
+	"wrap_width_style": "min",
 }

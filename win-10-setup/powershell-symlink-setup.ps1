@@ -14,14 +14,12 @@ $config_root = "$repo_root\$CONFIG_FOLDER_NAME"
 $CONFIGS = @(
   @("powershell-profile.ps1", $PROFILE),
   @("gitconfig", "$HOME\.gitconfig"),
-  @(
-    "windows-terminal.json",
-    "$ENV:LOCALAPPDATA\Microsoft\Windows Terminal\settings.json"
-  ),
-  @(
-    "sizer.xml",
-    "$ENV:APPDATA\Sizer4\sizer.xml"
-  )
+  @("windows-terminal.json",
+    "$ENV:LOCALAPPDATA\Microsoft\Windows Terminal\settings.json"),
+  @("sizer.xml",
+    "$ENV:APPDATA\Sizer4\sizer.xml"),
+  @("Preferences.sublime-settings",
+    "$ENV:APPDATA\Sublime Text\Packages\User\Preferences.sublime-settings")
 )
 
 foreach ($pair in $CONFIGS) {
