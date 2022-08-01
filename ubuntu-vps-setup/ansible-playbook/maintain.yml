@@ -1,0 +1,19 @@
+---
+# https://blog.ssdnodes.com/blog/secure-ansible-playbook/
+
+- name: Maintain Server
+
+  # Specify the hosts you want to target
+  hosts: zu1
+  remote_user: cuse
+  become: true
+
+  vars:
+    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
+    username: cuse
+    
+  roles:
+    - packages
+    - ssh
+    - iptables
+    - fail2ban

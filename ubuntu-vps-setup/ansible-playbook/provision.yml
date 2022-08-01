@@ -4,28 +4,31 @@
 - name: Provision a new server with hardened SSH and basic iptables.
 
   # Specify the hosts you want to target
-  hosts: HOSTNAME
-
-  # Specify the user you want to connect to the server.
-  # With a new installation, you will connect with `root`. If you want to
-  # re-run this playbook at a later date, you should change `remote_user` to
-  # the user you specified under `vars/username` below and uncomment the
-  # `become: true` line. You should then run the playbook using the
-  # `--ask-become-pass` flag, like so:
-  # `ansible-playbook -k provision.yml --ask-become-pass`.
+  hosts: zu1
   remote_user: root
-  # become: true
-
+  become: true
+  
+  vars_prompt:
+  
+  - name: username
+    prompt: enter user name
+    private: no
+    confirm: no
+  
+  - name: user_password
+    prompt: enter password
+    private: yes
+    encrypt: sha512_crypt
+    confirm: yes
+    salt_size: 7
+    
   vars:
-    username: USER
-    # Before first using the playbook, run the below command to create a hashed
-    # password that Ansible will assign to your new user.
-    # python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
-    password: PASSWORD
-    public_key: ~/.ssh/id_rsa.pub
-
+    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
+    UserKnownHostsFile: ""
+    
   roles:
     - user
     - packages
     - ssh
     - iptables
+    - fail2ban
