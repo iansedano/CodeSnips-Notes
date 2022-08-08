@@ -2,6 +2,7 @@
 <sizer>
 	<options showIconInTray="1" startInSafeMode="0" adjustOppositeEdge="0" tooltipOption="1" hotKey="90" hotKeyModifiers="10" hotKeyExtended="0" useDwmExtendedFrames="1"/>
 	<menu>
+		<resize description="RP Slides not presenter" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1924" height="1178" relocate="10" monitor="-2" top="80" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<resize description="DrawIO video" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="2282" height="1237" relocate="10" monitor="-2" top="62" left="1" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<group description="IDLE" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0">
 			<resize description="IDLE Shell no decorations" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1943" height="1157" relocate="10" monitor="-2" top="110" left="104" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>

@@ -1,6 +1,9 @@
 Set-Alias n notepad++
 Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
+Remove-Alias ls
+function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
+
 $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop |
     ConvertFrom-Json |
     ForEach-Object 'personal' |
@@ -11,6 +14,11 @@ $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction St
 $ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
 $ConfigFolder = (get-item $ProfileTarget).Directory
 $CodeSnipRepo = $ConfigFolder.Parent
+
+function dropdev(){Set-Location "$DropboxPath\dev"}
+function dev(){Set-Location "C:\dev"}
+function notebook(){Set-Location "$DropboxPath\0 Notebook"}
+function codesnip(){Set-Location $CodeSnipRepo}
 
 function git-recurse ($command)
 {
@@ -37,8 +45,4 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-function dropdev(){Set-Location "$DropboxPath\dev"}
-function dev(){Set-Location "C:\dev"}
 
-function notebook(){Set-Location "$DropboxPath\0 Notebook"}
-function codesnip(){Set-Location $CodeSnipRepo}
