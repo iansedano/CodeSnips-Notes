@@ -1,8 +1,4 @@
-Set-Alias n notepad++
-Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
-Remove-Alias ls
-function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
 
 $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop |
     ConvertFrom-Json |
@@ -15,6 +11,22 @@ $ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
 $ConfigFolder = (get-item $ProfileTarget).Directory
 $CodeSnipRepo = $ConfigFolder.Parent
 
+oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
+# Enable-PoshTransientPrompt
+Import-Module PSFzf
+Import-Module posh-git
+
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
+
+
+Set-Alias n notepad++
+Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
+
+Remove-Alias ls
+function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
 function dropdev(){Set-Location "$DropboxPath\dev"}
 function dev(){Set-Location "C:\dev"}
 function notebook(){Set-Location "$DropboxPath\0 Notebook"}
@@ -33,16 +45,17 @@ function git-recurse ($command)
 function grep {
   $input | out-string -stream | select-string $args
 }
-
-oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
-# Enable-PoshTransientPrompt
-
-Import-Module PSFzf
-Import-Module posh-git
-
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+function pyvenv(){
+  python -m venv venv
+  venv\Scripts\activate
 }
+function dropboxvenv() {
+  mkdir venv
+  "y" | dropboxignore
+  pyvenv
+}
+
+
+
 
 
