@@ -1,5 +1,7 @@
 # .bashrc
 
+echo "running .bashrc"
+
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
@@ -36,6 +38,8 @@ alias s="subl -n"
 alias codesnip='cd ~/dev/CodeSnips-Notes'
 alias notebook='cd ~/Dropbox/0\ Notebook/'
 alias dropboxstart="dropbox start > /dev/null 2>&1 &"
+alias dropboxrestart="dropbox stop; dropbox start"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
