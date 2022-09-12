@@ -3,7 +3,7 @@ scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
 scoop bucket add nerd-fonts
 scoop bucket add extras
 
-scoop install less cowsay
+scoop install less cowsay bat
 scoop install supabase
 scoop install CascadiaCode-NF
 scoop install gsudo
