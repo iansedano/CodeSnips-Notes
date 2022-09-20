@@ -13,8 +13,8 @@ archive_folder = Path(todo_folder, R"Archive")
 
 main_todo = Path(todo_folder, R"0 MAIN TODO.md")
 
-date_string = datetime.today().strftime('%Y%m%d')
-output_file_name = date_string + ".md"
+date_string = datetime.now().strftime(r'%Y%m%d')
+output_file_name = f"{date_string}.md"
 output_path = Path(archive_folder, output_file_name)
 
 copy(main_todo, output_path)

@@ -1,4 +1,3 @@
-```python
 from pathlib import Path
 
 folder_names_to_exclude = [
@@ -48,15 +47,12 @@ def convertSourceFilesToMarkdown(root_path):
 		elif path.is_file() and path.suffix in extensions_to_convert:
 			print("converting!")
 			content = path.read_text(encoding='utf-8')
-			new_content = ("```" + extensions_to_convert[path.suffix] + "\n" +
-				          content + "\n```")
+			new_content = f"```{extensions_to_convert[path.suffix]}" + "\n" + content + "\n```"
+
 			path.write_text(new_content, encoding='utf-8')
 			path.replace(path.with_suffix('.md'))
 		elif path.is_file() and path.suffix == ".txt":
 			path.replace(path.with_suffix('.md'))
 
-root_dir = " C:\\Dev\\CodeSnips-Notes"
 
-convertSourceFilesToMarkdown(root_dir)
-
-```
+convertSourceFilesToMarkdown(Path.cwd())
