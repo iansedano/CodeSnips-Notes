@@ -12,9 +12,10 @@ $ConfigFolder = (get-item $ProfileTarget).Directory
 $CodeSnipRepo = $ConfigFolder.Parent
 
 oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
-# Enable-PoshTransientPrompt
+
 Import-Module PSFzf
 Import-Module posh-git
+Import-Module ps-autoenv
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
