@@ -22,7 +22,7 @@ $action = {
     $time = Get-Date -Format 'HH:mm'
     Write-Host "Change detected $time"
     Copy-Item -Force -Path $args[1].FullPath -Destination $event.MessageData
-    make -f "C:\dev\rp\rp-slides\Makefile" html
+    make -C "C:\dev\rp\rp-slides\" html
 }
 
 $job = Register-ObjectEvent $watcher "Changed" -Action $action -MessageData $dest
