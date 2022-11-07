@@ -18,7 +18,7 @@
           "foreground": "black",
           "leading_diamond": "\ue0b6",
           "properties": {
-            "style": "full"
+            "style": "agnoster"
           },
           "style": "diamond",
           "template": " {{ .Path }} ",
@@ -52,28 +52,11 @@
         }
       ],
       "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "foreground": "#ffeb48",
-          "style": "plain",
-          "template": "PS> ",
-          "type": "text"
-        }
-      ],
-      "type": "prompt"
     }
   ],
   "console_title_template": "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}",
   "final_space": true,
   "osc99": true,
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "#A3A3A3",
-    "template": "{{ .Path }}>"
-  },
+
   "version": 2
 }

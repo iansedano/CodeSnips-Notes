@@ -57,7 +57,8 @@
         {
             "font": 
             {
-                "face": "CaskaydiaCove NF"
+                "face": "CaskaydiaCove NF",
+                "size": 10
             },
             "opacity": 100,
             "useAcrylic": false
