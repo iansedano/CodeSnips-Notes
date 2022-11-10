@@ -26,8 +26,8 @@ if (Test-Path($ChocolateyProfile)) {
 Set-Alias n notepad++
 Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
-Remove-Alias ls
-function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
+# Remove-Alias ls
+# function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
 function dropdev(){Set-Location "$DropboxPath\dev"}
 function dev(){Set-Location "C:\dev"}
 function notebook(){Set-Location "$DropboxPath\0 Notebook"}
