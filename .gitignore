@@ -8,6 +8,8 @@ __pycache__/
 *.o
 *.out
 
+venv
+
 .obsidian/workspace
 .obsidian/cache
 

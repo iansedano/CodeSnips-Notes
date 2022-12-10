@@ -2,10 +2,11 @@
 <sizer>
 	<options showIconInTray="1" startInSafeMode="0" adjustOppositeEdge="0" tooltipOption="1" hotKey="90" hotKeyModifiers="10" hotKeyExtended="0" useDwmExtendedFrames="1"/>
 	<menu>
+		<resize description="Win Terminal" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1932" height="1125" relocate="10" monitor="-2" top="123" left="106" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<resize description="RP Slides not presenter" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1924" height="1178" relocate="10" monitor="-2" top="80" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<resize description="DrawIO video" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="2282" height="1237" relocate="10" monitor="-2" top="62" left="1" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<group description="IDLE" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0">
-			<resize description="IDLE Shell no decorations" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1943" height="1157" relocate="10" monitor="-2" top="110" left="104" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+			<resize description="IDLE Shell no decorations" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1943" height="1158" relocate="10" monitor="-2" top="110" left="104" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="IDLE file right half" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="979" height="1153" relocate="10" monitor="-2" top="116" left="1069" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="IDLE Shell left half" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="967" height="1152" relocate="10" monitor="-2" top="116" left="103" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="IDLE file no decorations" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1941" height="1152" relocate="10" monitor="-2" top="110" left="108" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>

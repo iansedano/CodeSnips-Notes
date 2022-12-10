@@ -102,7 +102,7 @@
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
                 "font": 
                 {
-                    "size": 18
+                    "size": 24
                 },
                 "guid": "{2708bfb1-2fe1-4301-ba0c-dc233effac70}",
                 "hidden": false,

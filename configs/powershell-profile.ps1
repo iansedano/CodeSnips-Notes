@@ -49,6 +49,8 @@ function grep {
 function pyvenv(){
   python -m venv venv
   venv\Scripts\activate
+  echo ".\venv\Scripts\activate" > .autoenv
+  echo "deactivate" > .autoenv.leave
 }
 function dropboxvenv() {
   mkdir venv
@@ -56,6 +58,19 @@ function dropboxvenv() {
   pyvenv
 }
 
+# Blinking Cursor
+
+$BLINKING_STATE = $true
+
+function blink(){
+  if ( $global:BLINKING_STATE ){
+    echo "`e[6 q"
+    $global:BLINKING_STATE = $false
+  } else {
+    echo "`e[5 q"
+    $global:BLINKING_STATE = $true
+  }
+}
 
 ### `tree` source code (add to your `$PROFILE`, for instance; PSv4+):
 # https://stackoverflow.com/questions/43810090/
