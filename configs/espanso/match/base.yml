@@ -80,7 +80,14 @@ matches:
             - "Whatever you do, do it well."
 
   - trigger: ":mdlink"
-    replace: "[$|$]({{clipboard}})"
+    replace: "[{{last_item}}$|$]({{clipboard}})"
     vars:
       - name: "clipboard"
         type: "clipboard"
+      - name: "last_item"
+        type: script
+        params:
+          args:
+            - python
+            - "%CONFIG%/scripts/mdlink.py"
+            - "{{clipboard}}"
