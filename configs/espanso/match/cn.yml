@@ -1,0 +1,18 @@
+matches:
+
+
+  - trigger: "learnbydoing"
+    replace: "[LEARN_BY_DOING_GH]\n\n{{clipboard}}\n\n[/LEARN_BY_DOING_GH]"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+  
+  - trigger: "copyexercises"
+    replace: |
+      [LEARN_BY_DOING_GH]
+      
+      Copy the examples from this lesson and get them working in your labs. Make a few variations, too.
+      
+      [/LEARN_BY_DOING_GH]
+
+

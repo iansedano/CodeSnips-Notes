@@ -91,3 +91,24 @@ matches:
             - python
             - "%CONFIG%/scripts/mdlink.py"
             - "{{clipboard}}"
+  - trigger: ":pydebug"
+    replace: "{{debug}}"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: "debug"
+        type: script
+        params:
+          args:
+            - python
+            - "%CONFIG%/scripts/pydebug.py"
+            - "{{clipboard}}"
+  - trigger: ":launchapp"
+    replace: "{{script}}"
+    vars:
+      - name: "script"
+        type: script
+        params:
+          args:
+            - python
+            - "%CONFIG%/scripts/launch_app.py"
