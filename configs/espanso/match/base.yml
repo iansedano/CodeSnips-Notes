@@ -103,6 +103,8 @@ matches:
             - python
             - "%CONFIG%/scripts/pydebug.py"
             - "{{clipboard}}"
+  - trigger: ":ipydebug"
+    replace: "import IPython; IPython.embed()"
   - trigger: ":launchapp"
     replace: "{{script}}"
     vars:
