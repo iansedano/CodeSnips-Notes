@@ -6,7 +6,6 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
-  
   - trigger: "copyexercises"
     replace: |
       [LEARN_BY_DOING_GH]
@@ -14,5 +13,3 @@ matches:
       Copy the examples from this lesson and get them working in your labs. Make a few variations, too.
       
       [/LEARN_BY_DOING_GH]
-
-
