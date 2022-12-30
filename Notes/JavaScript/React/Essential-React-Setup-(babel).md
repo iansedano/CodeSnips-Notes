@@ -9,8 +9,9 @@ node_modules
 build
 ```
 
-These are the only two runtime dependencies needed
-```
+These are the only two runtime dependencies needed:
+
+```bash
 npm install react react-dom --save
 ```
 
