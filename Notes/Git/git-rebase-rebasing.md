@@ -24,7 +24,7 @@ I had a repo in which I wanted to add in a couple commits to the start of the ma
 
 ```
 1 - 2 - 3 - 4 - 5 - 6 - 7 (master)
-	  \ a - b (correction)
+	 \ a - b (correction)
 ```
 
 While usually rebasing is used to make the repo look like this:
@@ -79,7 +79,7 @@ but left me with this on the local repo:
 
 ```
 1 - 2 - 3 - 4 - 5 - 6 - 7 (origin/master)
-	  \ a - b - 3 - 4 - 5 - 6 - 7 (master)
+	 \ a - b - 3 - 4 - 5 - 6 - 7 (master)
 ```
 
 Which I don't understand. Being pressed for time I just cloned the remote repo again and deleted the local.
