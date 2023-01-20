@@ -1,4 +1,6 @@
-
+$ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
+$ConfigFolder = (get-item $ProfileTarget).Directory
+$CodeSnipRepo = $ConfigFolder.Parent
 
 $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction Stop |
     ConvertFrom-Json |
@@ -6,10 +8,6 @@ $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction St
     ForEach-Object 'path'
     
 & $Env:USERPROFILE\env.ps1
-
-$ProfileTarget = get-item $PROFILE | Select-Object -ExpandProperty target
-$ConfigFolder = (get-item $ProfileTarget).Directory
-$CodeSnipRepo = $ConfigFolder.Parent
 
 oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
 
@@ -26,12 +24,32 @@ if (Test-Path($ChocolateyProfile)) {
 Set-Alias n notepad++
 Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
-# Remove-Alias ls
-# function ls(){Get-ChildItem | Format-Wide -Autosize -Property Name}
+
+function lsc(){Get-ChildItem | Format-Wide -Autosize -Property Name}
 function dropdev(){Set-Location "$DropboxPath\dev"}
 function dev(){Set-Location "C:\dev"}
 function notebook(){Set-Location "$DropboxPath\0 Notebook"}
-function codesnip(){Set-Location $CodeSnipRepo}
+function codesnip(){
+  Set-Location $CodeSnipRepo
+  & code .
+}
+
+function pyvenv(){
+  python -m venv venv
+  venv\Scripts\activate
+
+}
+
+function pyautovenv{
+  Write-Output ".\venv\Scripts\activate" > .autoenv
+  Write-Output "deactivate" > .autoenv.leave
+}
+
+function dropboxvenv() {
+  mkdir venv
+  "y" | dropboxignore
+  pyvenv
+}
 
 function git-recurse ($command)
 {
@@ -46,17 +64,7 @@ function git-recurse ($command)
 function grep {
   $input | out-string -stream | select-string $args
 }
-function pyvenv(){
-  python -m venv venv
-  venv\Scripts\activate
-  echo ".\venv\Scripts\activate" > .autoenv
-  echo "deactivate" > .autoenv.leave
-}
-function dropboxvenv() {
-  mkdir venv
-  "y" | dropboxignore
-  pyvenv
-}
+
 
 # Blinking Cursor
 
@@ -72,9 +80,8 @@ function blink(){
   }
 }
 
-### `tree` source code (add to your `$PROFILE`, for instance; PSv4+):
-# https://stackoverflow.com/questions/43810090/
 
+# https://stackoverflow.com/questions/43810090/
 function tree {
   <#
   .SYNOPSIS
@@ -136,7 +143,7 @@ function tree {
     param(
       [parameter(Position=0)]
       [string] $Path = '.',
-      [string[]] $Exclude = (".vscode", "venv", ".pytest_cache", "__pycache__"),
+      [string[]] $Exclude,
       [ValidateRange(1, [int]::maxvalue)]
       [int] $IndentCount = 4,
       [switch] $Ascii,

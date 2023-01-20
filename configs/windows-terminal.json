@@ -16,6 +16,10 @@
             "keys": "ctrl+v"
         },
         {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -23,10 +27,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "ctrl+shift+e"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -58,7 +58,7 @@
             "font": 
             {
                 "face": "CaskaydiaCove NF",
-                "size": 10
+                "size": 8
             },
             "opacity": 100,
             "useAcrylic": false
