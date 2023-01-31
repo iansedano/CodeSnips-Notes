@@ -54,3 +54,4 @@ PATH="~/tools:$PATH"
 
 source ~/.myenv
 
+source ~/.sdkman/bin/sdkman-init.sh

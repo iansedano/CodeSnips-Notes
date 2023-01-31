@@ -15,8 +15,10 @@ scoop install fzf
 scoop install imagemagick
 scoop install zoom
 scoop install make
+scoop install jabba
 scoop install which
 scoop install aws-sam-cli
+scoop install manictime
 scoop install aws
 scoop install 7zip
 scoop install gitahead
