@@ -1,72 +1,99 @@
+# Powershell
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -Quiet"
+
 Invoke-RestMethod get.scoop.sh | Invoke-Expression
-scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
+scoop install git
+
 scoop bucket add nerd-fonts
 scoop bucket add extras
 scoop bucket add sysinternals
+scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
 
-scoop install less cowsay bat
-scoop install supabase
-scoop install CascadiaCode-NF
+# CLI Tools
+scoop install less
 scoop install gsudo
-scoop install gh
-scoop install pyenv
-scoop install nvm
-scoop install fzf
+scoop install cowsay
+scoop install bat
+scoop install ffmpeg
+scoop install supabase
 scoop install imagemagick
-scoop install zoom
-scoop install make
-scoop install jabba
-scoop install which
 scoop install aws-sam-cli
-scoop install manictime
 scoop install aws
-scoop install 7zip
-scoop install gitahead
 scoop install oh-my-posh
-scoop install RobotoMono-NF
 scoop install which
-scoop install windows-terminal
-scoop install zeal
-scoop install zoom
-scoop install extras/deluge
+scoop install make
+scoop install fzf
+scoop install gh
+
+# Fonts
+scoop install CascadiaCode-NF
+scoop install RobotoMono-NF
+
+# System
+scoop install 7zip
 scoop install vlc
-scoop install pwsh
-scoop install vscode
-scoop install git
-scoop install greenshot
-scoop install sharex
 scoop install everything
 scoop install keepass
 scoop install autohotkey
 scoop install foobar2000
+scoop install autoruns
+scoop install greenshot
 scoop install processhacker
 scoop install bulk-crap-uninstaller
+
+# Apps
+scoop install googlechrome
+scoop install zoom
+scoop install manictime
+scoop install gitahead
+scoop install zeal
+scoop install zoom
 scoop install winaero-tweaker
-scoop install mysql
-scoop install mysql-workbench
-scoop install ffmpeg
-scoop install sublime-text
-scoop install notepadplusplus
-scoop install idea
 scoop install fsresizer
 scoop install paint.net
 scoop install filezilla
+scoop install ripcord
+
+# Media
+scoop install deluge
+scoop install sharex
 scoop install draw.io
 scoop install licecap
 scoop install obs-studio
 scoop install krita
 scoop install inkscape
 scoop install scribus
-scoop install autoruns
 scoop install reaper
-scoop install docker
 scoop install freecad
 scoop install avidemux
-scoop install ripcord
-scoop install googlechrome
+
+# Editors
+scoop install idea
+scoop install sublime-text
+scoop install notepadplusplus
+scoop install vscode
+scoop install windows-terminal
+
+# Dev
+scoop install docker
+scoop install mysql
+scoop install mysql-workbench
+
+# Python
+scoop install pyenv
 
 pyenv update
 pyenv install --quiet 3.11.1
 
+# Node
+scoop install nvm
+
 nvm install lts
+
+# Java
+scoop install jabba
+
+
+
+
 
