@@ -15,4 +15,3 @@
 	directory = *
 [core]
 	autocrlf = true
-	excludesFile = C:\\Users\\PC\\.gitignore

@@ -1,5 +1,5 @@
 # Powershell
-iex "& { $(irm https://aka.ms/install-powershell.ps1) } -Quiet"
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -Quiet -AddToPath"
 
 Invoke-RestMethod get.scoop.sh | Invoke-Expression
 scoop install git

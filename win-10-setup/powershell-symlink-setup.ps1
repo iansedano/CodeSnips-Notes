@@ -13,7 +13,7 @@ $config_root = "$repo_root\$CONFIG_FOLDER_NAME"
 
 $CONFIGS = @(
   @("powershell-profile.ps1", $PROFILE),
-  @("gitconfig", "$HOME\.gitconfig"),
+  @("gitconfigwin", "$HOME\.gitconfig"),
   @("windows-terminal.json",
     "$ENV:LOCALAPPDATA\Microsoft\Windows Terminal\settings.json"),
   @("sizer.xml",
