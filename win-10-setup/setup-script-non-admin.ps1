@@ -1,5 +1,5 @@
 # Powershell
-iex "& { $(irm https://aka.ms/install-powershell.ps1) } -Quiet -AddToPath"
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
 
 Invoke-RestMethod get.scoop.sh | Invoke-Expression
 scoop install git
@@ -40,6 +40,7 @@ scoop install autoruns
 scoop install greenshot
 scoop install processhacker
 scoop install bulk-crap-uninstaller
+scoop install espanso
 
 # Apps
 scoop install googlechrome
@@ -67,13 +68,6 @@ scoop install reaper
 scoop install freecad
 scoop install avidemux
 
-# Editors
-scoop install idea
-scoop install sublime-text
-scoop install notepadplusplus
-scoop install vscode
-scoop install windows-terminal
-
 # Dev
 scoop install docker
 scoop install mysql
@@ -91,9 +85,25 @@ scoop install nvm
 nvm install lts
 
 # Java
-scoop install jabba
+Invoke-Expression (
+  Invoke-WebRequest https://github.com/Jabba-Team/jabba/raw/main/install.ps1 -UseBasicParsing
+).Content
+
+scoop install gradle
+scoop install maven
 
 
+# Editors
+scoop install idea
+scoop install sublime-text
+scoop install notepadplusplus
+scoop install vscode
+scoop install windows-terminal
 
 
+# SSH
+ssh-keygen -C iansedano@gmail.com -P '""' -f "$HOME/.ssh/id_rsa"
+Get-Content $HOME/.ssh/id_rsa.pub | clip
 
+Write-Output "Your SSH key has been copied to the clipboard"
+Write-Output "Remember to run scoop install 'extras/vcredist2022' for Windows terminal and espanso if needed"

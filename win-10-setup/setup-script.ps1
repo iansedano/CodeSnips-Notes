@@ -6,7 +6,6 @@ choco feature enable -n allowGlobalConfirmation
 
 Write-Output "Installing Chocolatey Packages"
 choco install veracrypt
-choco install espanso
 choco install sizer
 choco install steam-client
 choco install pdfxchangeeditor --version 7.0.328.2 --package-parameters="/NoDesktopShortcuts /NoViewInBrowsers"
@@ -31,9 +30,3 @@ foreach ($level in "Machine", "User") {
     } | Set-Content -Path { "Env:$($_.Name)" }
 }
 
-
-
-ssh-keygen -C iansedano@gmail.com -P '""' -f "$HOME/.ssh/id_rsa"
-Get-Content $HOME/.ssh/id_rsa.pub | clip
-
-Write-Output "Your SSH key has been copied to the clipboard"
