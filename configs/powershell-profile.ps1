@@ -69,15 +69,17 @@ function grep {
 
 # Blinking Cursor
 
-$BLINKING_STATE = $true
+$RECORDING = $true
 
-function blink(){
-  if ( $global:BLINKING_STATE ){
+function video(){
+  if ( $global:RECORDING ){
+    Set-PSReadLineOption -PredictionSource None
     echo "`e[6 q"
-    $global:BLINKING_STATE = $false
+    $global:RECORDING = $false
   } else {
     echo "`e[5 q"
-    $global:BLINKING_STATE = $true
+    Set-PSReadLineOption -PredictionSource History
+    $global:RECORDING = $true
   }
 }
 

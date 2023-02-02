@@ -2,8 +2,8 @@
 <sizer>
 	<options showIconInTray="1" startInSafeMode="0" adjustOppositeEdge="0" tooltipOption="1" hotKey="90" hotKeyModifiers="10" hotKeyExtended="0" useDwmExtendedFrames="1"/>
 	<menu>
-		<resize description="Win Terminal" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1932" height="1125" relocate="10" monitor="-2" top="123" left="106" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<resize description="RP Slides not presenter" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1924" height="1178" relocate="10" monitor="-2" top="80" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+		<resize description="Win Terminal" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1932" height="1124" relocate="10" monitor="-2" top="118" left="104" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<resize description="DrawIO video" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="2282" height="1237" relocate="10" monitor="-2" top="62" left="1" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		<group description="IDLE" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0">
 			<resize description="IDLE Shell no decorations" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1943" height="1158" relocate="10" monitor="-2" top="110" left="104" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
@@ -14,14 +14,16 @@
 		</group>
 		<group description="Chrome" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0">
 			<resize description="Chrome" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1926" height="1126" relocate="10" monitor="-2" top="120" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
-			<resize description="right side by side with vscode" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="593" height="1130" relocate="10" monitor="-2" top="120" left="1435" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+			<resize description="Full" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1926" height="1128" relocate="10" monitor="-2" top="118" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+			<resize description="1/4 right" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="593" height="1130" relocate="10" monitor="-2" top="120" left="1435" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+			<resize description="1/2 right" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1057" height="1130" relocate="10" monitor="-2" top="120" left="971" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		</group>
 		<group description="VS Code" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0">
 			<resize description="no header" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1922" height="1128" relocate="10" monitor="-2" top="118" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="VS Code no header or tabs" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1922" height="1141" relocate="10" monitor="-2" top="105" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="VS Code Zoom Level 4 no tabs no header" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1922" height="1214" relocate="10" monitor="-2" top="32" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 			<resize description="All Window" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1921" height="1081" relocate="10" monitor="-2" top="159" left="109" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
-			<resize description="VS Code | Chrome" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1330" height="1151" relocate="10" monitor="-2" top="101" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
+			<resize description="Zoom 0 3/4 right" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1331" height="1146" relocate="10" monitor="-2" top="97" left="106" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>
 		</group>
 		<resize description="OBS Positioning" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1920" height="1080" relocate="10" monitor="-2" top="160" left="109" noresize="0" relocateCoords="0" allowOutsideBounds="0"/>
 		<resize description="ConEmu Console" hotKey="0" hotKeyModifiers="0" hotKeyExtended="0" width="1924" height="1110" relocate="10" monitor="-2" top="132" left="107" noresize="0" relocateCoords="1" allowOutsideBounds="0"/>

@@ -67,6 +67,7 @@ scoop install scribus
 scoop install reaper
 scoop install freecad
 scoop install avidemux
+scoop install gink
 
 # Dev
 scoop install docker
