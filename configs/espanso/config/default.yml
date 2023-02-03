@@ -2,7 +2,7 @@
 
 search_shortcut: ALT+SPACE
 
-toggle_key: ALT
+toggle_key: OFF
 backend: Auto
 auto_restart: true
 

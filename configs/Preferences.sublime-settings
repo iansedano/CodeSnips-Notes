@@ -15,8 +15,11 @@
 		80
 	],
 	"preview_on_click": true,
-	"font_face": "Caskaydia Cove Nerd Font Complete Windows Compatible",
 	"word_wrap": "true",
 	"wrap_width": 80,
 	"wrap_width_style": "min",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
 }
