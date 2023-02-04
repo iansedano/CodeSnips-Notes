@@ -109,6 +109,7 @@ kamoso
 simplescreenrecorder
 obs-studio
 screenkey
+boxes
 ```
 
 For waiting for DB to download
@@ -178,3 +179,21 @@ sudo dnf install gh
 sudo dnf install -y libreoffice obs-studio inkscape gimp 
 
 ```
+
+
+drawio
+zoom
+gitahead
+intellij idea
+rofi
+spotify
+manic time
+espanso
+vlc
+zeal
+nvm
+jabba
+autoenv?
+pyenv
+docker
+flameshot
