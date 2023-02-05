@@ -41,6 +41,7 @@ scoop install greenshot
 scoop install processhacker
 scoop install bulk-crap-uninstaller
 scoop install espanso
+scoop install windirstat
 
 # Apps
 scoop install googlechrome
