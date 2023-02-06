@@ -68,7 +68,7 @@ scoop install inkscape
 scoop install scribus
 scoop install reaper
 scoop install freecad
-scoop install avidemux
+# scoop install avidemux # https://github.com/ScoopInstaller/Extras/issues/9689 so installing with choco for now
 scoop install gink
 scoop install gimp
 
