@@ -15,11 +15,7 @@
 		80
 	],
 	"preview_on_click": true,
-	"word_wrap": "true",
+	"word_wrap": "false",
 	"wrap_width": 80,
 	"wrap_width_style": "min",
-	"ignored_packages":
-	[
-		"Vintage",
-	],
 }

@@ -24,6 +24,7 @@ scoop install which
 scoop install make
 scoop install fzf
 scoop install gh
+scoop install scoop-search
 
 # Fonts
 scoop install CascadiaCode-NF
@@ -69,6 +70,7 @@ scoop install reaper
 scoop install freecad
 scoop install avidemux
 scoop install gink
+scoop install gimp
 
 # Dev
 scoop install docker
@@ -99,6 +101,7 @@ scoop install maven
 scoop install idea
 scoop install sublime-text
 scoop install notepadplusplus
+scoop install notepad3
 scoop install vscode
 scoop install windows-terminal
 

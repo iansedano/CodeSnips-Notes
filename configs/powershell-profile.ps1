@@ -15,6 +15,8 @@ Import-Module PSFzf
 Import-Module posh-git
 Import-Module ps-autoenv
 
+Invoke-Expression (&scoop-search --hook)
+
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
