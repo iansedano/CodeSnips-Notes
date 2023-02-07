@@ -104,6 +104,7 @@ scoop install notepadplusplus
 scoop install notepad3
 scoop install vscode
 scoop install windows-terminal
+scoop install neovim
 
 
 # SSH
