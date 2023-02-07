@@ -43,6 +43,7 @@ scoop install processhacker
 scoop install bulk-crap-uninstaller
 scoop install espanso
 scoop install windirstat
+scoop install extras/bulk-rename-utility
 
 # Apps
 scoop install googlechrome
