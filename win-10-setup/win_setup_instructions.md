@@ -4,11 +4,9 @@ Do Windows Updates
 
 ```powershell
 PS> # to save content of a page to a file
-PS> iwr -useb bit.ly/3NEMheH | Add-Content test.txt
+PS> iwr -useb "https://raw.githubusercontent.com/iansedano/CodeSnips-Notes/master/win-10-setup/setup-script-non-admin.ps1" | Add-Content test.txt
 PS> # to run content of an online script
-PS> iwr -useb bit.ly/3NEMheH | iex
-
-iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+PS> iwr -useb "https://raw.githubusercontent.com/iansedano/CodeSnips-Notes/master/win-10-setup/setup-script-non-admin.ps1" | iex
 ```
 
 ## Explorer Settings
@@ -19,31 +17,33 @@ Explorer > This PC > File > Change Folder and Search Options > View
 - Show hidden files, folders and drives
 - Hide extensions for known file types
 
-
 ```powershell
-PS> git@github.com:iansedano/CodeSnips-Notes.git
+PS> gh auth login
+PS> gh repo clone CodeSnips-Notes
+PS> $PROFILE
+PS> $RegistryPath = "HKCU:\Control Panel\Desktop"
+PS> $Name = "ActiveWndTrkTimeout"
+PS> $Val = "1000"
+PS> New-ItemProperty -Path $RegistryPath -Name $Name -Value $Val -PropertyType DWORD -Force
 ```
 
-gh auth login
-gh repo clone CodeSnips-Notes
-
-to get powershell profile
-
-```ps
-$PROFILE
-```
-
-Registry entry for time to activate windows
+## MySQL
 
 ```
-Computer\HKEY_CURRENT_USER\Control Panel\Desktop\ActiveWndTrkTimeout
+Start-process mysqld -windowstyle hidden
+get-process "mysql*"
+Get-Process -Name "mysql*" | ForEach-Object { Stop-Process $_.Id }
 ```
 
-Set to 1000
+or
 
-```pwsh
-$RegistryPath = "HKCU:\Control Panel\Desktop"
-$Name = "ActiveWndTrkTimeout"
-$Val = "1000"
-New-ItemProperty -Path $RegistryPath -Name $Name -Value $Val -PropertyType DWORD -Force
+```
+net start mysql
+```
+
+```
+PS> mysql.exe -u root -p
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+mysql> FLUSH PRIVILEGES;
+mysql> EXIT;
 ```
