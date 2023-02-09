@@ -50,7 +50,7 @@ function pyautovenv{
 
 function dropboxvenv() {
   mkdir venv
-  "y" | dropboxignore
+  "y" | dbignore
   pyvenv
 }
 
