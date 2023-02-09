@@ -1,52 +1,13 @@
-First steps:
 
-```bash
 dnf upgrade
-```
+dnf install -y ssh
+dnf install -y git
+dnf install -y curl
+dnf install -y vim
+dnf install -y terminator # ??
 
-Check ssh `ssh` or `sudo dnf install ssh`
-Install git `sudo dnf install git`
-Install `curl vim terminator`
+git clone git@github.com:rupa/z.git ~/tools/z # tools?
 
-Make ssh keys:
-
-```bash
-ssh-keygen -C iansedano@gmail.com
-cat ~/.ssh/id_rsa.pub
-# Add key to GH account
-ssh -T git@github.com # check connection
-git config --global user.email "iansedano@gmail.com"
-git config --global user.name "Ian"
-```
-
-from home
-
-```bash
-mkdir dev
-git clone git@github.com:iansedano/CodeSnips-Notes.git
-```
-
-If want to set hostname and timezone:
-
-```bash
-hostnamectl set-hostname $new-hostname
-timedatectl list-timezones
-timedatectl set-timezone Europe/Madrid
-```
-
-`reboot`
-
-```
-mkdir tools
-cd tools
-git clone git@github.com:rupa/z.git
-```
-
-add `. ~/tools/z/z.sh` to .bashrc
-
-### Add repos to RPM
-
-```bash
 rpmdomain="https://mirrors.rpmfusion.org/"
 freerepo="free/fedora/rpmfusion-free-release-$(rpm -E %fedora)"
 nonfreerepo="nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora)"
@@ -54,26 +15,18 @@ nonfreerepo="nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora)"
 freeurl="$rpmdomain$freerepo.noarch.rpm"
 nonfreeurl="$rpmdomain$nonfreerepo.noarch.rpm"
 
-sudo dnf install -y $freeurl
-sudo dnf install -y $nonfreeurl
-
-sudo dnf install -y fedora-workstation-repositories
-sudo dnf config-manager --set-enabled google-chrome
+dnf install -y $freeurl
+dnf install -y $nonfreeurl
+dnf install -y fedora-workstation-repositories
+dnf config-manager --set-enabled google-chrome
 
 dnf upgrade
-```
 
-install:
+dnf install -y google-chrome-stable
+dnf install -y ripcord
+dnf install -y keepassx.x86_64
+dnf install -y nautilus-dropbox
 
-```
-google-chrome-stable
-ripcord
-keepassx.x86_64
-nautilus-dropbox
-```
-
-run google chrome and set as default
-run dropbox from start menu and sign in
 
 Go to /etc/dnf/dnf.conf and add
 max_parallel_downloads=10
