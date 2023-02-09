@@ -47,3 +47,17 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 mysql> FLUSH PRIVILEGES;
 mysql> EXIT;
 ```
+
+## Neovim
+
+```pwsh
+sudo new-item -ItemType SymbolicLink `
+-Path "C:\Users\ianse\AppData\Local\nvim\init.vim" `
+-Target "C:\dev\CodeSnips-Notes\configs\nvim-init.vim"
+```
+
+Then from within neovim:
+
+```
+:PlugInstall
+```
