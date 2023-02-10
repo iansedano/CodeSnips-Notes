@@ -1,10 +1,29 @@
+ensure_conf () {
+  CONF=$1
+  FILE=$2
+  TEXT=$3
+  
+  if test -f $FILE
+  then
+    if grep -q $TEXT $FILE
+    then
+      sed -i 's/.*${TEXT}.*/${CONF}'
+    else
+      echo $CONF >> $FILE 
+    fi
+  else
+    echo $CONF > $FILE 
+  fi
+}
+
+ensure_conf "max_parallel_downloads=10" /etc/dnf/dnf.configs "max_parallel_downloads"
+ensure_conf "fastestmirror=True" /etc/dnf/dnf.configs "max_parallel_downloads" 
 
 dnf upgrade
 dnf install -y ssh
 dnf install -y git
 dnf install -y curl
-dnf install -y vim
-dnf install -y terminator # ??
+
 
 git clone git@github.com:rupa/z.git ~/tools/z # tools?
 
@@ -27,127 +46,56 @@ dnf install -y ripcord
 dnf install -y keepassx.x86_64
 dnf install -y nautilus-dropbox
 
+dnf upgrade
 
-Go to /etc/dnf/dnf.conf and add
-max_parallel_downloads=10
-fastestmirror=True
-  
+dnf install -y vim
+dnf install -y terminator # ??
+dnf install -y gh # then login
 
-```
-reboot
-```
-
-https://code.visualstudio.com/docs/setup/linux
-https://www.sublimetext.com/docs/linux_repositories.html
-https://github.com/cli/cli/blob/trunk/docs/install_linux.md
-
-```
-sudo dnf upgrade
-```
-
-Install:
-
-```bash
-gh # then login
-sublime-text
-code
-pinta
-ksnip
-gcc-c++.x86_64
-peek
-feh
-neovim
-gnome-boxes
-kamoso
-simplescreenrecorder
-obs-studio
-screenkey
-boxes
-```
-
-For waiting for DB to download
-
-```bash
-while true; do dropbox status; sleep 10; done
-# Ctrl + C to exit
-```
-
-vscode settings
-
-to edit the openbox theme (for example for window border handle)
-
-```
-usr/share/themes/...
-```
-
-Keyboard Shortcuts
-
-```
-~/.config/openbox/lxde-rc.xml
-```
+dnf install -y sublime-text
+dnf install -y code
+dnf install -y pinta
+dnf install -y ksnip
+dnf install -y gcc-c++.x86_64
+dnf install -y peek
+dnf install -y feh
+dnf install -y neovim
+dnf install -y gnome-boxes
+dnf install -y kamoso
+dnf install -y simplescreenrecorder
+dnf install -y obs-studio
+dnf install -y screenkey
+dnf install -y boxes # ?
 
 
-For touchpad tap to click:
-  
-https://wiki.archlinux.org/index.php/Libinput#Touchpad_configuration
+dnf install -y libreoffice
+dnf install -y obs-studio
+dnf install -y inkscape
+dnf install -y gimp
+dnf install -y drawio
+dnf install -y zoom
+dnf install -y gitahead
+dnf install -y intellij idea
+dnf install -y rofi
+dnf install -y spotify
 
-create:  
-
-    /etc/X11/xorg.conf.d/30-touchpad.conf  
-
-content:  
-
-    Section "InputClass"   
-      Identifier "touchpad"  
-      Driver "libinput"  
-      MatchIsTouchpad "on"  
-      Option "Tapping" "on"  
-    EndSection
-
-and finally  
-
-    reboot
-
-
-git@github.com:rupa/z.git
-git@github.com:iansedano/CodeSnips-Notes.git
+dnf install -y espanso
+dnf install -y vlc
+dnf install -y zeal
+dnf install -y nvm
+dnf install -y jabba
+dnf install -y pyenv
+dnf install -y docker
+dnf install -y flameshot
+dnf install -y switchdesk
 
 
-create symbolic links (from obsolete linux configs repo)
-```
-ln -sf source target
-```
-link symbolic force(replace target) source(file in repo) target(home folder)
+# manic time
+dnf install -y autoenv # ?
 
-
-edit `/etc/dnf/dnf.conf` and add `fastestmirror=true` `max_parallel_downloads=10`
-
-
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh
-
-## Extra Programs
-
-```shell
-sudo dnf install -y libreoffice obs-studio inkscape gimp 
-
-```
-
-
-drawio
-zoom
-gitahead
-intellij idea
-rofi
-spotify
-manic time
-espanso
-vlc
-zeal
-nvm
-jabba
-autoenv?
-pyenv
-docker
-flameshot
-switchdesk
+packages=(
+  package1
+  package2
+  package3
+  package4
+)
