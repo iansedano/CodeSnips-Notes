@@ -29,12 +29,12 @@ timedatectl set-timezone Europe/Madrid
 gh
 https://github.com/cli/cli/blob/trunk/docs/install_linux.md (should be installable from community repo now)
 
-
 manic time
 autoenv
 docker...podmad?
+
 gitahead
-"https://github.com/gitahead/gitahead/releases/download/v2.6.3/GitAhead-2.6.3.sh"
+curl -o- https://github.com/gitahead/gitahead/releases/download/v2.6.3/GitAhead-2.6.3.sh | bash
 
 For waiting for DB to download
 

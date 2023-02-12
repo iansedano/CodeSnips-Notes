@@ -113,7 +113,15 @@ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
 flatpak install flathub com.jgraph.drawio.desktop
 
 # Espanso
-wget -O /opt/espanso/Espanso.AppImage 'https://github.com/federico-terzi/espanso/releases/download/v2.1.8/Espanso-X11.AppImage'
+ESPANSO_URL='https://github.com/federico-terzi/espanso/releases/download/v2.1.8/Espanso-X11.AppImage'
+wget -O /opt/espanso/Espanso.AppImage $ESPANSO_URL
 chmod u+x /opt/espanso/Espanso.AppImage
 /opt/espanso/Espanso.AppImage env-path register
 espanso service register
+
+# Reaper (check version)
+# Downloads script and installs to /opt
+mkdir temp
+wget https://www.reaper.fm/files/6.x/reaper675_linux_x86_64.tar.xz -P temp
+tar xvf temp/reaper675_linux_x86_64.tar.xz -C temp
+./reaper675_linux_x86_64/install-reaper.sh
