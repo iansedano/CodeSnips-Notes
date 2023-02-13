@@ -24,10 +24,8 @@ if (Test-Path($ChocolateyProfile)) {
 
 if (Test-Path "$Env:USERPROFILE\.jabba\jabba.ps1") { . "$Env:USERPROFILE\.jabba\jabba.ps1" }
 
-Set-Alias n notepad++
-Set-Alias subl "$Env:PROGRAMFILES\Sublime Text\subl.exe"
 
-
+function iidea () {start-process idea -argumentlist "." -windowstyle hidden}
 function lsc(){Get-ChildItem | Format-Wide -Autosize -Property Name}
 function dropdev(){Set-Location "$DropboxPath\dev"}
 function dev(){Set-Location "C:\dev"}

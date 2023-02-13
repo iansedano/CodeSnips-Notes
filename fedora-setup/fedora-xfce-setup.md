@@ -5,6 +5,8 @@ mkdir dev
 git clone git@github.com:iansedano/CodeSnips-Notes.git
 ```
 
+download dropbox rpm from site and install manual
+
 Make links to configs
 
 Make ssh keys:

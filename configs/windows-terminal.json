@@ -16,6 +16,15 @@
             "keys": "ctrl+v"
         },
         {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+shift+o"
+        },
+        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
@@ -36,15 +45,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down",
-                "splitMode": "duplicate"
-            },
-            "keys": "ctrl+shift+o"
         }
     ],
     "copyFormatting": "none",
@@ -58,7 +58,7 @@
             "font": 
             {
                 "face": "CaskaydiaCove NF",
-                "size": 8
+                "size": 8.0
             },
             "opacity": 100,
             "useAcrylic": false
@@ -102,7 +102,7 @@
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
                 "font": 
                 {
-                    "size": 24
+                    "size": 24.0
                 },
                 "guid": "{2708bfb1-2fe1-4301-ba0c-dc233effac70}",
                 "hidden": false,
@@ -113,6 +113,12 @@
                 "scrollbarState": "hidden",
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": false
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
             }
         ]
     },
@@ -303,6 +309,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -325,5 +354,6 @@
             "white": "#C0C0C0",
             "yellow": "#808000"
         }
-    ]
+    ],
+    "themes": []
 }
