@@ -10,7 +10,7 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="16"/>
-      <property name="size" type="uint" value="24"/>
+      <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="2"/>
         <value type="int" value="3"/>
@@ -26,16 +26,11 @@
         <value type="int" value="14"/>
       </property>
       <property name="mode" type="uint" value="0"/>
-      <property name="nrows" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-2" type="string" value="tasklist">
-      <property name="grouping" type="uint" value="0"/>
-      <property name="show-labels" type="bool" value="true"/>
-      <property name="sort-order" type="uint" value="0"/>
-      <property name="window-scrolling" type="bool" value="false"/>
-      <property name="include-all-monitors" type="bool" value="false"/>
+      <property name="grouping" type="uint" value="1"/>
     </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -43,7 +38,6 @@
     </property>
     <property name="plugin-4" type="string" value="pager">
       <property name="rows" type="uint" value="3"/>
-      <property name="miniature-view" type="bool" value="true"/>
     </property>
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -51,21 +45,24 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="xfce terminal"/>
-        <value type="string" value="blueberry-tray.py"/>
+        <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (63%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (44%)"/>
         <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="reminders"/>
+        <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (100%)"/>
+        <value type="string" value="seapplet"/>
       </property>
       <property name="known-items" type="array">
-        <value type="string" value="flameshot"/>
-        <value type="string" value="dropbox-client-2960"/>
+        <value type="string" value="dropbox-client-1438"/>
+        <value type="string" value="dropbox-client-2762"/>
+        <value type="string" value="vlc"/>
         <value type="string" value="dnfdragora-updater"/>
-        <value type="string" value="manictime_indicator"/>
+        <value type="string" value="blueman"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="vlc"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
