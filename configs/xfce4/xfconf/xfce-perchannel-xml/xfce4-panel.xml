@@ -45,6 +45,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (76%)"/>
         <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (63%)"/>
         <value type="string" value="wi-fi network connection “miwifi_2g_jrhj” active: miwifi_2g_jrhj (44%)"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -52,6 +53,7 @@
         <value type="string" value="seapplet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="dropbox-client-1505"/>
         <value type="string" value="dropbox-client-1438"/>
         <value type="string" value="dropbox-client-2762"/>
         <value type="string" value="vlc"/>

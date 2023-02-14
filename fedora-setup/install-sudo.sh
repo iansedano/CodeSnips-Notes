@@ -54,6 +54,7 @@ packages=(
   rofi
   gh
   bat
+  dos2unix
   # Editors
   neovim
   libreoffice
