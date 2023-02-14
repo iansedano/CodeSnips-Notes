@@ -15,3 +15,5 @@
 	directory = *
 [core]
 	autocrlf = true
+[init]
+	defaultBranch = main
