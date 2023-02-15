@@ -61,3 +61,9 @@ Then from within neovim:
 ```
 :PlugInstall
 ```
+
+
+## Syncthing
+
+Set it up!
+Check out how to create tasks with task scheduler programatically...

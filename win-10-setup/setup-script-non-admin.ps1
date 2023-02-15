@@ -7,7 +7,6 @@ scoop install git
 scoop bucket add nerd-fonts
 scoop bucket add extras
 scoop bucket add sysinternals
-scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
 
 # CLI Tools
 scoop install less
@@ -15,7 +14,6 @@ scoop install gsudo
 scoop install cowsay
 scoop install bat
 scoop install ffmpeg
-scoop install supabase
 scoop install imagemagick
 scoop install aws-sam-cli
 scoop install aws
@@ -44,6 +42,7 @@ scoop install bulk-crap-uninstaller
 scoop install espanso
 scoop install windirstat
 scoop install extras/bulk-rename-utility
+scoop install syncthing
 
 # Apps
 scoop install googlechrome
@@ -78,6 +77,9 @@ scoop install docker
 scoop install mysql
 scoop install mysql-workbench
 
+scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
+scoop install supabase
+
 # Python
 scoop install pyenv
 
@@ -96,6 +98,9 @@ Invoke-Expression (
 
 scoop install gradle
 scoop install maven
+
+scoop bucket add maciejwalkowiak https://github.com/maciejwalkowiak/scoop-just.git
+scoop install just
 
 
 # Editors
