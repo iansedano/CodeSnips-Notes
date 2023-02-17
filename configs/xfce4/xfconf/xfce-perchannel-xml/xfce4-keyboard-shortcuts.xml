@@ -173,17 +173,14 @@
       <property name="&lt;Alt&gt;F6" type="string" value="stick_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_5" type="string" value="move_window_workspace_5_key"/>
       <property name="&lt;Primary&gt;F11" type="string" value="workspace_11_key"/>
-      <property name="&lt;Alt&gt;F10" type="string" value="maximize_window_key"/>
       <property name="&lt;Alt&gt;Delete" type="string" value="del_workspace_key"/>
       <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;d" type="string" value="show_desktop_key"/>
       <property name="&lt;Primary&gt;F4" type="string" value="workspace_4_key"/>
       <property name="&lt;Super&gt;KP_Page_Up" type="string" value="tile_up_right_key"/>
-      <property name="&lt;Alt&gt;F7" type="string" value="move_window_key"/>
       <property name="Up" type="string" value="up_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_6" type="string" value="move_window_workspace_6_key"/>
       <property name="&lt;Alt&gt;F11" type="string" value="fullscreen_key"/>
-      <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
       <property name="&lt;Super&gt;KP_Home" type="string" value="tile_up_left_key"/>
       <property name="Escape" type="string" value="cancel_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_1" type="string" value="move_window_workspace_1_key"/>
@@ -195,11 +192,9 @@
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
       <property name="&lt;Primary&gt;F5" type="string" value="workspace_5_key"/>
-      <property name="&lt;Alt&gt;F8" type="string" value="resize_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_7" type="string" value="move_window_workspace_7_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_2" type="string" value="move_window_workspace_2_key"/>
       <property name="&lt;Super&gt;KP_End" type="string" value="tile_down_left_key"/>
-      <property name="&lt;Alt&gt;F9" type="string" value="hide_window_key"/>
       <property name="&lt;Primary&gt;F7" type="string" value="workspace_7_key"/>
       <property name="&lt;Primary&gt;F10" type="string" value="workspace_10_key"/>
       <property name="Left" type="string" value="left_key"/>
@@ -215,6 +210,7 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Super&gt;Down" type="string" value="move_window_down_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Super&gt;Left" type="string" value="move_window_left_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="move_window_right_workspace_key"/>
+      <property name="&lt;Super&gt;Page_Up" type="string" value="maximize_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">

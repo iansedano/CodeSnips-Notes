@@ -13,26 +13,26 @@ git clone git@github.com:rupa/z.git /opt/z
 
 # pyenv
 
-curl https://pyenv.run | bash
+curl https://pyenv.run | bash  # may need restart after this...or sourcing .bashrc
 
 pyenv update
 pyenv rehash
 LATEST_PYTHON=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1)
 pyenv install $LATEST_PYTHON
 
-
 # Jabba
-export JABBA_VERSION="0.12.0" # do I need this?
 curl -sL https://github.com/Jabba-Team/jabba/raw/main/install.sh | bash && . ~/.jabba/jabba.sh
 
 # NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash # needs restart
+nvm install --lts
 
-# Espanso (didn't work)
+# Espanso (didn't work if not in ~/opt)
 ESPANSO_URL='https://github.com/federico-terzi/espanso/releases/download/v2.1.8/Espanso-X11.AppImage'
-wget -O /opt/espanso/Espanso.AppImage $ESPANSO_URL
-chmod u+x /opt/espanso/Espanso.AppImage
-/opt/espanso/Espanso.AppImage env-path register
+mkdir ~/opt
+wget -O ~/opt/Espanso.AppImage $ESPANSO_URL
+chmod u+x ~/opt/Espanso.AppImage
+sudo ~/opt/Espanso.AppImage env-path register
 espanso service register
 
 # Reaper (check version)
@@ -42,7 +42,8 @@ wget https://www.reaper.fm/files/6.x/reaper675_linux_x86_64.tar.xz -P temp
 tar xvf temp/reaper675_linux_x86_64.tar.xz -C temp
 ./temp/reaper_linux_x86_64/install-reaper.sh
 
-# Manictime (check version)
+# Manictime (check version) (didn't work from command line... maybe just do manually)
+sudo dnf install libX11-devel libappindicator-gtk3 libXScrnSaver gssntlmssp openssl-libs krb5-libs
 wget https://cdn.manictime.com/setup/linux/v1_4_3_0/ManicTime-arch.tar.gz -P temp
 tar xvf temp/ManicTime-arch.tar.gz -C temp
-./temp/manictime/manictime # does not support root install
+./temp/manictime/manictime # does not support root install (casing important)
