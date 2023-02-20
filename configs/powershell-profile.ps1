@@ -14,7 +14,6 @@ function transcript(){
   Start-DropboxTranscript("$DropboxPath\backups\pwsh-logs")
 }
 
-
 oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
 
 Import-Module PSFzf
@@ -39,6 +38,9 @@ function notebook(){Set-Location "$DropboxPath\0 Notebook"}
 function codesnip(){
   Set-Location $CodeSnipRepo
   & code .
+}
+function sniplog(){
+  subl "$DropboxPath\Desktop\.snippet-log"
 }
 
 function pyvenv(){
