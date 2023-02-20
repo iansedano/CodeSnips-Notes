@@ -1,6 +1,6 @@
 [user]
 	email = iansedano@gmail.com
-	name = Ian
+	name = Ian Currie
 
 [alias]
 	pushall = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
