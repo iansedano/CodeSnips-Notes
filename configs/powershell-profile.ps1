@@ -8,6 +8,12 @@ $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction St
     ForEach-Object 'path'
     
 & $Env:USERPROFILE\env.ps1
+Import-Module "$ConfigFolder/pwsh-transcript.psm1"
+
+function transcript(){
+  Start-DropboxTranscript("$DropboxPath\backups\pwsh-logs")
+}
+
 
 oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
 
