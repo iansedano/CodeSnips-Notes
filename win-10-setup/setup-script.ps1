@@ -1,5 +1,7 @@
 $StartTime = Get-Date
 
+scoop install svg-explorer-extension-np
+
 Write-Output "Downloading and installing Chocolatey"
 Invoke-WebRequest -useb community.chocolatey.org/install.ps1 | Invoke-Expression
 choco feature enable -n allowGlobalConfirmation
