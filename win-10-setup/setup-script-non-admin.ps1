@@ -23,6 +23,7 @@ scoop install make
 scoop install fzf
 scoop install gh
 scoop install scoop-search
+scoop install clipboard
 
 # Fonts
 scoop install CascadiaCode-NF
