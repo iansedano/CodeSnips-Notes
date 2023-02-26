@@ -36,6 +36,9 @@ dnf install -y $nonfreeurl
 dnf install -y fedora-workstation-repositories # for chrome
 dnf config-manager --set-enabled google-chrome
 
+dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
+
+
 dnf upgrade -y
 
 packages=(
@@ -58,6 +61,7 @@ packages=(
   # Editors
   neovim
   libreoffice
+  cascadiacode-nerd-fonts
   # Media
   pinta
   peek
@@ -116,3 +120,6 @@ dnf install -yq code
 rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 dnf install -yq sublime-text
+
+# clipboard
+curl -sSL https://github.com/Slackadays/Clipboard/raw/main/src/install.sh | sh
