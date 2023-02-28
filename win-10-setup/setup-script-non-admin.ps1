@@ -44,6 +44,7 @@ scoop install espanso
 scoop install windirstat
 scoop install extras/bulk-rename-utility
 scoop install syncthing
+scoop install color-cop
 
 # Apps
 scoop install googlechrome

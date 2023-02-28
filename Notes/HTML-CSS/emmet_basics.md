@@ -12,6 +12,8 @@ General syntax
 `elem#id`
 `elem.class`
 
+`a{Click me}` `<a href="">Click me</a>`
+
 HTML
 `!`	html5 template
 `link:css`	link css file
