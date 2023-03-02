@@ -16,7 +16,10 @@ choco pin add -n pdfxchangeeditor
 
 # Delete new desktop shortcuts
 $Desktops = "$env:PUBLIC\Desktop", "$env:USERPROFILE\Desktop"
-$Desktops | Get-ChildItem -Filter "*.lnk" -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt $StartTime } | Remove-Item
+  $Desktops |
+  Get-ChildItem -Filter "*.lnk" -ErrorAction SilentlyContinue |
+  Where-Object { $_.LastWriteTime -gt $StartTime } |
+  Remove-Item
 
 # refreshenv (choc replacement because it won't work on same session as install)
 # Source: https://stackoverflow.com/a/22670892/10445017

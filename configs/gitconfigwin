@@ -4,12 +4,11 @@
 
 [alias]
 	pushall = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
-	commitall = "!f() { git add -A && git commit -m \"$@\"; }; f"
-	ammendpush = "!f() { git add -A && git commit --amend --no-edit && git push -f; }; f"
-	amm = commit --amend --no-edit
-	ll = log --graph --decorate --oneline
-	last = log -1
-	recent = log -5 --oneline --graph
+  cm = "!f() { git commit -m \"$@\"; }; f"
+	commall = "!f() { git add -A && git commit -m \"$@\"; }; f"
+	amendpush = "!f() { git add -A && git commit --amend --no-edit && git push -f; }; f"
+	ll = log -10 --graph --decorate --oneline
+	last = log -3
 	s = status
 [safe]
 	directory = *
