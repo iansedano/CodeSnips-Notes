@@ -27,8 +27,8 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
+# Add `jabba use openjdk@17.0.2` for example in file referenced here
 if (Test-Path "$Env:USERPROFILE\.jabba\jabba.ps1") { . "$Env:USERPROFILE\.jabba\jabba.ps1" }
-
 
 function iidea () {start-process idea -argumentlist "." -windowstyle hidden}
 function lsc(){Get-ChildItem | Format-Wide -Autosize -Property Name}
