@@ -44,6 +44,8 @@ dnf upgrade -y
 packages=(
   # Sys
   gcc-c++
+  fd-find
+  ripgrep
   # ssh # not needed
   git
   curl
