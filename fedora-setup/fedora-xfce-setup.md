@@ -52,4 +52,9 @@ ln -sf source target
 ```
 link symbolic force(replace target) source(file in repo) target(home folder)
 
-
+```
+sudo systemctl enable mysqld
+sudo systemctl start mysqld
+sudo mysql_secure_installation
+sudo mysql -u root -p
+```
