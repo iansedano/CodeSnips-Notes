@@ -46,6 +46,8 @@ packages=(
   gcc-c++
   fd-find
   ripgrep
+  # community-mysql
+  community-mysql-server
   # ssh # not needed
   git
   curl

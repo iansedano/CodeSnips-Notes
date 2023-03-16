@@ -5,6 +5,8 @@ flatpak install --yes --quiet flathub us.zoom.Zoom
 flatpak install --yes --quiet flathub com.jetbrains.IntelliJ-IDEA-Community
 flatpak install --yes --quiet flathub com.jgraph.drawio.desktop
 flatpak install --yes --quiet flathub com.spotify.Client
+flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
+
 # install obs
 
 # z 
