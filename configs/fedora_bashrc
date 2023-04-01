@@ -20,7 +20,7 @@ bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous off"
 
 # System specific env
-env_path="~/.myenv"
+env_path="$HOME/.myenv"
 if [ -e $env_path ]; then
   source $env_path
 else
