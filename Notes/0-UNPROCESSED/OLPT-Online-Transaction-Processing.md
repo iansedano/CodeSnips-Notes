@@ -1,1 +1,0 @@
-Information systems that manage transaction oriented applications. High speed, operating on a few records at a time.

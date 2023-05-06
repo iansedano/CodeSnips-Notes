@@ -1,6 +1,0 @@
-[[Operator Overloading]]
-
-[[undefined]]
-
-[[Vector]]
-

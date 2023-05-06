@@ -79,6 +79,7 @@
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;q" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="keepassxc"/>
+      <property name="&lt;Super&gt;c" type="string" value="google-chrome-stable"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
