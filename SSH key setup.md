@@ -47,7 +47,7 @@ Follow the directions in this article from GitHub to verify your SSH connection.
 
 https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
 
-# link projects using SSH keey
+# link projects using SSH key
 
 Create Repository on Github
 
