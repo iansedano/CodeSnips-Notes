@@ -6,13 +6,13 @@ $DropboxPath = Get-Content "$ENV:LOCALAPPDATA\Dropbox\info.json" -ErrorAction St
     ConvertFrom-Json |
     ForEach-Object 'personal' |
     ForEach-Object 'path'
-    
-& $Env:USERPROFILE\env.ps1
-Import-Module "$ConfigFolder/pwsh-transcript.psm1"
 
-function transcript(){
-  Start-DropboxTranscript("$DropboxPath\backups\pwsh-logs")
-}
+$Notebook = "$DropboxPath\notebook"
+$SnipLog = "$Notebook\snippet-log.md"
+$Dev = "C:\dev"
+$DropDev = "$DropboxPath\dev"
+
+& $Env:USERPROFILE\env.ps1
 
 oh-my-posh init pwsh --config "$($ConfigFolder.FullName)/posh.omp.json" | Invoke-Expression
 
@@ -30,17 +30,31 @@ if (Test-Path($ChocolateyProfile)) {
 # Add `jabba use openjdk@17.0.2` for example in file referenced here
 if (Test-Path "$Env:USERPROFILE\.jabba\jabba.ps1") { . "$Env:USERPROFILE\.jabba\jabba.ps1" }
 
-function iidea () {start-process idea -argumentlist "." -windowstyle hidden}
+function iidea(){start-process idea -argumentlist "." -windowstyle hidden}
 function lsc(){Get-ChildItem | Format-Wide -Autosize -Property Name}
-function dropdev(){Set-Location "$DropboxPath\dev"}
-function dev(){Set-Location "C:\dev"}
-function notebook(){Set-Location "$DropboxPath\0 Notebook"}
-function codesnip(){
-  Set-Location $CodeSnipRepo
-  & code .
-}
-function sniplog(){
-  subl "$DropboxPath\Desktop\.snippet-log"
+function dropdev(){Set-Location "$DropDev"}
+function dev(){Set-Location "$Dev"}
+function notebook(){Set-Location "$Notebook"}
+function codesnip(){Set-Location $CodeSnipRepo}
+
+function sniplog {
+    $lastCommand = (Get-History)[-1].CommandLine
+    $date = Get-Date -Format "yyyyMMdd"
+    if (Test-Path $SnipLog) {
+        $logContent = Get-Content $SnipLog
+        $dateStampExists = $logContent -match "^$date"
+        $logEntry = "`n$date`n$lastCommand"
+        if ($dateStampExists) {
+            $logEntry = "`n$lastCommand"
+        }
+        Add-Content -Path $SnipLog -Value $logEntry
+    }
+    else {
+        echo "Can't find log file!"
+        return
+    }
+
+    subl $SnipLog
 }
 
 function pyvenv(){
@@ -73,7 +87,6 @@ function git-recurse ($command)
 function grep {
   $input | out-string -stream | select-string $args
 }
-
 
 # Blinking Cursor
 
@@ -108,3 +121,8 @@ function refresh {
 }
 
 & "$ConfigFolder/pwsh-tree.ps1"
+
+Import-Module "$ConfigFolder/pwsh-transcript.psm1"
+function transcript(){
+  Start-DropboxTranscript("$DropboxPath\backups\pwsh-logs")
+}
