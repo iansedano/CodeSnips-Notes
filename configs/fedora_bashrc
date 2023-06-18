@@ -48,14 +48,12 @@ then
 fi
 
 # aliases and utilities
-open () {
-	($*) > /dev/null 2>&1 &
-}
 
 light-theme () {
   alias bat='bat --theme gruvbox-light'
 }
 
+alias open='xdg-open'
 alias la='ls -A'
 alias desktop="cd $DESKTOP"
 alias dev="cd $DEV"
