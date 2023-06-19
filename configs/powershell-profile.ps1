@@ -37,6 +37,9 @@ function dev(){Set-Location "$Dev"}
 function notebook(){Set-Location "$Notebook"}
 function codesnip(){Set-Location $CodeSnipRepo}
 
+function spotless(){./gradlew spotlessApply}
+function frontend(){./gradlew buildFrontend}
+
 function sniplog {
     $lastCommand = (Get-History)[-1].CommandLine
     $date = Get-Date -Format "yyyyMMdd"
