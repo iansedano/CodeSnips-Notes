@@ -127,3 +127,6 @@ dnf install -yq sublime-text
 
 # clipboard
 curl -sSL https://github.com/Slackadays/Clipboard/raw/main/src/install.sh | sh
+
+# oh my posh
+curl -s https://ohmyposh.dev/install.sh | bash -s
