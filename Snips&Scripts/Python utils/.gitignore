@@ -1,8 +1,0 @@
-__pycache__
-output/
-.vscode/
-venv
-*.manifest
-*.spec
-build/
-dist/
