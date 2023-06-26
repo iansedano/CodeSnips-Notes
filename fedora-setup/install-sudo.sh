@@ -52,6 +52,7 @@ packages=(
   git
   curl
   wget
+  direnv
   fzf
   google-chrome-stable
   keepassxc

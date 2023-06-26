@@ -14,13 +14,32 @@ flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
 git clone git@github.com:rupa/z.git /opt/z
 
 # pyenv
-
 curl https://pyenv.run | bash  # may need restart after this...or sourcing .bashrc
 
 pyenv update
 pyenv rehash
 LATEST_PYTHON=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1)
 pyenv install $LATEST_PYTHON
+
+# direnv
+# https://github.com/direnv/direnv/issues/73
+touch ~/.direnvrc
+echo 'export_alias() {
+  local name=$1
+  shift
+  local alias_dir=$PWD/.direnv/aliases
+  local target="$alias_dir/$name"
+  local oldpath="$PATH"
+  mkdir -p "$alias_dir"
+  if ! [[ ":$PATH:" == *":$alias_dir:"* ]]; then
+    PATH_add "$alias_dir"
+  fi
+
+  echo "#!/usr/bin/env bash" > "$target"
+  echo "PATH=\"$oldpath\"" >> "$target"
+  echo "$@" >> "$target"
+  chmod +x "$target"
+}' >> ~/.direnvrc
 
 # Jabba
 curl -sL https://github.com/Jabba-Team/jabba/raw/main/install.sh | bash && . ~/.jabba/jabba.sh

@@ -38,6 +38,9 @@ else
   echo "$env_path doesn't exist, create one for your local env variables"
 fi
 
+# direnv (maybe the above can be put into direnv?)
+eval "$(direnv hook bash)"
+
 # z
 . /opt/z/z.sh
 
