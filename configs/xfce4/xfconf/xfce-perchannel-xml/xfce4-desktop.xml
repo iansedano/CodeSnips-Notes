@@ -30,9 +30,9 @@
           <property name="image-style" type="int" value="0"/>
           <property name="last-image" type="string" value="/usr/share/backgrounds/images/default.png"/>
           <property name="rgba1" type="array">
-            <value type="double" value="0.000000"/>
-            <value type="double" value="0.000000"/>
-            <value type="double" value="0.000000"/>
+            <value type="double" value="0.064133"/>
+            <value type="double" value="0.370000"/>
+            <value type="double" value="0.310900"/>
             <value type="double" value="1.000000"/>
           </property>
         </property>
