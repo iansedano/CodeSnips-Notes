@@ -9,11 +9,22 @@
           "properties": {
             "root_icon": "\ue0a2"
           },
+          "type": "root",
           "style": "plain",
-          "template": " \uf0e7 ",
-          "type": "root"
+          "template": " \uf0e7 "
         },
         {
+          "type": "python",
+          "style": "plain",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#088538",
+          "properties": {
+            "prefix": " \uE235 "
+          }
+        },
+        {
+          "type": "path",
+          "template": " {{ .Path }} ",
           "background": "#969696",
           "foreground": "black",
           "leading_diamond": "\ue0b6",
@@ -21,9 +32,7 @@
             "style": "agnoster"
           },
           "style": "diamond",
-          "template": " {{ .Path }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "path"
+          "trailing_diamond": "\ue0b0"
         },
         {
           "background": "green",
