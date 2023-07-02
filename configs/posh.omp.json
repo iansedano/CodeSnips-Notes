@@ -5,26 +5,17 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "root",
+          "style": "plain",
           "foreground": "yellow",
           "properties": {
             "root_icon": "\ue0a2"
           },
-          "type": "root",
-          "style": "plain",
-          "template": " \uf0e7 "
-        },
-        {
-          "type": "python",
-          "style": "plain",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#088538",
-          "properties": {
-            "prefix": " \uE235 "
-          }
+          "template": "\uf0e7"
         },
         {
           "type": "path",
-          "template": " {{ .Path }} ",
+          "template": "{{ .Path }}",
           "background": "#969696",
           "foreground": "black",
           "leading_diamond": "\ue0b6",
@@ -32,9 +23,22 @@
             "style": "agnoster"
           },
           "style": "diamond",
-          "trailing_diamond": "\ue0b0"
+          "trailing_diamond": ""
         },
         {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "template": "{{ if .Venv }} {{.Venv}}{{ end }}",
+          "display_mode" : "environment",
+          "fetch_version": false,
+          "foreground": "#2b2c29",
+          "background": "#54c414"
+        },
+        {
+          "type": "git",
+          "template": "{{ .HEAD }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}",
+          "style": "powerline",
           "background": "green",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
@@ -54,10 +58,7 @@
             "no_commits_icon": "[no commits]",
             "rebase_icon": "\u2c62 ",
             "tag_icon": "\u25b6 "
-          },
-          "style": "powerline",
-          "template": " {{ .HEAD }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }} ",
-          "type": "git"
+          }
         }
       ],
       "type": "prompt"
@@ -66,6 +67,5 @@
   "console_title_template": "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}",
   "final_space": true,
   "osc99": true,
-
   "version": 2
 }
