@@ -41,7 +41,7 @@
       </property>
     </property>
     <property name="custom" type="empty">
-      <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder -c">
+      <property name="&lt;Super&gt;r" type="empty">
         <property name="XF86Explorer" type="string" value="Thunar"/>
         <property name="XF86Memo" type="string" value="xfce4-notes"/>
         <property name="startup-notify" type="bool" value="true"/>
@@ -185,7 +185,6 @@
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;f" type="string" value="fullscreen_key"/>
-      <property name="&lt;Super&gt;Down" type="string" value="hide_window_key"/>
       <property name="&lt;Super&gt;Up" type="string" value="maximize_window_key"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;1" type="string" value="move_window_workspace_1_key"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;2" type="string" value="move_window_workspace_2_key"/>
@@ -201,6 +200,14 @@
       <property name="&lt;Primary&gt;&lt;Super&gt;equal" type="string" value="move_window_workspace_12_key"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Left" type="string" value="prev_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Right" type="string" value="next_workspace_key"/>
+      <property name="&lt;Super&gt;apostrophe" type="string" value="tile_up_right_key"/>
+      <property name="&lt;Super&gt;period" type="string" value="tile_down_left_key"/>
+      <property name="&lt;Super&gt;slash" type="string" value="tile_down_right_key"/>
+      <property name="&lt;Super&gt;semicolon" type="string" value="tile_up_left_key"/>
+      <property name="&lt;Super&gt;h" type="string" value="maximize_horiz_key"/>
+      <property name="&lt;Super&gt;v" type="string" value="maximize_vert_key"/>
+      <property name="&lt;Super&gt;m" type="string" value="move_window_key"/>
+      <property name="&lt;Super&gt;r" type="string" value="resize_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
