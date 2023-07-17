@@ -1,11 +1,11 @@
 
 # flatpaks
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --yes --quiet flathub us.zoom.Zoom
-flatpak install --yes --quiet flathub com.jetbrains.IntelliJ-IDEA-Community
-flatpak install --yes --quiet flathub com.jgraph.drawio.desktop
-flatpak install --yes --quiet flathub com.spotify.Client
-flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# flatpak install --yes --quiet flathub us.zoom.Zoom
+# flatpak install --yes --quiet flathub com.jetbrains.IntelliJ-IDEA-Community
+# flatpak install --yes --quiet flathub com.jgraph.drawio.desktop
+# flatpak install --yes --quiet flathub com.spotify.Client
+# flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
 
 # install obs
 
@@ -64,7 +64,7 @@ tar xvf temp/reaper675_linux_x86_64.tar.xz -C temp
 ./temp/reaper_linux_x86_64/install-reaper.sh
 
 # Manictime (check version) (didn't work from command line... maybe just do manually)
-sudo dnf install libX11-devel libappindicator-gtk3 libXScrnSaver gssntlmssp openssl-libs krb5-libs
-wget https://cdn.manictime.com/setup/linux/v1_4_3_0/ManicTime-arch.tar.gz -P temp
-tar xvf temp/ManicTime-arch.tar.gz -C temp
-./temp/manictime/manictime # does not support root install (casing important)
+# sudo dnf install libX11-devel libappindicator-gtk3 libXScrnSaver gssntlmssp openssl-libs krb5-libs
+# wget https://cdn.manictime.com/setup/linux/v1_4_3_0/ManicTime-arch.tar.gz -P temp
+# tar xvf temp/ManicTime-arch.tar.gz -C temp
+# ./temp/manictime/manictime # does not support root install (casing important)
