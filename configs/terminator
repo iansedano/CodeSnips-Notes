@@ -1,0 +1,31 @@
+[global_config]
+  window_state = maximise
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_color = "#282828"
+    font = CaskaydiaCove NFM 11
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scrollback_lines = 10000
+    use_system_font = False
+  [[light]]
+    allow_bold = False
+    background_color = "#fbf1c7"
+    font = CaskaydiaCove NFM 11
+    foreground_color = "#3c3836"
+    show_titlebar = False
+    scrollback_lines = 10000
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
