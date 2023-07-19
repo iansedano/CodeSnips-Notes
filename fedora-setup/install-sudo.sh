@@ -126,8 +126,5 @@ rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 dnf install -yq sublime-text
 
-# clipboard
-curl -sSL https://github.com/Slackadays/Clipboard/raw/main/install.sh | sh
-
 # oh my posh
 curl -s https://ohmyposh.dev/install.sh | bash -s

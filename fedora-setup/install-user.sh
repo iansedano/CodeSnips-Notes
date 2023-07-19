@@ -1,17 +1,19 @@
+# Must have bashrc
 
 # flatpaks
-# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# flatpak install --yes --quiet flathub us.zoom.Zoom
-# flatpak install --yes --quiet flathub com.jetbrains.IntelliJ-IDEA-Community
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # flatpak install --yes --quiet flathub com.jgraph.drawio.desktop
 # flatpak install --yes --quiet flathub com.spotify.Client
 # flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
 
 # install obs
 
+# clipboard (needs flathub)
+curl -sSL https://github.com/Slackadays/Clipboard/raw/main/install.sh | sh
+
 # z 
 # Need to connect to github first
-git clone git@github.com:rupa/z.git /opt/z
+git clone git@github.com:rupa/z.git ~/opt/z
 
 # pyenv
 curl https://pyenv.run | bash  # may need restart after this...or sourcing .bashrc
