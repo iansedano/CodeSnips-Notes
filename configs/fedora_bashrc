@@ -54,7 +54,8 @@ alias dropdev="cd $DROPBOX_DEV"
 alias codesnip="cd $CODESNIP"
 alias notebook="cd $NOTEBOOK"
 alias pyvenv="python -m venv venv; source venv/bin/activate"
-
+alias copy="xclip -selection clipboard"
+alias paste="xclip -selection clipboard -o"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

@@ -19,6 +19,8 @@ Sure, here's a summary of our conversation with the included code snippets:
     ```bash
     echo "DEVICE_NAME" | sudo tee /proc/acpi/wakeup
     ```
+    
+    device was XHCI (usb)
 
 5. I clarified that disabling PCI slots for troubleshooting is typically safe and the changes are not permanent.
 

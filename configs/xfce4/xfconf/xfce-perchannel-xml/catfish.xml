@@ -12,7 +12,7 @@
   <property name="file-size-binary" type="bool" value="true"/>
   <property name="window-width" type="int" value="700"/>
   <property name="window-height" type="int" value="540"/>
-  <property name="window-x" type="int" value="1237"/>
-  <property name="window-y" type="int" value="461"/>
+  <property name="window-x" type="int" value="1179"/>
+  <property name="window-y" type="int" value="686"/>
   <property name="exclude-paths" type="string" value="/dev;~/.cache;~/.gvfs;"/>
 </channel>
