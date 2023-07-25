@@ -16,3 +16,4 @@ set mount points manually
 /boot/efi ~ 200MB??
 / ~ final disk size...
 
+see [[fedora-xfce-setup]]
