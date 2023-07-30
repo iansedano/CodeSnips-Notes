@@ -72,6 +72,7 @@ packages=(
   pinta
   peek
   feh
+  zulucrypt
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder
   screenkey
