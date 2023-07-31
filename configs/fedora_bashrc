@@ -57,6 +57,10 @@ alias pyvenv="python -m venv venv; source venv/bin/activate"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
 
+runbg() {
+  nohup "$@" > /dev/null 2>&1 &
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
