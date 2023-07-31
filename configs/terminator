@@ -4,9 +4,8 @@
 [keybindings]
 [profiles]
   [[default]]
-    allow_bold = False
     background_color = "#282828"
-    font = CaskaydiaCove NFM 11
+    font = CaskaydiaCove Nerd Font Propo Semi-Light 9
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollback_lines = 10000

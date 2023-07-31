@@ -10,6 +10,6 @@
   <property name="misc-text-beside-icons" type="bool" value="false"/>
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,173,50,50,341,50,50,69,50,151"/>
+  <property name="last-details-view-column-widths" type="string" value="50,123,50,50,158,50,50,69,50,400"/>
   <property name="last-separator-position" type="int" value="170"/>
 </channel>
