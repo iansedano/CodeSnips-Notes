@@ -33,7 +33,13 @@ eval "$(oh-my-posh init bash --config $CODESNIP/configs/posh.omp.json)"
 eval "$(direnv hook bash)"
 
 # z
-. ~/opt/z/z.sh
+if [ -f ~/opt/z/z.sh ]; then
+    . ~/opt/z/z.sh
+fi
+
+if [ -f /opt/z/z.sh ]; then
+    . /opt/z/z.sh
+fi
 
 # fzf
 if [ -x "$(command -v fzf)"  ]
@@ -60,6 +66,7 @@ alias paste="xclip -selection clipboard -o"
 runbg() {
   nohup "$@" > /dev/null 2>&1 &
 }
+complete -c runbg
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
