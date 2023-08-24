@@ -72,6 +72,7 @@ packages=(
   pinta
   peek
   feh
+  libjpeg-turbo-utils
   zulucrypt
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder

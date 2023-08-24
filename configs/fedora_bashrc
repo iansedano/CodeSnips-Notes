@@ -62,6 +62,7 @@ alias notebook="cd $NOTEBOOK"
 alias pyvenv="python -m venv venv; source venv/bin/activate"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
+alias feh="feh --geometry 1680x1390 --scale-down --edit"
 
 runbg() {
   nohup "$@" > /dev/null 2>&1 &
