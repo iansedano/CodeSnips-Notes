@@ -5,7 +5,7 @@
 [alias]
 	pushall = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 	commitall = "!f() { git add -A && git commit -m \"$@\"; }; f"
-	ammendpush = "!f() { git add -A && git commit --amend --no-edit && git push -f; }; f"
+	amendpush = "!f() { git add -A && git commit --amend --no-edit && git push -f; }; f"
 	amm = commit --amend --no-edit
 	ll = log --graph --decorate --oneline
 	last = log -1
