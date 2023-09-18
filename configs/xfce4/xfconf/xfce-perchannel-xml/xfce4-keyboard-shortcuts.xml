@@ -60,10 +60,8 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;Escape" type="string" value="xfce4-taskmanager"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;f" type="string" value="thunar"/>
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
-      <property name="&lt;Alt&gt;Print" type="string" value="xfce4-screenshooter -w"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="xflock4"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
-      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
@@ -79,6 +77,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="keepassxc"/>
       <property name="&lt;Super&gt;c" type="string" value="google-chrome-stable"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;t" type="string" value="subl -n"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;p" type="string" value="xfce4-screenshooter -w"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
