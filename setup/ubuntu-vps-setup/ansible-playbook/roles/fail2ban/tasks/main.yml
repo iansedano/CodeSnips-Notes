@@ -2,11 +2,16 @@
   package:
     name: fail2ban
     state: latest
-
-- name: Override some basic fail2ban configurations
-  copy:
-    src: ../templates/jail.local.j2
+    
+- name: Copy Fail2Ban local config
+  template:
+    src: jail.local.j2  # The name of your template file
     dest: /etc/fail2ban/jail.local
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
+
+- name: Reload Fail2Ban config
+  systemd:
+    name: fail2ban
+    state: reloaded
