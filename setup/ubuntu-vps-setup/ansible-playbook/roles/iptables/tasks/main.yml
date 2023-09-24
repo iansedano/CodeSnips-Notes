@@ -60,4 +60,3 @@
     - iptables-persistent
     - netfilter-persistent
   when: ansible_os_family == "Debian"
-

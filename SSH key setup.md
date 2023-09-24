@@ -58,4 +58,3 @@ Now, switch back over to the terminal
     git remote add origin <SSH URL from above>
     git push -u origin master
 
-

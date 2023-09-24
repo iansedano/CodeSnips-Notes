@@ -11,7 +11,7 @@
   vars:
     public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
     username: cuse
-    
+
   roles:
     - packages
     - ssh
