@@ -33,10 +33,5 @@
     to_port: 27017
     proto: tcp
 
-- name: Allow ICMP (Ping)
-  ufw:
-    rule: allow
-    proto: icmp
-
 - name: Reload UFW rules
   command: ufw reload
