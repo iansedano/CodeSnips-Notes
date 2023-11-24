@@ -1,0 +1,37 @@
+---
+- name: Install UFW
+  apt:
+    name: ufw
+    state: present
+
+- name: Enable UFW
+  ufw:
+    state: enabled
+    policy: deny # Default policy is to deny all incoming
+
+- name: Allow SSH
+  ufw:
+    rule: allow
+    port: "22"
+    proto: tcp
+
+- name: Allow for Database (e.g., PostgreSQL)
+  ufw:
+    rule: allow
+    port: "5432"
+    proto: tcp
+
+- name: Allow for Web Server (e.g., Nginx, Apache)
+  ufw:
+    rule: allow
+    port: "80,443"
+    proto: tcp
+
+- name: Allow MongoDB
+  ufw:
+    rule: allow
+    to_port: 27017
+    proto: tcp
+
+- name: Reload UFW rules
+  command: ufw reload

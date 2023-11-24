@@ -1,10 +1,22 @@
+# /etc/fail2ban/jail.local
 [DEFAULT]
-# Ban hosts for one hour:
-bantime = 3600
+# "bantime" is the number of seconds that a host is banned.
+bantime  = 600
 
-# Override /etc/fail2ban/jail.d/00-firewalld.conf:
-banaction = iptables-multiport
+# A host is banned if it has generated "maxretry" during the last "findtime" seconds.
+findtime  = 600
+maxretry = 3
+
+# "backend" specifies the backend used to get files modification.
+backend = auto
+
+# "usedns" specifies if jails should trust hostnames in logs,
+#   warn when DNS lookups are performed, or ignore all hostnames in logs
+usedns = warn
 
 [sshd]
 enabled = true
+port    = ssh
+filter  = sshd
+logpath  = /var/log/auth.log
 maxretry = 3
