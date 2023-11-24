@@ -51,7 +51,6 @@
       </property>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
-      <property name="Print" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
       <property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder --collapsed">
         <property name="startup-notify" type="bool" value="true"/>
@@ -77,7 +76,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="keepassxc"/>
       <property name="&lt;Super&gt;c" type="string" value="google-chrome-stable"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;t" type="string" value="subl -n"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;p" type="string" value="xfce4-screenshooter -w"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -f -o pinta"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

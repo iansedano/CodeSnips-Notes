@@ -1,6 +1,11 @@
 matches:
 
-
+  
+  - trigger: "cnnote"
+    replace: "[[note]]\n\n{{clipboard}}\n\n[[/note]]"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
   - trigger: "learnbydoing"
     replace: "[LEARN_BY_DOING_GH]\n\n{{clipboard}}\n\n[/LEARN_BY_DOING_GH]"
     vars:
@@ -13,3 +18,40 @@ matches:
       Copy the examples from this lesson and get them working in your labs. Make a few variations, too.
       
       [/LEARN_BY_DOING_GH]
+  - trigger: "cncolorpalette"
+    replace: |
+      black: #000
+      white: #fff
+      blue: 
+        100: #f0f3f5
+        200: #d8e1e8 stroke
+        300: #a0c8e2
+        400: #4a99ce
+        500: #0071bc primary
+        600: #005a96
+
+      orange:
+        100: #fffae9
+        200: #fadda9
+        300: #f5be64
+        400: #f0a228
+        500: #cc8515
+
+      red:
+        100: #f6f0f1
+        200: #f5c8ca
+        300: #ec7075
+        400: #ed1c24
+        500: #ae1218
+
+      grey: 
+        100: #d9d9d9
+        200: #ababab
+        300: #616161
+        400: #404040
+
+      green: 
+        100: #eaf3ea
+        200: #90d795
+        300: #59c563
+        400: #0eac1d
