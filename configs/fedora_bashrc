@@ -70,6 +70,15 @@ runbg() {
 }
 complete -c runbg
 
+# function cd() {
+#     builtin cd "$@" && {
+#         if [ -f "venv/bin/activate" ];
+#             . venv/bin/activate
+#             echo "Activated virtual environment."
+#         fi
+#     }
+# }
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
