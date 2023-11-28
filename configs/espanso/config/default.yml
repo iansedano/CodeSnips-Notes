@@ -3,7 +3,7 @@
 search_shortcut: ALT+SPACE
 
 toggle_key: OFF
-backend: Auto
+backend: Clipboard
 auto_restart: true
 
 undo_backspace: false

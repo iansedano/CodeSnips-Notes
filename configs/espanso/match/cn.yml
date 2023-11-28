@@ -1,6 +1,7 @@
 matches:
 
-  
+  - trigger: "prettierignore"
+    replace: "<!-- prettier-ignore -->"
   - trigger: "cnnote"
     replace: "[[note]]\n\n{{clipboard}}\n\n[[/note]]"
     vars:
@@ -8,6 +9,11 @@ matches:
         type: "clipboard"
   - trigger: "learnbydoing"
     replace: "[LEARN_BY_DOING_GH]\n\n{{clipboard}}\n\n[/LEARN_BY_DOING_GH]"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+  - trigger: "cnvideo"
+    replace: "[[video id={{clipboard}}]]"
     vars:
       - name: "clipboard"
         type: "clipboard"
@@ -55,3 +61,12 @@ matches:
         200: #90d795
         300: #59c563
         400: #0eac1d
+  - trigger: "cnfrontmatter"
+    replace: |
+      ---
+      title:
+      slug:
+      metaTitle:
+      description:
+      metaDescription:
+      ---
