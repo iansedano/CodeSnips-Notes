@@ -94,3 +94,6 @@ fi
 
 # jabba
 [ -s "/home/cuse/.jabba/jabba.sh" ] && source "/home/cuse/.jabba/jabba.sh"
+
+# rust (after rustup is installed)
+. "$HOME/.cargo/env"
