@@ -2,6 +2,8 @@ matches:
 
   - trigger: "prettierignore"
     replace: "<!-- prettier-ignore -->"
+  - trigger: "prettierstart"
+    replace: "<!-- prettier-ignore-start -->\n\n<!-- prettier-ignore-end -->"
   - trigger: "cnnote"
     replace: "[[note]]\n\n{{clipboard}}\n\n[[/note]]"
     vars:
