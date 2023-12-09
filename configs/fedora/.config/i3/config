@@ -64,8 +64,7 @@ bindsym $mod+q scratchpad show
 gaps inner 10
 gaps outer 5
 
-
-# start dmenu (a program launcher)
+# start program launcher
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 # change focus
