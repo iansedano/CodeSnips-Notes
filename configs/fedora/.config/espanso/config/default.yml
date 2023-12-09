@@ -1,0 +1,9 @@
+# https://espanso.org/docs/configuration/options/
+
+search_shortcut: ALT+SPACE
+
+toggle_key: OFF
+backend: Clipboard
+auto_restart: true
+
+undo_backspace: false

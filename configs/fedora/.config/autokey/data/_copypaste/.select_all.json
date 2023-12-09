@@ -1,0 +1,28 @@
+{
+    "type": "script",
+    "description": "select_all",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 15,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": "<np_end>"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}
