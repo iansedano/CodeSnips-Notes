@@ -47,6 +47,7 @@ packages=(
   fd-find
   ripgrep
   xclip
+  xsetroot
   # community-mysql
   community-mysql-server
   i3
