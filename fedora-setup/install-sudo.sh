@@ -49,6 +49,8 @@ packages=(
   xclip
   # community-mysql
   community-mysql-server
+  i3
+  python3-pip
   # ssh # not needed
   git
   curl
@@ -77,7 +79,7 @@ packages=(
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder
   screenkey
-  # 'obs-studio --alloweraising' # install with flatpak
+  obs-studio
   inkscape
   gimp
   vlc
