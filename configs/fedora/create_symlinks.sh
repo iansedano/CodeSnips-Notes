@@ -1,31 +1,60 @@
 #!/bin/bash
 
+DRY_RUN=false
+if [ "$1" == "--dry-run" ]; then
+    DRY_RUN=true
+    echo "Running in dry run mode. No changes will be made."
+fi
+
 # Define the path to your actual .config directory and the repository .config directory
 ACTUAL_CONFIG_DIR="$HOME/.config"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 REPO_CONFIG_DIR="$SCRIPT_DIR/.config"
 
-echo $SCRIPT_DIR
-echo $REPO_CONFIG_DIR
 # Loop through the directories in your repository's .config directory
 for dir in "$REPO_CONFIG_DIR"/*; do
     if [ -d "$dir" ]; then
-        # Extract just the directory name
         dirname=$(basename "$dir")
-        echo $dirname
+        targetpath="$ACTUAL_CONFIG_DIR/$dirname"
+        
+        echo "Checking if need to make backup of $targetpath"
+        
+        # Backup config target
+        if [ -d "$targetpath" ]; then
+            echo "Making backup of $targetpath"
+            if [ "$DRY_RUN" = false ]; then
+              mv "$targetpath" "$targetpath-backup"
+            fi
+        fi
 
-        # Create a corresponding directory in the actual .config directory if it doesn't exist
-        # mkdir -p "$ACTUAL_CONFIG_DIR/$dirname"
+        # Create a symbolic link for the directory in the actual .config directory
+        echo "Creating symlink for $targetpath"
+        if [ "$DRY_RUN" = false ]; then
+          ln -sfn "$dir" "$targetpath"
+        fi
+    fi
+done
 
-        # Loop through the files in the repository directory
-        # for file in "$dir"/*; do
-        #     if [ -f "$file" ]; then
-        #         # Extract just the filename
-        #         filename=$(basename "$file")
 
-        #         # Create a symbolic link in the actual .config directory
-        #         ln -sfn "$file" "$ACTUAL_CONFIG_DIR/$dirname/$filename"
-        #     fi
-        # done
+DOTFILES_DIR="$SCRIPT_DIR/HOME"
+
+# Loop through the .dotfiles in the specified directory
+for dotfile in "$DOTFILES_DIR"/*.dotfile; do
+    if [ -f "$dotfile" ]; then
+
+        filename=".$(basename "$dotfile" .dotfile)"
+        echo "Checking if need to make backup of $filename"
+
+        if [ -f "$HOME/$filename" ]; then
+            echo "Making backup of $filename"
+            if [ "$DRY_RUN" = false ]; then
+              mv "$HOME/$filename" "$HOME/$filename-backup"
+            fi
+        fi
+
+        echo "Making symlink of $filename"
+        if [ "$DRY_RUN" = false ]; then
+          ln -sfn "$dotfile" "$HOME/$filename"
+        fi
     fi
 done
