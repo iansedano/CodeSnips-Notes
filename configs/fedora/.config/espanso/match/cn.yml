@@ -1,5 +1,4 @@
 matches:
-
   - trigger: "prettierignore"
     replace: "<!-- prettier-ignore -->"
   - trigger: "prettierstart"
