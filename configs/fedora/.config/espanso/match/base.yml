@@ -104,7 +104,7 @@ matches:
             - "%CONFIG%/scripts/pydebug.py"
             - "{{clipboard}}"
   - trigger: ":ipydebug"
-    replace: "import IPython; IPython.embed()"
+    replace: "import IPython; IPython.embed()  # fmt: skip"
   - trigger: ":launchapp"
     replace: "{{script}}"
     vars:
