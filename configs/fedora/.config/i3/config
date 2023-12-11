@@ -49,7 +49,7 @@ bindsym Control+Mod1+k exec --no-startup-id keepassxc
 bindsym Control+Mod1+t exec --no-startup-id subl
 
 exec --no-startup-id keepassxc
-for_window [class="keepassxc"] floating enable
+for_window [class="KeePassXC"] floating enable
 for_window [class="Galculator"] floating enable
 for_window [class="zoom"] floating enable
 
