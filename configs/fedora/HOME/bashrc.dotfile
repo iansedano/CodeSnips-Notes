@@ -66,6 +66,7 @@ alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
 alias feh="feh --geometry 1680x1390 --scale-down --edit"
 alias venv="source venv/bin/activate"
+alias screenshot="import png:- | xclip -selection clipboard -t image/png""
 
 runbg() {
   nohup "$@" > /dev/null 2>&1 &

@@ -67,6 +67,7 @@ packages=(
   gh
   bat
   dos2unix
+  ImageMagick
   # Editors
   neovim
   libreoffice

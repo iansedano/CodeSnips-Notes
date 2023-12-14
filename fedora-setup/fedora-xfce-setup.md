@@ -41,6 +41,16 @@ sudo mysql_secure_installation
 sudo mysql -u root -p
 ```
 
+## Getting notifications to work on i3
+
+if using i3, see https://gitlab.xfce.org/apps/xfce4-notifyd/-/issues/35 for notifications
+
+to find executable:
+
+`find / -name xfce4-notifyd 2>/dev/null`
+
+Then just run it
+
 `/` (root): This is the root directory of your system. All files and directories start from the root directory, apart from /boot (in some cases) and /dev. A size of around 25-30GB should be more than enough for most users. This partition should use a Linux filesystem such as ext4.
 
 `swap`: The swap space is used when your system runs out of RAM. The kernel then starts moving inactive pages from the RAM into the swap space. It also plays a crucial role if you want to hibernate your system, as the contents of RAM are copied to swap space before the system shuts down. The size of the swap partition depends on your system's RAM. A rule of thumb is to make swap size equal to your RAM size, or a little more if you plan on using hibernation.
