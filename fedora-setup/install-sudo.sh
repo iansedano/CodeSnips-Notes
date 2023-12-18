@@ -46,13 +46,15 @@ packages=(
   gcc-c++
   fd-find
   ripgrep
+  exa
+  entr
   xclip
   xsetroot
-  # community-mysql
+  tmux
   community-mysql-server
   i3
   python3-pip
-  # ssh # not needed
+  ssh
   git
   curl
   wget
