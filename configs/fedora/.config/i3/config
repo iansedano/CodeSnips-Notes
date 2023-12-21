@@ -46,7 +46,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 bindsym Control+Mod1+c exec --no-startup-id google-chrome
 bindsym Control+Mod1+k exec --no-startup-id keepassxc
-bindsym Control+Mod1+t exec --no-startup-id subl
+bindsym Control+Mod1+t exec --no-startup-id subl -n
 
 exec --no-startup-id keepassxc
 for_window [class="KeePassXC"] floating enable
