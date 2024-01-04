@@ -44,6 +44,11 @@ dnf upgrade -y
 packages=(
   # Sys
   gcc-c++
+  cmake
+  clang
+  clang-tools-extra
+  nethogs
+  xinput
   fd-find
   ripgrep
   exa
@@ -65,6 +70,7 @@ packages=(
   nautilus-dropbox
   terminator
   ripcord
+  dunst
   rofi
   gh
   bat
