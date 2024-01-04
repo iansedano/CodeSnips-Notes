@@ -8,7 +8,7 @@ set $dropbox $HOME/Dropbox
 set $notebook $dropbox/notebook
 
 # Add xfce settings for mouse settings etc.
-exec --no-startup-id xfsettingsd
+# exec --no-startup-id xfsettingsd
 
 # Font for window titles used in status bar unless overriden.
 font pango:CaskaydiaCove NFM SemiLight 8
