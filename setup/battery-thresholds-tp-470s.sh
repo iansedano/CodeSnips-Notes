@@ -38,15 +38,15 @@ if [[ $LOW -lt 40 || $LOW -gt 100 || $HIGH -lt 40 || $HIGH -gt 100 ]]; then
   exit 1
 fi
 
-# Install tpacpi-bat
-# echo "Installing tpacpi-bat..."
-# dnf install kernel-devel -y
-# mkdir -p ~/opt
-# cd ~/opt
-# git clone https://github.com/teleshoes/tpacpi-bat.git
-# cd tpacpi-bat
-# ./install.pl
-# cd ~
+Install tpacpi-bat
+echo "Installing tpacpi-bat..."
+dnf install kernel-devel -y
+mkdir -p ~/opt
+cd ~/opt
+git clone https://github.com/teleshoes/tpacpi-bat.git
+cd tpacpi-bat
+./install.pl
+cd ~
 
 # Create systemd service file
 echo "Creating systemd service file..."
