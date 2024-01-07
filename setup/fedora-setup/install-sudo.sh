@@ -1,4 +1,4 @@
-ensure_conf () {
+ensure_conf() {
   CONF=$1
   FILE=$2
   TEXT=$3
@@ -7,12 +7,12 @@ ensure_conf () {
       sed -i "/$TEXT/s/.*/$CONF/" $FILE
     else
       if [ "$(tail -c 1 <$FILE)" != $'\n' ]; then
-        echo -e "" >> $FILE # adds newline
+        echo -e "" >>$FILE # adds newline
       fi
-      echo "$CONF" >> $FILE
+      echo "$CONF" >>$FILE
     fi
   else
-    echo $CONF > $FILE
+    echo $CONF >$FILE
   fi
 }
 
@@ -20,7 +20,7 @@ ensure_conf () {
 exec &> >(tee -a install-sudo.log)
 
 ensure_conf "max_parallel_downloads=10" /etc/dnf/dnf.configs "max_parallel_downloads"
-ensure_conf "fastestmirror=True" /etc/dnf/dnf.configs "fastestmirror" 
+ensure_conf "fastestmirror=True" /etc/dnf/dnf.configs "fastestmirror"
 
 dnf upgrade -y
 
@@ -36,50 +36,50 @@ dnf install -y $nonfreeurl
 dnf install -y fedora-workstation-repositories # for chrome
 dnf config-manager --set-enabled google-chrome
 
-dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
-
+terra_repo_url="https://terra.fyralabs.com/terra.repo"
+terra_repo_id="terra"
+if ! dnf repolist | grep -q "^${terra_repo_id}"; then
+  dnf config-manager --add-repo ${terra_repo_url}
+fi
 
 dnf upgrade -y
 
 packages=(
   # Sys
-  gcc-c++
-  cmake
-  clang
-  clang-tools-extra
-  nethogs
-  xinput
-  fd-find
-  ripgrep
-  exa
-  entr
-  xclip
-  xsetroot
-  tmux
+  bat
+  cascadiacode-nerd-fonts
   community-mysql-server
-  i3
-  python3-pip
-  ssh
-  git
   curl
-  wget
   direnv
+  dos2unix
+  dunst
+  entr
+  exa
+  fd-find
   fzf
+  gh
+  git
   google-chrome-stable
+  i3
+  ImageMagick
   keepassxc
   nautilus-dropbox
-  terminator
-  ripcord
-  dunst
-  rofi
-  gh
-  bat
-  dos2unix
-  ImageMagick
-  # Editors
   neovim
-  libreoffice
-  cascadiacode-nerd-fonts
+  nethogs
+  python3-pip
+  ripcord
+  ripgrep
+  rofi
+  openssh
+  terminator
+  tmux
+  wget
+  xclip
+  xinput
+  xsetroot
+  # Office
+  gnumeric
+  # libreoffice
   # Media
   pinta
   peek
@@ -96,10 +96,14 @@ packages=(
   zeal
   flameshot
   switchdesk
-  # pyenv build deps
-  make
+  # Build tools (C, pyenv, etc)
+  gcc-c++
   gcc
-  zlib-devel
+  make
+  cmake
+  clang
+  clang-tools-extra
+  zlib-devel 
   bzip2
   bzip2-devel
   readline-devel
@@ -119,27 +123,35 @@ for package in "${packages[@]}"; do
   dnf install -yq $package
 done
 
-# VS Code
-CODE_GPG="https://packages.microsoft.com/keys/microsoft.asc"
-CODE_URL="https://packages.microsoft.com/yumrepos/vscode"
-rpm --import $CODE_GPG
-
-cat > /etc/yum.repos.d/vscode.repo << EOF
+vs_code_repo="/etc/yum.repos.d/vscode.repo"
+if [ ! -f "$vs_code_repo" ]; then
+  vs_code_gpg="https://packages.microsoft.com/keys/microsoft.asc"
+  vs_code_url="https://packages.microsoft.com/yumrepos/vscode"
+  rpm --import $vs_code_gpg
+  
+  cat >$vs_code_repo <<EOF
 [code]
 name=Visual Studio Code
-baseurl=${CODE_URL}
+baseurl=${vs_code_url}
 enabled=1
 gpgcheck=1
-gpgkey=${CODE_GPG}
+gpgkey=${vs_code_gpg}
 EOF
+fi
 
 dnf check-update
 dnf install -yq code
 
 # Sublime Text
-rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sublime_repo="https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo"
+if ! dnf repolist | grep -q "sublime-text"; then
+  rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+  dnf config-manager --add-repo $sublime_repo
+fi
+
 dnf install -yq sublime-text
 
 # oh my posh
-curl -s https://ohmyposh.dev/install.sh | bash -s
+if ! command -v oh-my-posh >/dev/null 2>&1; then
+  curl -s https://ohmyposh.dev/install.sh | bash -s
+fi
