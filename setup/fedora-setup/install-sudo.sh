@@ -45,16 +45,18 @@ fi
 dnf upgrade -y
 
 packages=(
+  #######
   # Sys
+  #######
   bat
   cascadiacode-nerd-fonts
   community-mysql-server
   curl
   direnv
   dos2unix
-  dunst
-  entr
-  exa
+  dunst # Notification daemon
+  entr # Run command on file change
+  eza # ls replacement (exa no longer)
   fd-find
   fzf
   gh
@@ -65,7 +67,7 @@ packages=(
   keepassxc
   nautilus-dropbox
   neovim
-  nethogs
+  nethogs # Bandwidth monitor
   python3-pip
   ripcord
   ripgrep
@@ -79,13 +81,17 @@ packages=(
   xsetroot
   # Office
   gnumeric
+  visidata
+  sc # Spreadsheet calculator
   # libreoffice
+  #######
   # Media
-  pinta
-  peek
-  feh
+  #######
+  pinta # Paint.net like app
+  peek # Gif recorder
+  feh # Image viewer
   libjpeg-turbo-utils
-  zulucrypt
+  zulucrypt # Truecrypt replacement
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder
   screenkey
@@ -93,10 +99,12 @@ packages=(
   inkscape
   gimp
   vlc
-  zeal
-  flameshot
-  switchdesk
+  zeal # Offline documentation
+  flameshot # Screenshot tool
+  switchdesk 
+  #######
   # Build tools (C, pyenv, etc)
+  #######
   gcc-c++
   gcc
   make
