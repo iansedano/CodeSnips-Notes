@@ -1,15 +1,19 @@
 # Must have bashrc
 
+if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+    echo "SSH connection to GitHub established."
+else
+    echo "SSH connection to GitHub failed."
+    exit 1
+fi
+
 # flatpaks
 # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # flatpak install --yes --quiet flathub com.jgraph.drawio.desktop
 # flatpak install --yes --quiet flathub com.spotify.Client
 # flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
 
-# install obs
-
 # z 
-# Need to connect to github first
 git clone git@github.com:rupa/z.git ~/opt/z
 
 # pyenv
