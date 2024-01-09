@@ -55,7 +55,8 @@ light-theme () {
 }
 
 alias open='xdg-open'
-alias la='ls -A'
+alias ls='eza'
+alias la='eza -lah'
 alias desktop="cd $DESKTOP"
 alias dev="cd $DEV"
 alias dropdev="cd $DROPBOX_DEV"
