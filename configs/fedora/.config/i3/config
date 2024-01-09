@@ -41,6 +41,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 tiling_drag modifier titlebar
 
+exec --no-startup-id keepassxc
+for_window [class="KeePassXC"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="zoom"] floating enable
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -48,10 +53,6 @@ bindsym Control+Mod1+c exec --no-startup-id google-chrome
 bindsym Control+Mod1+k exec --no-startup-id keepassxc
 bindsym Control+Mod1+t exec --no-startup-id subl -n
 
-exec --no-startup-id keepassxc
-for_window [class="KeePassXC"] floating enable
-for_window [class="Galculator"] floating enable
-for_window [class="zoom"] floating enable
 
 bindsym $mod+Shift+q kill
 
@@ -126,6 +127,7 @@ bindsym $mod+g exec --no-startup-id i3-switch-active-workspace-group
 bindsym $mod+Shift+g exec --no-startup-id i3-assign-workspace-to-group
 bindsym $mod+w exec --no-startup-id i3-focus-on-workspace
 bindsym $mod+Shift+w exec --no-startup-id i3-move-to-workspace
+# alt + mod + n
 bindsym Mod1+Mod4+n exec --no-startup-id i3-rename-workspace
 
 # switch to workspace
