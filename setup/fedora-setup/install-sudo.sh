@@ -48,6 +48,8 @@ packages=(
   #######
   # Sys
   #######
+  ansible
+  python3-ansible-lint
   bat
   cascadiacode-nerd-fonts
   community-mysql-server
