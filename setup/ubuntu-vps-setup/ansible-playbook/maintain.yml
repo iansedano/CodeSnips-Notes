@@ -6,20 +6,17 @@
   # Specify the hosts you want to target
   hosts: zu1
   become: true
-  
+  vars_prompt:
+    - name: sudo_password
+      prompt: enter remote password
+      private: true
+      confirm: false
   vars:
     ansible_user: cuse
     username: cuse
-    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
-  
-  vars_prompt:
-    - name: sudo_password
-      prompt: enter remote sudo password (not root pass)
-      private: yes
-      confirm: no
-
+    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
   roles:
     - packages
-    - ssh
     - ufw
     - fail2ban
+    - ssh

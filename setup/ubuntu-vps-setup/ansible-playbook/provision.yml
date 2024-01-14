@@ -6,35 +6,32 @@
   # Specify the hosts you want to target
   hosts: zu1
   become: true
-  vars:
-    remote_user: root
-
   vars_prompt:
-  
     - name: sudo_password
       prompt: enter remote sudo password
-      private: yes
-      confirm: no
-      
+      # Don't show the chars when typing
+      private: true
+      confirm: false
     - name: username
-      prompt: enter user name for VPS
-      private: no
-      confirm: no
-
+      prompt: enter new user name for VPS
+      private: false
+      confirm: false
     - name: user_password
-      prompt: enter password for VPS user - to become sudo
-      private: yes
+      prompt: enter password for new user
+      private: true
       encrypt: sha512_crypt
-      confirm: yes
+      confirm: false
       salt_size: 7
 
   vars:
-    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
-    UserKnownHostsFile: ""
+    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
+    ansible_user: root
+    ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa_vps"
+    ansible_sudo_pass: "{{ sudo_password }}"
 
   roles:
     - user
     - packages
-    - ssh
     - ufw
     - fail2ban
+    - ssh

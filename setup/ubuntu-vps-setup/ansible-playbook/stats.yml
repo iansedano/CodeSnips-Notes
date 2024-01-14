@@ -1,9 +1,9 @@
 - name: Stats
   hosts: all
-  gather_facts: True
+  gather_facts: true
   tasks:
     - name: Debug Gathered Facts
-      debug:
+      ansible.builtin.debug:
         var: item
       with_items:
         - "{{ ansible_lsb }}"
@@ -14,11 +14,14 @@
         - "{{ ansible_hostname }}"
         - "{{ ansible_memory_mb }}"
         - "{{ ansible_memfree_mb }}"
+      debug:
+        var: item
 
     - name: Capture OS Name
-      command: uname -a
+      ansible.builtin.command: uname -a
       register: os_name
+      changed_when: false
 
     - name: Debug OS Name
-      debug:
+      ansible.builtin.debug:
         var: os_name.stdout

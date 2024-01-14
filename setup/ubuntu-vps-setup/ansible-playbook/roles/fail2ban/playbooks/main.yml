@@ -1,0 +1,18 @@
+- name: Fail2Ban
+  hosts: all
+  tasks:
+    - name: Install the `fail2ban` package
+      ansible.builtin.package:
+        name: fail2ban
+        state: present
+    - name: Copy Fail2Ban local config
+      ansible.builtin.template:
+        src: jail.local.j2  # The name of your template file
+        dest: /etc/fail2ban/jail.local
+        owner: root
+        group: root
+        mode: '0644'
+    - name: Reload Fail2Ban config
+      ansible.builtin.systemd:
+        name: fail2ban
+        state: reloaded

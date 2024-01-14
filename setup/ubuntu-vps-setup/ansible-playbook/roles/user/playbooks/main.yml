@@ -23,4 +23,4 @@
     shell: /bin/bash
     update_password: on_create
     groups: wheel
-    append: yes
+    append: true

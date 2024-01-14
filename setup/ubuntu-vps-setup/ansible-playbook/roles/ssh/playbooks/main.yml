@@ -7,8 +7,8 @@
 - name: Harden sshd configuration
   lineinfile:
     dest: /etc/ssh/sshd_config
-    regexp: "{{item.regexp}}"
-    line: "{{item.line}}"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
     state: present
   with_items:
     - regexp: "^#?PermitRootLogin"
@@ -27,11 +27,9 @@
       line: "TCPKeepAlive no"
     - regexp: "^#?UseDNS"
       line: "UseDNS no"
-    - regexp: "^#?AllowAgentForwarding"
-      line: "AllowAgentForwarding no"
 
 - name: Restart sshd
   systemd:
     state: restarted
-    daemon_reload: yes
+    daemon_reload: true
     name: sshd
