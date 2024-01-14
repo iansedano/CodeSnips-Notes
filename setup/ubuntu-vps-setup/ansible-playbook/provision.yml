@@ -7,14 +7,10 @@
   hosts: zu1
   become: true
   vars_prompt:
-    - name: sudo_password
+    - name: ansible_sudo_pass
       prompt: enter remote sudo password
       # Don't show the chars when typing
       private: true
-      confirm: false
-    - name: username
-      prompt: enter new user name for VPS
-      private: false
       confirm: false
     - name: user_password
       prompt: enter password for new user
@@ -27,7 +23,7 @@
     public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
     ansible_user: root
     ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa_vps"
-    ansible_sudo_pass: "{{ sudo_password }}"
+    username: cuse
 
   roles:
     - user

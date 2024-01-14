@@ -1,11 +1,10 @@
 - name: Add local public key for key-based SSH authentication
-  authorized_key:
+  ansible.posix.authorized_key:
     user: "{{ username }}"
     state: present
     key: "{{ public_key }}"
-
 - name: Harden sshd configuration
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/ssh/sshd_config
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
@@ -27,9 +26,8 @@
       line: "TCPKeepAlive no"
     - regexp: "^#?UseDNS"
       line: "UseDNS no"
-
 - name: Restart sshd
-  systemd:
+  ansible.builtin.systemd:
     state: restarted
     daemon_reload: true
     name: sshd

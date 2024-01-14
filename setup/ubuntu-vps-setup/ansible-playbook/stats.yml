@@ -14,8 +14,6 @@
         - "{{ ansible_hostname }}"
         - "{{ ansible_memory_mb }}"
         - "{{ ansible_memfree_mb }}"
-      debug:
-        var: item
 
     - name: Capture OS Name
       ansible.builtin.command: uname -a

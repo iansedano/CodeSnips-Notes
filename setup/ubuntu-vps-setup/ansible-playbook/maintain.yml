@@ -7,7 +7,7 @@
   hosts: zu1
   become: true
   vars_prompt:
-    - name: sudo_password
+    - name: ansible_sudo_pass
       prompt: enter remote password
       private: true
       confirm: false
@@ -15,6 +15,7 @@
     ansible_user: cuse
     username: cuse
     public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
+    ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa_vps"
   roles:
     - packages
     - ufw

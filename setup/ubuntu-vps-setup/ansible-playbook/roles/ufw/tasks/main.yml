@@ -1,37 +1,33 @@
----
 - name: Install UFW
-  apt:
+  ansible.builtin.apt:
     name: ufw
     state: present
-
 - name: Enable UFW
-  ufw:
+  community.general.ufw:
     state: enabled
     policy: deny # Default policy is to deny all incoming
-
 - name: Allow SSH
-  ufw:
+  community.general.ufw:
     rule: allow
     port: "22"
     proto: tcp
-
 - name: Allow for Database (e.g., PostgreSQL)
-  ufw:
+  community.general.ufw:
     rule: allow
     port: "5432"
     proto: tcp
-
 - name: Allow for Web Server (e.g., Nginx, Apache)
-  ufw:
+  community.general.ufw:
     rule: allow
     port: "80,443"
     proto: tcp
-
 - name: Allow MongoDB
-  ufw:
+  community.general.ufw:
     rule: allow
     to_port: 27017
     proto: tcp
-
 - name: Reload UFW rules
-  command: ufw reload
+  ansible.builtin.command: ufw reload
+  register: ufw_reload_result  # Registering the output to a variable
+  changed_when: "'reloaded' in ufw_reload_result.stdout"  # Using the registered variable
+

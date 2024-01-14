@@ -1,23 +1,20 @@
 - name: Ensure wheel group is present
-  group:
+  ansible.builtin.group:
     name: wheel
     state: present
-
 - name: Ensure wheel group has sudo privileges
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/sudoers
     state: present
     regexp: "^%wheel"
     line: "%wheel ALL=(ALL:ALL) ALL"
     validate: "/usr/sbin/visudo -cf %s"
-
 - name: Install the `sudo` package
-  package:
+  ansible.builtin.package:
     name: sudo
-    state: latest
-
+    state: present
 - name: Create the non-root user account
-  user:
+  ansible.builtin.user:
     name: "{{ username }}"
     password: "{{ user_password }}"
     shell: /bin/bash
