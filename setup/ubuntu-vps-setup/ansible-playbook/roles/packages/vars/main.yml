@@ -1,0 +1,12 @@
+packages_to_install:
+  - unattended-upgrades
+  - bat
+  - eza
+  - neovim
+  - nethogs
+  - direnv
+  - entr
+  - git
+  - tmux
+  - ripgrep
+  - fzf

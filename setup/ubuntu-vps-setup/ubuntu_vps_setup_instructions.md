@@ -2,9 +2,7 @@
 
 On local machine
 
-Create a passphrase and save it in password manager with date (will become obsolete once initial setup is done)
-
-Save the public key entry in password manager:
+Create a passphrase and save it in password manager:
 
 `SSH-VPSHostens-[ComputerWhereCreated]-[DATE]`
 
@@ -13,6 +11,8 @@ Create key pair:
 ```bash
 ssh-keygen -t rsa -b 4096"
 ```
+
+Use the passphrase when prompted.
 
 Call it `is_rsa_vps` and save it in `~/.ssh/`
 
