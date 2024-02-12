@@ -12,7 +12,7 @@
 # this distribution doesn't have a version that supports it.
 
 LOW=70
-HIGH=80
+HIGH=100
 
 # Check if ThinkPad
 if [[ $(dmidecode -s system-manufacturer) != "LENOVO" ]]; then
@@ -57,10 +57,10 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s SP 0 $HIGH
-ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s ST 1 $LOW
-ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s ST 0 $LOW
 ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s SP 1 $HIGH
+ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s ST 2 $LOW
+ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s ST 1 $LOW
+ExecStart=/usr/bin/tpacpi-bat/tpacpi-bat -s SP 2 $HIGH
 
 [Install]
 WantedBy=multi-user.target

@@ -68,6 +68,15 @@ alias paste="xclip -selection clipboard -o"
 alias feh="feh --geometry 1680x1390 --scale-down --edit"
 alias venv="source venv/bin/activate"
 alias screenshot="import png:- | xclip -selection clipboard -t image/png"
+alias todo="nvim $NOTEBOOK/TODO.md"
+alias bashrc="nvim ~/.bashrc; source ~/.bashrc"
+alias snips="cd $NOTEBOOK/snippets"
+
+snip() {
+  read -p "Enter snippet name: " name
+  nvim "$NOTEBOOK/snippets/$(date '+%Y%m')-${name}"
+}
+
 
 runbg() {
   nohup "$@" > /dev/null 2>&1 &
