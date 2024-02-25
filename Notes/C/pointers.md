@@ -1,34 +1,26 @@
-```c
-/*
-
 Pointers are variables
 
 used for:
-* Strings
-* Dynamic Memory allocation
-* Sending function arguments by reference
-* Building complex data structures
-* Pointing to functions
-* Building special data structures (trees, tries etc)
+
+- Strings
+- Dynamic Memory allocation
+- Sending function arguments by reference
+- Building complex data structures
+- Pointing to functions
+- Building special data structures (trees, tries etc)
 
 A pointer is a simple integer variable that holds a MEMORY ADDRESS
 
-*/
-
+```
 char *name = "John";
+```
 
-/*
-
-1. Allocates a local (stack) variable called "name" - which is a pointer to a single character.
+1. Allocates a local stack variable called "name" - which is a pointer to a single character.
 2. It causes the string "John" to appear somewhere in memory.
 3. It initializes the "name" argument to point to where the "J" character resides.
 
-It will go over the string until it reaches the "null" character noted as "\0"
+It will go over the string until it reaches the "null" character noted as `\0`
 
-*/
-
-
-/*
 DEREFERENCING
 
 This is a bit of a confusing name, because what it refers to
@@ -36,13 +28,12 @@ is the act of "unfolding a reference" - or following where a reference
 points to.
 
 Accesing the first item in an array i.e
-array[0]
+`array[0]`
 is the same as dereferencing a pointer
 
-
 The & operator (address of operator) can be used:
-*/
 
+````c
 int a = 1;
 
 int *pointer_to_a = &a;
@@ -84,7 +75,7 @@ int main() {
 
 //////
 
-int i; 
+int i;
 int k, *ip; // initializing and integer and pointer
 
 ip = &i; // & reference operator. ip is pointer/address to i.
@@ -124,11 +115,11 @@ void update(int *a,int *b) {
 int main() {
     int a, b;
     int *pa = &a, *pb = &b;
-    
+
     scanf("%d %d", &a, &b);
     update(pa, pb);
     printf("%d\n%d", a, b);
 
     return 0;
-}
-```
+}```
+````

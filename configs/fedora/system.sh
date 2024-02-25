@@ -1,4 +1,5 @@
-notify-send "running xprofile"
+#!/bin/sh
+notify-send "Running system setup"
 
 if xinput list | grep -q "Synaptics TM3145-005"; then
     xinput set-prop "Synaptics TM3145-005" "libinput Natural Scrolling Enabled" 1

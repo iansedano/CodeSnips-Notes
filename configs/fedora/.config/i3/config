@@ -8,6 +8,9 @@ set $mod Mod4
 
 set $dropbox $HOME/Dropbox
 set $notebook $dropbox/notebook
+set $codesnip $HOME/dev/CodeSnips-Notes
+
+exec --no-startup-id $codesnip/configs/fedora/system.sh
 
 # Add xfce settings for mouse settings etc.
 # exec --no-startup-id xfsettingsd
