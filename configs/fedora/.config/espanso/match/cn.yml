@@ -8,6 +8,11 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
+  - trigger: "cnexternalresource"
+    replace: "[[external-resource src=\"example.com\" link-text=\"example\"]]\n\n{{clipboard}}\n\n[[/external-resource]]"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
   - trigger: "learnbydoing"
     replace: "[LEARN_BY_DOING_GH]\n\n{{clipboard}}\n\n[/LEARN_BY_DOING_GH]"
     vars:

@@ -69,14 +69,23 @@ alias feh="feh --geometry 1680x1390 --scale-down --edit"
 alias venv="source venv/bin/activate"
 alias screenshot="import png:- | xclip -selection clipboard -t image/png"
 alias todo="nvim $NOTEBOOK/TODO.md"
+alias scratch="nvim $NOTEBOOK/SCRATCH.md"
 alias bashrc="nvim ~/.bashrc; source ~/.bashrc"
 alias snips="cd $NOTEBOOK/snippets"
+
 
 snip() {
   read -p "Enter snippet name: " name
   nvim "$NOTEBOOK/snippets/$(date '+%Y%m')-${name}"
 }
 
+journal() {
+  nvim "$NOTEBOOK/journal/$(date '+%Y%m%d')"
+}
+
+mem() {
+  nvim "$NOTEBOOK/mem.md"
+}
 
 runbg() {
   nohup "$@" > /dev/null 2>&1 &

@@ -114,3 +114,6 @@ matches:
           args:
             - python
             - "%CONFIG%/scripts/launch_app.py"
+  - trigger: "mdcomment"
+    replace: "[]: # ()"
+  

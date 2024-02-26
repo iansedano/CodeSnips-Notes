@@ -84,6 +84,7 @@ packages=(
   # Office
   gnumeric
   visidata
+  xpad
   sc # Spreadsheet calculator
   # libreoffice
   #######
