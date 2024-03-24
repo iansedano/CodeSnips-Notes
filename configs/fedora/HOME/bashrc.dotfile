@@ -80,7 +80,7 @@ snip() {
 }
 
 journal() {
-  nvim "$NOTEBOOK/journal/$(date '+%Y%m%d')"
+  nvim "$NOTEBOOK/journal/$(date '+%Y%m%d').md"
 }
 
 mem() {
