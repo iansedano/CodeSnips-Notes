@@ -70,6 +70,7 @@ packages=(
   nautilus-dropbox
   neovim
   nethogs # Bandwidth monitor
+  meld
   python3-pip
   ripcord
   ripgrep

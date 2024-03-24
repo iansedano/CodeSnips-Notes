@@ -8,13 +8,18 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
+  - trigger: "cnalert"
+    replace: "[[alert]]\n\n{{clipboard}}\n\n[[/alert]]"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
   - trigger: "cnexternalresource"
     replace: "[[external-resource src=\"example.com\" link-text=\"example\"]]\n\n{{clipboard}}\n\n[[/external-resource]]"
     vars:
       - name: "clipboard"
         type: "clipboard"
   - trigger: "learnbydoing"
-    replace: "[LEARN_BY_DOING_GH]\n\n{{clipboard}}\n\n[/LEARN_BY_DOING_GH]"
+    replace: "[[learn-by-doing]]\n\n{{clipboard}}\n\n[[/learn-by-doing]]"
     vars:
       - name: "clipboard"
         type: "clipboard"
@@ -23,13 +28,6 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
-  - trigger: "copyexercises"
-    replace: |
-      [LEARN_BY_DOING_GH]
-      
-      Copy the examples from this lesson and get them working in your labs. Make a few variations, too.
-      
-      [/LEARN_BY_DOING_GH]
   - trigger: "cncolorpalette"
     replace: |
       black: #000

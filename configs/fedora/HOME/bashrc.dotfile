@@ -76,7 +76,7 @@ alias snips="cd $NOTEBOOK/snippets"
 
 snip() {
   read -p "Enter snippet name: " name
-  nvim "$NOTEBOOK/snippets/$(date '+%Y%m')-${name}"
+  nvim "$NOTEBOOK/snippets/$(date '+%Y%m')-${name}.md"
 }
 
 journal() {
