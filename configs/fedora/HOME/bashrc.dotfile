@@ -69,8 +69,12 @@ alias feh="feh --geometry 1680x1390 --scale-down --edit"
 alias venv="source venv/bin/activate"
 alias screenshot="import png:- | xclip -selection clipboard -t image/png"
 alias scratch="nvim $NOTEBOOK/SCRATCH.md"
-alias bashrc="nvim ~/.bashrc; source ~/.bashrc"
 alias snips="cd $NOTEBOOK/snippets"
+
+bashrc(){
+  nvim ~/.bashrc
+  source ~/.bashrc
+}
 
 note(){
     if [[ -z $1 ]]; then

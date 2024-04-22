@@ -28,6 +28,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 404040
 # NetworkManager
 exec --no-startup-id nm-applet
 
+bindsym Print exec flameshot gui
+
 # Appearance
 exec_always --no-startup-id xsetroot -solid "#404040"
 gaps inner 10

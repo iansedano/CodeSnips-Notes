@@ -1,5 +1,5 @@
 {
-	"font_size": 14,
+	"font_size": 12,
 	"save_on_focus_lost": true,
 	"hot_exit": "disabled",
 	"remember_workspace": false,
@@ -20,6 +20,7 @@
 	"wrap_width_style": "min",
 	"ignored_packages":
 	[
+		"LSP",
 		"Vintage",
 	],
 	"index_files": true,
