@@ -87,6 +87,7 @@ packages=(
   visidata
   xpad
   sc # Spreadsheet calculator
+  xournalpp
   # libreoffice
   #######
   # Media
