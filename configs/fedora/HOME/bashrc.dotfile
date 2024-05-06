@@ -55,7 +55,6 @@ light-theme () {
 }
 
 alias open='xdg-open'
-alias ls='eza -a'
 alias la='eza -lah'
 alias desktop="cd $DESKTOP"
 alias dev="cd $DEV"
