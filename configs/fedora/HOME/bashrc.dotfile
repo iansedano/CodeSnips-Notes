@@ -98,6 +98,8 @@ snip() {
   nvim "$NOTEBOOK/snippets/$(date '+%Y%m')-${name}.md"
 }
 
+alias snippets="ls $NOTEBOOK/snippets"
+
 journal() {
   nvim "$NOTEBOOK/journal/$(date '+%Y%m%d').md"
 }
