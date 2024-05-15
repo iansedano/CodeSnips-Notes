@@ -17,3 +17,5 @@
 	autocrlf = input
 [init]
 	defaultBranch = main
+[core]
+  editor = "$(command -v nvim || echo 'vi')"

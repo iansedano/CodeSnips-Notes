@@ -61,7 +61,7 @@ alias dev="cd $DEV"
 alias dropdev="cd $DROPBOX_DEV"
 alias codesnip="cd $CODESNIP"
 alias notebook="cd $NOTEBOOK"
-alias mkvenv="python -m venv venv; source venv/bin/activate"
+alias mkvenv="mkdir venv; echo 'venv' > .dbignore; dbignore; python -m venv venv; source venv/bin/activate"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
 alias feh="feh --geometry 1680x1390 --scale-down --edit"
@@ -69,6 +69,7 @@ alias venv="source venv/bin/activate"
 alias screenshot="import png:- | xclip -selection clipboard -t image/png"
 alias scratch="nvim $NOTEBOOK/SCRATCH.md"
 alias snips="cd $NOTEBOOK/snippets"
+alias ..="cd .."
 
 bashrc(){
   nvim ~/.bashrc
