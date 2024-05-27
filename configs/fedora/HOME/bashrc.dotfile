@@ -71,6 +71,15 @@ alias scratch="nvim $NOTEBOOK/SCRATCH.md"
 alias snips="cd $NOTEBOOK/snippets"
 alias ..="cd .."
 
+idea(){
+  if [[ -z $1 ]]; then
+    runbg idea.sh $1
+  else
+    runbg idea.sh .
+  fi
+}
+complete -c idea
+
 bashrc(){
   nvim ~/.bashrc
   source ~/.bashrc
@@ -140,3 +149,7 @@ fi
 
 # rust (after rustup is installed)
 . "$HOME/.cargo/env"
+
+function manage_screenshots() {
+  runbg $CODESNIP/scripts/screenshot-log.sh
+}

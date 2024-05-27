@@ -82,6 +82,8 @@ packages=(
   xclip
   xinput
   xsetroot
+  yad # tray icons...
+  scrot
   # Office
   gnumeric
   visidata
