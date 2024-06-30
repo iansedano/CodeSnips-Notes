@@ -3,10 +3,12 @@
   suppress_multiple_term_dialog = True
   invert_search = True
 [keybindings]
+  full_screen = ""
+  help = ""
 [profiles]
   [[default]]
     background_color = "#282828"
-    font = CaskaydiaCove Nerd Font Propo Semi-Bold 9
+    font = CaskaydiaCove Nerd Font Propo Semi-Light 9
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollback_lines = 10000

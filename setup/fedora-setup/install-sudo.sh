@@ -54,6 +54,7 @@ packages=(
   cascadiacode-nerd-fonts
   community-mysql-server
   curl
+  alacritty
   direnv
   dos2unix
   dunst # Notification daemon
@@ -63,6 +64,7 @@ packages=(
   fzf
   gh
   git
+  meld
   google-chrome-stable
   i3
   ImageMagick
