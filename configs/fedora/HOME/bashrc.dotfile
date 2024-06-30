@@ -29,7 +29,7 @@ bind "TAB:menu-complete"
 bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous off"
 
-eval "$(oh-my-posh init bash --config $CODESNIP/configs/posh.omp.json)"
+eval "$(oh-my-posh init bash --config $CODESNIP/configs/common/posh.omp.json)"
 
 # direnv (maybe the above can be put into direnv?)
 eval "$(direnv hook bash)"
@@ -50,8 +50,14 @@ then
 fi
 
 # aliases and utilities
-light-theme () {
-  alias bat='bat --theme gruvbox-light'
+light () {
+  export BAT_THEME="gruvbox-light"
+  alacritty msg config "$(cat ~/.config/alacritty/light.toml)"
+}
+
+dark () {
+  export BAT_THEME=""
+  alacritty msg config "$(cat ~/.config/alacritty/alacritty.toml)"
 }
 
 alias open='xdg-open'
