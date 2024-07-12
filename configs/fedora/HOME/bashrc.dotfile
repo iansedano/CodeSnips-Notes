@@ -10,15 +10,27 @@ SNIPPET_LOG="$NOTEBOOK/snippet-log.md"
 PROFILE="$HOME/.bashrc"
 
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+  . /etc/bashrc
 fi
 
-export HISTFILESIZE=10000
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+export HISTFILE=~/.bash_eternal_history
+
+# if histfile is greater than 1mb then warn
+if [ $(stat -c %s $HISTFILE) -gt 1000000 ]; then
+  echo "Warning: History file is greater than 1mb"
+fi
+
+# if histfile is greater than 10mb then warn
+if [ $(stat -c %s $HISTFILE) -gt 10000000 ]; then
+  echo "Warning: History file is greater than 10mb"
+fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -36,26 +48,25 @@ eval "$(direnv hook bash)"
 
 # z
 if [ -f ~/opt/z/z.sh ]; then
-    . ~/opt/z/z.sh
+  . ~/opt/z/z.sh
 fi
 
 if [ -f /opt/z/z.sh ]; then
-    . /opt/z/z.sh
+  . /opt/z/z.sh
 fi
 
 # fzf
-if [ -x "$(command -v fzf)"  ]
-then
-	source /usr/share/fzf/shell/key-bindings.bash
+if [ -x "$(command -v fzf)" ]; then
+  source /usr/share/fzf/shell/key-bindings.bash
 fi
 
 # aliases and utilities
-light () {
+light() {
   export BAT_THEME="gruvbox-light"
   alacritty msg config "$(cat ~/.config/alacritty/light.toml)"
 }
 
-dark () {
+dark() {
   export BAT_THEME=""
   alacritty msg config "$(cat ~/.config/alacritty/alacritty.toml)"
 }
@@ -77,7 +88,7 @@ alias scratch="nvim $NOTEBOOK/SCRATCH.md"
 alias snips="cd $NOTEBOOK/snippets"
 alias ..="cd .."
 
-idea(){
+idea() {
   if [[ -z $1 ]]; then
     runbg idea.sh $1
   else
@@ -86,26 +97,26 @@ idea(){
 }
 complete -c idea
 
-bashrc(){
+bashrc() {
   nvim ~/.bashrc
   source ~/.bashrc
 }
 
-note(){
-    if [[ -z $1 ]]; then
-        echo "Error: Provide note name"
-        return 1
-    else
-        nvim "$NOTEBOOK/0-unprocessed/$1.md"
-    fi
+note() {
+  if [[ -z $1 ]]; then
+    echo "Error: Provide note name"
+    return 1
+  else
+    nvim "$NOTEBOOK/0-unprocessed/$1.md"
+  fi
 }
 
-todo(){
-    if [[ -z $1 ]]; then
-        nvim "$NOTEBOOK/TODO.md"
-    else
-        nvim "$NOTEBOOK/TODO-$1.md"
-    fi
+todo() {
+  if [[ -z $1 ]]; then
+    nvim "$NOTEBOOK/TODO.md"
+  else
+    nvim "$NOTEBOOK/TODO-$1.md"
+  fi
 }
 
 snip() {
@@ -124,7 +135,7 @@ mem() {
 }
 
 runbg() {
-  nohup "$@" > /dev/null 2>&1 &
+  nohup "$@" >/dev/null 2>&1 &
 }
 complete -c runbg
 
@@ -139,14 +150,13 @@ complete -c runbg
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1
-then
+if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
