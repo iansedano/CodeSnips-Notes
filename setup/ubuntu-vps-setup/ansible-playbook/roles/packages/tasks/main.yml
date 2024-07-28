@@ -1,3 +1,7 @@
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+
 - name: Install the unattended-upgrades package
   ansible.builtin.apt:
     name: unattended-upgrades
@@ -10,3 +14,25 @@
     group: root
     mode: "0644"
   when: ansible_os_family == "Debian"
+
+# - name: Install utility packages
+#   ansible.builtin.apt:
+#     name: "{{ item }}"
+#     state: present
+#   loop: "{{ packages_to_install }}"
+
+- name: Install required packages
+  ansible.builtin.apt:
+    pkg:
+      - bat
+      # - eza
+      - neovim
+      - nethogs
+      - direnv
+      - entr
+      - git
+      - tmux
+      - ripgrep
+      - fzf
+      - fd-find
+      - ca-certificates

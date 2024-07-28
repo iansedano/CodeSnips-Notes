@@ -31,3 +31,4 @@
     - ufw
     - fail2ban
     - ssh
+    - geerlingguy.docker

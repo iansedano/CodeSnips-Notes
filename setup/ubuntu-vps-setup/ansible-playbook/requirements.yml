@@ -1,0 +1,8 @@
+- name: geerlingguy.docker
+  version: "7.3.0"
+  
+# - name: geerlingguy.postgresql
+#   version: "3.5.2"
+  
+# - name: geerlingguy.nodejs
+#   version: "7.0.0"

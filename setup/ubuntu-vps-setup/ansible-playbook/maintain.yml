@@ -16,8 +16,12 @@
     username: cuse
     public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
     ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa_vps"
+    docker_edition: 'ce'
   roles:
     - packages
     - ufw
     - fail2ban
     - ssh
+    - geerlingguy.docker
+    # - geerlingguy.postgresql
+    # - geerlingguy.nodejs

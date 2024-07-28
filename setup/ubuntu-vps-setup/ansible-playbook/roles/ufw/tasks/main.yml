@@ -30,4 +30,8 @@
   ansible.builtin.command: ufw reload
   register: ufw_reload_result  # Registering the output to a variable
   changed_when: "'reloaded' in ufw_reload_result.stdout"  # Using the registered variable
-
+- name: Enable and start ufw service
+  ansible.builtin.systemd:
+    name: ufw
+    enabled: true
+    state: started
