@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"LSP",
 	],
 	"installed_packages":
 	[
@@ -10,6 +9,7 @@
 		"i3 wm",
 		"JSON Reindent",
 		"LSP",
+		"LSP-copilot",
 		"LSP-cspell",
 		"Package Control",
 	],
