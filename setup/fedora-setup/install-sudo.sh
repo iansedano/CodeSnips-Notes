@@ -58,12 +58,13 @@ packages=(
   direnv
   dos2unix
   dunst # Notification daemon
-  entr # Run command on file change
-  eza # ls replacement (exa no longer)
+  entr  # Run command on file change
+  eza   # ls replacement (exa no longer)
   fd-find
   fzf
   gh
   git
+  diff-so-fancy
   meld
   google-chrome-stable
   i3
@@ -97,8 +98,8 @@ packages=(
   # Media
   #######
   pinta # Paint.net like app
-  peek # Gif recorder
-  feh # Image viewer
+  peek  # Gif recorder
+  feh   # Image viewer
   libjpeg-turbo-utils
   zulucrypt # Truecrypt replacement
   # kamoso # Way to many deps... use vlc
@@ -108,9 +109,9 @@ packages=(
   inkscape
   gimp
   vlc
-  zeal # Offline documentation
+  zeal      # Offline documentation
   flameshot # Screenshot tool
-  switchdesk 
+  switchdesk
   #######
   # Build tools (C, pyenv, etc)
   #######
@@ -120,7 +121,7 @@ packages=(
   cmake
   clang
   clang-tools-extra
-  zlib-devel 
+  zlib-devel
   bzip2
   bzip2-devel
   readline-devel
@@ -145,7 +146,7 @@ if [ ! -f "$vs_code_repo" ]; then
   vs_code_gpg="https://packages.microsoft.com/keys/microsoft.asc"
   vs_code_url="https://packages.microsoft.com/yumrepos/vscode"
   rpm --import $vs_code_gpg
-  
+
   cat >$vs_code_repo <<EOF
 [code]
 name=Visual Studio Code
