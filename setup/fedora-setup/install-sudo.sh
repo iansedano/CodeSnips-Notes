@@ -44,6 +44,8 @@ fi
 
 dnf upgrade -y
 
+dnf copr enable atim/lazygit -y
+
 packages=(
   #######
   # Sys
@@ -56,6 +58,7 @@ packages=(
   curl
   alacritty
   direnv
+  lazygit
   dos2unix
   dunst # Notification daemon
   entr  # Run command on file change
