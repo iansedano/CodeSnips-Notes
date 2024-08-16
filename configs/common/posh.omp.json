@@ -5,39 +5,30 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "root",
-          "style": "plain",
-          "foreground": "yellow",
-          "properties": {
-            "root_icon": "\ue0a2"
-          },
-          "template": "\uf0e7"
-        },
-        {
           "type": "path",
-          "template": "{{ .Path }}",
+          "template": " {{ .Path }}",
           "background": "#969696",
           "foreground": "black",
           "leading_diamond": "\ue0b6",
+          "style": "powerline",
+          "powerline_symbol": "",
           "properties": {
             "style": "agnoster"
-          },
-          "style": "diamond",
-          "trailing_diamond": ""
+          }
         },
         {
           "type": "python",
           "style": "powerline",
           "powerline_symbol": "",
-          "template": "{{ if .Venv }} {{.Venv}}{{ end }}",
+          "template": "{{ if .Venv }}  {{ end }}",
           "display_mode" : "environment",
           "fetch_version": false,
-          "foreground": "#2b2c29",
-          "background": "#54c414"
+          "foreground": "#ffffff",
+          "background": "#338106"
         },
         {
           "type": "git",
-          "template": "{{ .HEAD }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}",
+          "template": " {{ .HEAD }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}",
           "style": "powerline",
           "background": "green",
           "background_templates": [
@@ -59,6 +50,15 @@
             "rebase_icon": "\u2c62 ",
             "tag_icon": "\u25b6 "
           }
+        },
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "yellow",
+          "properties": {
+            "root_icon": "\ue0a2"
+          },
+          "template": "\uf0e7"
         }
       ],
       "type": "prompt"
