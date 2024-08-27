@@ -93,7 +93,7 @@ int main() {
 			drawTriangle(size);
 			break;
 		case 2:
-			cout << "You chose type TWOA" << endl;
+			cout << "You chose type TWA" << endl;
 			drawSquare(size);
 			break;
 		case 3:

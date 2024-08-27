@@ -1,6 +1,3 @@
-```c
-/*
-
 Usually functions are passed values.
 Which usually means that a copy is made
 and passed into the function.
@@ -8,23 +5,13 @@ and passed into the function.
 Yet if you pass a reference, no copy is made,
 and you could manipulate the value directly.
 
-Might this be where a lot of memory management,
-can be made?
-
-*/
-
-
-/*
-
 For example,
 
 If you wanted to make a function that increments one
 WITHOUT returning a new value
 but MODIFYING the variable that was passed.
 
-*/
-
-
+```c
 void addone(int * n) {
     (*n)++;
 }
@@ -39,19 +26,14 @@ addone(i); // OUTPUT :22:8 NULL pointer dereference
 addone(&i); // passing it a pointer
 
 printf("%i\n", i); // OUTPUT 1
+```
 
+POINTERS TO STRUCTURES
 
-//
-
-// POINTERS TO STRUCTURES
-
-/*
-
-Likewise if we have a  function that increments the x and y of a point
+Likewise if we have a function that increments the x and y of a point
 we can send a pointer to a function.
 
-*/
-
+```c
 void move(point * p) {
     (*p).x++;
     (*p).y++;
@@ -97,8 +79,9 @@ int main() {
   return 0;
 }
 
-//
+```
 
+```c
 #include <stdio.h>
 
 typedef struct {

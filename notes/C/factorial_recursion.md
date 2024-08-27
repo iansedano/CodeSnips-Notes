@@ -1,7 +1,4 @@
 ```c
-/* Demonstrates function recursion
-*  Calculates factorial */
-
 #include <stdio.h>
 
 unsigned int f, x;
