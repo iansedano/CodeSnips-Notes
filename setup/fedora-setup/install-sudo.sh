@@ -47,64 +47,77 @@ dnf upgrade -y
 dnf copr enable atim/lazygit -y
 
 packages=(
-  #######
-  # Sys
-  #######
-  ansible
-  python3-ansible-lint
-  bat
-  cascadiacode-nerd-fonts
-  community-mysql-server
+  # ==========
+  # CLI Tools
+  # ==========
+  bat # cat replacement
   curl
-  alacritty
-  direnv
-  lazygit
-  dos2unix
-  dunst # Notification daemon
-  entr  # Run command on file change
-  eza   # ls replacement (exa no longer)
+  lazygit  # git tui
+  dos2unix # Convert line endings
+  entr     # Run command on file change
+  eza      # ls replacement (exa no longer)
   fd-find
   fzf
-  gh
   git
   diff-so-fancy
-  meld
-  google-chrome-stable
-  i3
-  ImageMagick
-  keepassxc
-  nautilus-dropbox
-  neovim
-  nethogs # Bandwidth monitor
-  meld
-  python3-pip
-  ripcord
   ripgrep
-  rofi
   openssh
-  terminator
   tmux
   wget
+  mc       # Midnight commander
+  visidata # Spreadsheet viewer
+  sc       # Spreadsheet calculator
+  neovim
+  nethogs # Bandwidth monitor
+  direnv
+
+  # ==========
+  # X11 Tools
+  # ==========
   xclip
   xinput
   xsetroot
-  yad # tray icons...
-  scrot
-  # Office
-  gnumeric
-  visidata
   xpad
-  sc # Spreadsheet calculator
+  xrandr # change output properties
+
+  # ==========
+  # Desktop Environment
+  # ==========
+  i3
+  dunst # Notification daemon
+  nautilus-dropbox
+  # yad   # Tray icons?
+  rofi
+
+  # ==========
+  # Desktop Apps
+  # ==========
+  meld
+  google-chrome-stable
+  keepassxc
+  alacritty
+  gnumeric
   xournalpp
-  # libreoffice
-  #######
-  # Media
-  #######
-  pinta # Paint.net like app
-  peek  # Gif recorder
-  feh   # Image viewer
-  libjpeg-turbo-utils
+  pinta     # Paint.net like app
+  peek      # Gif recorder
+  feh       # Image viewer
   zulucrypt # Truecrypt replacement
+
+  # ==========
+  # Dev Tools
+  # ==========
+  ansible
+  python3-ansible-lint
+  community-mysql-server
+  python3-pip
+
+  cascadiacode-nerd-fonts
+  gh
+  ImageMagick
+  ripcord
+  scrot
+
+  libjpeg-turbo-utils
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder
   screenkey

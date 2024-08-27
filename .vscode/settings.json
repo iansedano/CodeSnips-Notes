@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.dotfile": "shellscript",
+    "**/i3/config": "i3"
+  }
+}

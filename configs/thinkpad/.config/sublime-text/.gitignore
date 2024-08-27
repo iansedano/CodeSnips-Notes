@@ -1,0 +1,10 @@
+/*
+
+!.gitignore
+
+!Packages/
+Packages/*
+!Packages/User/
+
+Package Control.user-ca-bundle
+

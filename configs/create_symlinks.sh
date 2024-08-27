@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# This will then create symlinks in your home directory to the files in the
+# desktop directory.
+#
+# It will symlink the `.dotfile` files to the `HOME` directory, and the
+# `.config` sub-directories.
+#
+# You can run the script with the `--dry-run` flag to see what it will do
+# without actually doing it.
+#
+# Example:
+#   ./create_symlinks.sh /path/to/source-config --dry-run
+
 SOURCE_DIR="$1"
 if [ -z "$SOURCE_DIR" ]; then
   echo "No source directory specified, exiting."
@@ -88,6 +100,9 @@ for source_dotfile in "$SOURCE_DOTFILES_DIR"/*.dotfile; do
     if [ -L "$home_dotfile_path" ] && [ "$(readlink -f "$home_dotfile_path")" != "$source_dotfile" ]; then
       echo "$home_dotfile is a symbolic link but points to wrong location. Deleting."
       [ "$DRY_RUN" = false ] && rm "$home_dotfile_path"
+      echo "Creating symbolic link for $home_dotfile"
+      [ "$DRY_RUN" = false ] && ln -sfn "$source_dotfile" "$home_dotfile_path"
+    elif [ ! -e "$home_dotfile_path" ]; then
       echo "Creating symbolic link for $home_dotfile"
       [ "$DRY_RUN" = false ] && ln -sfn "$source_dotfile" "$home_dotfile_path"
     else

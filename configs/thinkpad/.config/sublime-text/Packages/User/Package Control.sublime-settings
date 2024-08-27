@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"GhostText",
+		"i3 wm",
+		"JSON Reindent",
+		"LSP",
+		"LSP-copilot",
+		"LSP-cspell",
+		"Package Control",
+	],
+}
