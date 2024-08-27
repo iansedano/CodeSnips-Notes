@@ -1,3 +1,12 @@
+"""
+I backtrack on every sub knapsack, so I always maintain the most efficient
+knapsack on every iteration. I also build the array as I go.
+
+Their solution chooses the most efficient subknapsack yet always with the current
+item. So they need to backtrack at the end. They also build a blank array before
+starting.
+"""
+
 import copy
 
 def knapsackProblem(items, cap):
@@ -53,15 +62,7 @@ def knapsackProblem(items, cap):
 
             sub_knaps[i].append(sub_knap)
       
-	best_knap = sub_knaps[-1][-1]
+    best_knap = sub_knaps[-1][-1]
     output = [best_knap[0], best_knap[2]]
     return output
 
-"""
-I backtrack on every sub knapsack, so I always maintain the most efficient
-knapsack on every iteration. I also build the array as I go.
-
-Their solution chooses the most efficient subknapsack yet always with the current
-item. So they need to backtrack at the end. They also build a blank array before
-starting.
-"""
