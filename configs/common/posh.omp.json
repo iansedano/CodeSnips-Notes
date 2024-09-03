@@ -13,7 +13,8 @@
           "style": "powerline",
           "powerline_symbol": "",
           "properties": {
-            "style": "agnoster"
+            "style": "powerlevel",
+            "max_width": 80
           }
         },
         {
