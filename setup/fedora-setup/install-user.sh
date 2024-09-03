@@ -1,10 +1,10 @@
 # Must have bashrc
 
 if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
-    echo "SSH connection to GitHub established."
+  echo "SSH connection to GitHub established."
 else
-    echo "SSH connection to GitHub failed."
-    exit 1
+  echo "SSH connection to GitHub failed."
+  exit 1
 fi
 
 # flatpaks
@@ -13,11 +13,11 @@ fi
 # flatpak install --yes --quiet flathub com.spotify.Client
 # flatpak install --yes --quiet io.dbeaver.DBeaverCommunity
 
-# z 
-git clone git@github.com:rupa/z.git ~/opt/z
+# z
+# git clone git@github.com:rupa/z.git ~/opt/z
 
 # pyenv
-curl https://pyenv.run | bash  # may need restart after this...or sourcing .bashrc
+curl https://pyenv.run | bash # may need restart after this...or sourcing .bashrc
 
 pyenv update
 pyenv rehash
@@ -42,7 +42,7 @@ echo 'export_alias() {
   echo "PATH=\"$oldpath\"" >> "$target"
   echo "$@" >> "$target"
   chmod +x "$target"
-}' >> ~/.direnvrc
+}' >>~/.direnvrc
 
 # Jabba
 curl -sL https://github.com/Jabba-Team/jabba/raw/main/install.sh | bash && . ~/.jabba/jabba.sh

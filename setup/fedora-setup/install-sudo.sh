@@ -70,6 +70,7 @@ packages=(
   neovim
   nethogs # Bandwidth monitor
   direnv
+  zoxide # z autojump replacement
 
   # ==========
   # X11 Tools
