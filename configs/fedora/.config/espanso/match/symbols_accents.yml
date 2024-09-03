@@ -39,3 +39,6 @@ matches:
     replace: "♯"
   - trigger: "naturalico"
     replace: "♮"
+    
+  - trigger: "euroico"
+    replace: "€"
