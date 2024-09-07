@@ -40,5 +40,5 @@ matches:
   - trigger: "naturalico"
     replace: "♮"
     
-  - trigger: "euroico"
+  - trigger: "eurico"
     replace: "€"
