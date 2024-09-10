@@ -50,75 +50,76 @@ packages=(
   # ==========
   # CLI Tools
   # ==========
-  bat # cat replacement
-  curl
-  lazygit  # git tui
-  dos2unix # Convert line endings
-  entr     # Run command on file change
-  eza      # ls replacement (exa no longer)
-  fd-find
-  fzf
-  git
-  diff-so-fancy
-  ripgrep
-  openssh
-  tmux
-  wget
-  mc       # Midnight commander
-  visidata # Spreadsheet viewer
-  sc       # Spreadsheet calculator
-  neovim
-  nethogs # Bandwidth monitor
-  direnv
-  zoxide # z autojump replacement
+  bat                 # cat replacement
+  curl                # download
+  lazygit             # git tui
+  dos2unix            # Convert line endings
+  entr                # Run command on file change
+  eza                 # ls replacement (exa no longer)
+  fd-find             # find replacement
+  fzf                 # fuzzy finder
+  git                 # version control
+  diff-so-fancy       # nicer diff view
+  ripgrep             # grep replacement
+  openssh             # ssh
+  tmux                # terminal multiplexer
+  wget                # download
+  mc                  # Midnight commander
+  visidata            # Spreadsheet viewer
+  sc                  # Spreadsheet calculator
+  neovim              # Text editor
+  nethogs             # Bandwidth monitor
+  direnv              # Environment manager
+  zoxide              # z autojump replacement
+  qpdf                # PDF manipulation
+  gh                  # Github CLI
+  ImageMagick         # Image manipulation
+  libjpeg-turbo-utils # JPEG manipulation
 
   # ==========
   # X11 Tools
   # ==========
-  xclip
-  xinput
+  xclip  # clipboard manager
+  xinput # input device manager
   xsetroot
   xpad
   xrandr # change output properties
+  scrot  # Screenshot tool
 
   # ==========
   # Desktop Environment
   # ==========
   i3
-  dunst # Notification daemon
-  nautilus-dropbox
+  dunst                   # Notification daemon
+  nautilus-dropbox        # Dropbox daemon
+  rofi                    # Launcher
+  alacritty               # Terminal emulator
+  cascadiacode-nerd-fonts # Nerd font for terminal
   # yad   # Tray icons?
-  rofi
 
   # ==========
   # Desktop Apps
   # ==========
-  meld
-  google-chrome-stable
-  keepassxc
-  alacritty
-  gnumeric
-  xournalpp
-  pinta     # Paint.net like app
-  peek      # Gif recorder
-  feh       # Image viewer
-  zulucrypt # Truecrypt replacement
+  meld                 # Diff tool
+  google-chrome-stable # browser
+  keepassxc            # Password manager
+  gnumeric             # Superfast basic spreadsheet
+  xournalpp            # Annotate PDFs and general drawing
+  pinta                # Paint.net like app
+  peek                 # Gif recorder
+  feh                  # Image viewer
+  zulucrypt            # Truecrypt replacement
 
   # ==========
   # Dev Tools
   # ==========
-  ansible
-  python3-ansible-lint
-  community-mysql-server
-  python3-pip
+  ansible                # Install automation
+  python3-ansible-lint   # Linting for ansible
+  community-mysql-server # MySQL
+  python3-pip            # Python package manager for system install
 
-  cascadiacode-nerd-fonts
-  gh
-  ImageMagick
-  ripcord
-  scrot
+  ripcord # Discord client
 
-  libjpeg-turbo-utils
   # kamoso # Way to many deps... use vlc
   simplescreenrecorder
   screenkey
@@ -129,6 +130,7 @@ packages=(
   zeal      # Offline documentation
   flameshot # Screenshot tool
   switchdesk
+
   #######
   # Build tools (C, pyenv, etc)
   #######
