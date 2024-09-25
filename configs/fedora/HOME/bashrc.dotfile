@@ -45,6 +45,11 @@ fi
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
   PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+if ! [[ "$PATH" =~ (^|:)"$CODESNIP/scripts"(:|$) ]]; then
+  PATH="$CODESNIP/scripts:$PATH"
+fi
+
 export PATH
 
 # ========================================
@@ -64,18 +69,6 @@ eval "$(oh-my-posh init bash --config "$POSH_CONFIG")"
 # ========================================
 
 eval "$(direnv hook bash)"
-
-# ========================================
-# z
-# ========================================
-
-# if [ -f ~/opt/z/z.sh ]; then
-#   . ~/opt/z/z.sh
-# fi
-
-# if [ -f /opt/z/z.sh ]; then
-#   . /opt/z/z.sh
-# fi
 
 # ========================================
 # fzf

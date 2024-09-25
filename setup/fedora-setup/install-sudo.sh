@@ -45,6 +45,7 @@ fi
 dnf upgrade -y
 
 dnf copr enable atim/lazygit -y
+# dnf copr enable lkiesow/intellij-idea-community # need to test this
 
 packages=(
   # ==========
