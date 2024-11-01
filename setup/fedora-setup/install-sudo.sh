@@ -77,6 +77,8 @@ packages=(
   ImageMagick         # Image manipulation
   libjpeg-turbo-utils # JPEG manipulation
   pipx                # Python installer for standalone execs
+  mycli               # MySQL CLI
+
   # ==========
   # X11 Tools
   # ==========
@@ -90,7 +92,7 @@ packages=(
   # ==========
   # Desktop Environment
   # ==========
-  i3
+  i3                      # Window manager
   dunst                   # Notification daemon
   nautilus-dropbox        # Dropbox daemon
   rofi                    # Launcher
