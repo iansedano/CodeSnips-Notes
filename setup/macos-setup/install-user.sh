@@ -84,6 +84,11 @@ done
 
 brew install --cask alacritty --no-quarantine # Terminal emulator
 
+# Autoraise - Raise windows on hover
+brew tap dimentium/autoraise
+brew install autoraise
+brew services start autoraise
+
 pyenv update
 pyenv rehash
 LATEST_PYTHON=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1)
