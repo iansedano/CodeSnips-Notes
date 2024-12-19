@@ -53,21 +53,21 @@ casks=(
   dropbox               # File sync and backup
   visual-studio-code    # IDE
   sublime-text          # Fast, simple IDE
-  alacritty             # Terminal emulator
   font-cascadia-code-nf # Nerd font for terminal
   xournal++             # Notetaking, good for annotating PDFs
   dehesselle-meld       # Diff GUI tool
   keepassxc             # Password manager GUI
   pinta                 # Paint.net like app
   #  ripcord                 # Light and fast app for Discord and Slack
-  inkscape # Open source vector image app
-  gimp     # Open source Photoshop replacement
-  vlc      # Video player
-  obs      # OSS streaming, screen recording
-  drawio   # Diagramming
-  spotify  # Music player
-  espanso  # Text expander
-  gitahead # Git client
+  inkscape        # Open source vector image app
+  gimp            # Open source Photoshop replacement
+  vlc             # Video player
+  obs             # OSS streaming, screen recording
+  drawio          # Diagramming
+  spotify         # Music player
+  espanso         # Text expander
+  gitahead        # Git client
+  scroll-reverser # Independent mouse settings for mouse and trackpad
 )
 
 exec &> >(tee -a install-user.log)
@@ -79,34 +79,19 @@ done
 
 for cask in "${casks[@]}"; do
   echo "==== Attempting to install $cask cask ===="
-  brew install --cask $cask
+  brew install --cask $casks
 done
+
+brew install --cask alacritty --no-quarantine # Terminal emulator
 
 pyenv update
 pyenv rehash
 LATEST_PYTHON=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1)
 pyenv install $LATEST_PYTHON
 
-# direnv
-# https://github.com/direnv/direnv/issues/73
-if [ ! -e ~/.direnvrc ] || [ ! -s ~/.direnvrc ]; then
-  touch ~/.direnvrc
-  echo 'export_alias() {
-      local name=$1
-      shift
-      local alias_dir=$PWD/.direnv/aliases
-      local target="$alias_dir/$name"
-      local oldpath="$PATH"
-      mkdir -p "$alias_dir"
-      if ! [[ ":$PATH:" == *":$alias_dir:"* ]]; then
-        PATH_add "$alias_dir"
-      fi
-
-      echo "#!/usr/bin/env bash" > "$target"
-      echo "PATH=\"$oldpath\"" >> "$target"
-      echo "$@" >> "$target"
-      chmod +x "$target"
-    }' >>~/.direnvrc
-fi
-
+# May need an exit and relog to work...
+mkdir "$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 nvm install --lts

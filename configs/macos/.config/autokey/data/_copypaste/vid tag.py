@@ -1,0 +1,1 @@
+keyboard.send_keys("[[video id=<ctrl>+v]]")
