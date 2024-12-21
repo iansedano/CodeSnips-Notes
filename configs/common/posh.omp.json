@@ -93,9 +93,6 @@
       ]
     },
     {
-      "type": "newline"
-    },
-    {
       "type": "prompt",
       "alignment": "left",
       "segments": [
@@ -103,7 +100,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "❯",
+          "template": "\n❯",
           "foreground": "#007ACC",
           "type": "text",
           "style": "plain"
@@ -111,6 +108,13 @@
       ]
     }
   ],
+  
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#ffffff",
+    "template": "==={{now | date \"15:04:05\"}}===> "
+  },
+  
   "version": 3,
   "final_space": true
 }

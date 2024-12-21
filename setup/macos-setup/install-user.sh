@@ -68,6 +68,7 @@ casks=(
   espanso         # Text expander
   gitahead        # Git client
   scroll-reverser # Independent mouse settings for mouse and trackpad
+  kitty           # Terminal emulator
 )
 
 exec &> >(tee -a install-user.log)
@@ -82,7 +83,7 @@ for cask in "${casks[@]}"; do
   brew install --cask $casks
 done
 
-brew install --cask alacritty --no-quarantine # Terminal emulator
+brew install --cask nikitabobko/tap/aerospace
 
 # Autoraise - Raise windows on hover
 brew tap dimentium/autoraise

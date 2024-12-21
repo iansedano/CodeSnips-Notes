@@ -1,10 +1,10 @@
 pollMillis=50
 delay=5
-focusDelay=0
+focusDelay=1
 warpX=0
 warpY=0
 scale=1
-altTaskSwitcher=false
+altTaskSwitcher=true
 ignoreSpaceChanged=false
 invertIgnoreApps=false
 ignoreApps=""
