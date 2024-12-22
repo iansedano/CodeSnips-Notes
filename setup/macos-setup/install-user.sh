@@ -58,18 +58,20 @@ casks=(
   dehesselle-meld       # Diff GUI tool
   keepassxc             # Password manager GUI
   pinta                 # Paint.net like app
-  #  ripcord                 # Light and fast app for Discord and Slack
-  inkscape        # Open source vector image app
-  gimp            # Open source Photoshop replacement
-  vlc             # Video player
-  obs             # OSS streaming, screen recording
-  drawio          # Diagramming
-  spotify         # Music player
-  espanso         # Text expander
-  gitahead        # Git client
-  scroll-reverser # Independent mouse settings for mouse and trackpad
-  kitty           # Terminal emulator
+  inkscape              # Open source vector image app
+  gimp                  # Open source Photoshop replacement
+  vlc                   # Video player
+  obs                   # OSS streaming, screen recording
+  drawio                # Diagramming
+  spotify               # Music player
+  espanso               # Text expander
+  gitahead              # Git client
+  scroll-reverser       # Independent mouse settings for mouse and trackpad
+  kitty                 # Terminal emulator
+  karabiner-elements    # Keyboard remapper
 )
+
+#  ripcord                 # Light and fast app for Discord and Slack
 
 exec &> >(tee -a install-user.log)
 
