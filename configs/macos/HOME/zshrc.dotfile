@@ -27,6 +27,7 @@ PS1='%F{cyan}%n%F{red}@%F{green}%m%F{magenta}:%~%F{red}$%f '
 # Completion settings
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 bindkey '^I' menu-complete
 bindkey '^[[Z' reverse-menu-complete
 
