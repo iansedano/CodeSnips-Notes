@@ -48,18 +48,18 @@ alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
 # alt-a = 'focus parent'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
-alt-minus = 'workspace 11'
-alt-equal = 'workspace 12'
+alt-1 = ['workspace 13', 'workspace 1']
+alt-2 = ['workspace 14', 'workspace 2']
+alt-3 = ['workspace 15', 'workspace 3']
+alt-4 = ['workspace 16', 'workspace 4']
+alt-5 = ['workspace 17', 'workspace 5']
+alt-6 = ['workspace 18', 'workspace 6']
+alt-7 = ['workspace 19', 'workspace 7']
+alt-8 = ['workspace 20', 'workspace 8']
+alt-9 = ['workspace 21', 'workspace 9']
+alt-0 = ['workspace 22', 'workspace 10']
+alt-minus = ['workspace 23', 'workspace 11']
+alt-equal = ['workspace 24', 'workspace 12']
 
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -78,6 +78,33 @@ alt-shift-equal = 'move-node-to-workspace 12'
 
 alt-r = 'mode resize'
 
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = 'main'
+7 = 'main'
+8 = 'main'
+9 = 'main'
+10 = 'main'
+11 = 'main'
+12 = 'main'
+13 = 'secondary'
+14 = 'secondary'
+15 = 'secondary'
+16 = 'secondary'
+17 = 'secondary'
+18 = 'secondary'
+19 = 'secondary'
+20 = 'secondary'
+21 = 'secondary'
+22 = 'secondary'
+23 = 'secondary'
+24 = 'secondary'                        
+
+
 [mode.resize.binding]
 h = 'resize width -50'
 j = 'resize height +50'
@@ -89,5 +116,4 @@ esc = 'mode main'
 [[on-window-detected]]
 if.app-id = 'org.keepassxc.keepassxc'
 run = 'layout floating'
-
 
