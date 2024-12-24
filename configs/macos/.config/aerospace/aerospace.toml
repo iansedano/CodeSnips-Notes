@@ -61,6 +61,19 @@ alt-0 = ['workspace 22', 'workspace 10']
 alt-minus = ['workspace 23', 'workspace 11']
 alt-equal = ['workspace 24', 'workspace 12']
 
+alt-ctrl-1 = 'workspace 13'
+alt-ctrl-2 = 'workspace 14'
+alt-ctrl-3 = 'workspace 15'
+alt-ctrl-4 = 'workspace 16'
+alt-ctrl-5 = 'workspace 17'
+alt-ctrl-6 = 'workspace 18'
+alt-ctrl-7 = 'workspace 19'
+alt-ctrl-8 = 'workspace 20'
+alt-ctrl-9 = 'workspace 21'
+alt-ctrl-0 = 'workspace 22'
+alt-ctrl-minus = 'workspace 23'
+alt-ctrl-equal = 'workspace 24'
+
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
@@ -73,10 +86,18 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
 alt-shift-minus = 'move-node-to-workspace 11'
 alt-shift-equal = 'move-node-to-workspace 12'
-
-# alt-shift-c = 'reload-config' # Doesn't seem to work
-
-alt-r = 'mode resize'
+alt-shift-ctrl-1 = 'move-node-to-workspace 13'
+alt-shift-ctrl-2 = 'move-node-to-workspace 14'
+alt-shift-ctrl-3 = 'move-node-to-workspace 15'
+alt-shift-ctrl-4 = 'move-node-to-workspace 16'
+alt-shift-ctrl-5 = 'move-node-to-workspace 17'
+alt-shift-ctrl-6 = 'move-node-to-workspace 18'
+alt-shift-ctrl-7 = 'move-node-to-workspace 19'
+alt-shift-ctrl-8 = 'move-node-to-workspace 20'
+alt-shift-ctrl-9 = 'move-node-to-workspace 21'
+alt-shift-ctrl-0 = 'move-node-to-workspace 22'
+alt-shift-ctrl-minus = 'move-node-to-workspace 23'
+alt-shift-ctrl-equal = 'move-node-to-workspace 24'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'
@@ -102,8 +123,11 @@ alt-r = 'mode resize'
 21 = 'secondary'
 22 = 'secondary'
 23 = 'secondary'
-24 = 'secondary'                        
+24 = 'secondary'            
 
+# alt-shift-c = 'reload-config' # Doesn't seem to work            
+
+alt-r = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'
