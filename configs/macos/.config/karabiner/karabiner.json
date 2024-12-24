@@ -4,7 +4,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change right_command+hjkl to arrow keys",
+                        "description": "Caps lock layer",
                         "manipulators": [
                             {
                                 "from": {
@@ -118,24 +118,18 @@
                     "identifiers": { "is_keyboard": true },
                     "simple_modifications": [
                         {
-                            "from": { "key_code": "§" },
-                            "to": [{ "key_code": "`" }]
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "right_command" }]
                         },
                         {
-                            "from": { "key_code": "±" },
-                            "to": [{ "key_code": "~" }]
+                            "from": { "key_code": "non_us_backslash" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
                         }
                     ]
                 }
             ],
             "name": "Default profile",
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "right_command" }]
-                }
-            ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
