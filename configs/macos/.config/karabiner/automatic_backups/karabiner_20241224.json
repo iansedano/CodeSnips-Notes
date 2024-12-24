@@ -86,7 +86,9 @@
                             {
                                 "from": {
                                     "key_code": "g",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": ["right_command"]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -99,7 +101,9 @@
                             {
                                 "from": {
                                     "key_code": "g",
-                                    "modifiers": { "mandatory": ["right_command", "left_shift"] }
+                                    "modifiers": {
+                                        "mandatory": ["right_command", "left_shift"]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -113,21 +117,6 @@
                     }
                 ]
             },
-            "devices": [
-                {
-                    "identifiers": { "is_keyboard": true },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "§" },
-                            "to": [{ "key_code": "`" }]
-                        },
-                        {
-                            "from": { "key_code": "±" },
-                            "to": [{ "key_code": "~" }]
-                        }
-                    ]
-                }
-            ],
             "name": "Default profile",
             "selected": true,
             "simple_modifications": [
