@@ -13,9 +13,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [mode.main.binding]
 # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
 alt-enter = 'exec-and-forget kitty -1 -d ~/'
-alt-cmd-c = 'exec-and-forget open -na "Google Chrome" --args --new-window'
-alt-cmd-k = 'exec-and-forget open -a "KeePassXC"'
-alt-cmd-t = 'exec-and-forget open -a "Sublime Text" --args -n'
+cmd-ctrl-c = 'exec-and-forget open -na "Google Chrome" --args --new-window'
+cmd-ctrl-k = 'exec-and-forget open -a "KeePassXC"'
+cmd-ctrl-t = 'exec-and-forget open -a "Sublime Text" --args -n'
 
 # i3 wraps focus by default
 alt-h =         'focus --boundaries-action wrap-around-the-workspace left'
