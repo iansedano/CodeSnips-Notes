@@ -78,8 +78,8 @@ alias notebook="cd $NOTEBOOK"
 alias ls='eza'
 alias la='eza -lah'
 
-alias copy="xclip -selection clipboard"
-alias paste="xclip -selection clipboard -o"
+alias copy="pbcopy"
+alias paste="pbpaste"
 
 alias feh="feh --geometry 1680x1390 --scale-down --edit"
 
