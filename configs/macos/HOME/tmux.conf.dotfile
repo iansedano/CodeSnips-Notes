@@ -1,0 +1,2 @@
+set-option -g prefix C-Space
+unbind C-b # Unbind the default leader (Control-b)
