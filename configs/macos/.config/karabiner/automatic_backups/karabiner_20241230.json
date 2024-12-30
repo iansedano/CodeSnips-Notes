@@ -147,154 +147,51 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "BUILT IN Mod keys",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "net.kovidgoyal.kitty"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "description": "fn to command - if not kitty",
-                                "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                                "to": { "key_code": "left_command" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "net.kovidgoyal.kitty"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "description": "fn to control - if kitty",
-                                "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                                "to": { "key_code": "left_control" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "net.kovidgoyal.kitty"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "description": "command to control - if not kitty. Don't need an inverse because want command key to stay command key if kitty",
-                                "from": { "key_code": "left_command" },
-                                "to": { "key_code": "left_control" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "description": "control to fn",
-                                "from": { "key_code": "left_control" },
-                                "to": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "description": "caps to right_command",
-                                "from": { "key_code": "caps_lock" },
-                                "to": { "key_code": "right_command" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "description": "tilde key",
-                                "from": { "key_code": "non_us_backslash" },
-                                "to": { "key_code": "grave_accent_and_tilde" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "KEYCHRON Mod keys",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 13364 }],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "net.kovidgoyal.kitty"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "description": "command to control - if not kitty",
-                                "from": { "key_code": "left_command" },
-                                "to": { "key_code": "left_control" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 13364 }],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "net.kovidgoyal.kitty"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "description": "control to commnand - if not kitty",
-                                "from": { "key_code": "left_control" },
-                                "to": { "key_code": "left_command" },
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
             "devices": [
                 {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "non_us_backslash" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        },
+                        {
+                            "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
+                },
+                {
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": true,
                         "product_id": 2675,
                         "vendor_id": 13364
                     },
-                    "ignore": false
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
                 }
             ],
             "name": "Default profile",
