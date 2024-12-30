@@ -76,7 +76,7 @@ alias notebook="cd $NOTEBOOK"
 # ========================================
 
 alias ls='eza'
-alias la='eza -lah'
+alias la='eza -lah --git'
 
 alias copy="pbcopy"
 alias paste="pbpaste"
