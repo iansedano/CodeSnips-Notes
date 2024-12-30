@@ -1,0 +1,10 @@
+# https://espanso.org/docs/configuration/options/
+
+search_shortcut: ALT+SPACE
+
+toggle_key: OFF
+# Clipboard, Inject or Auto
+backend: Clipboard
+auto_restart: true
+
+undo_backspace: false

@@ -1,0 +1,145 @@
+# Reference: https://github.com/i3/i3/blob/next/etc/config
+
+# i3 doesn't have "normalizations" feature that why we disable them here.
+# But the feature is very helpful.
+# Normalizations eliminate all sorts of weird tree configurations that don't make sense.
+# Give normalizations a chance and enable them back.
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+# Mouse follows focus when focused monitor changes
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+accordion-padding = 120
+
+[mode.main.binding]
+# See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
+alt-enter = 'exec-and-forget kitty -1 -d ~/'
+cmd-ctrl-c = 'exec-and-forget open -na "Google Chrome" --args --new-window'
+cmd-ctrl-k = 'exec-and-forget open -a "KeePassXC"'
+cmd-ctrl-t = 'exec-and-forget open -a "Sublime Text" --args -n'
+
+# i3 wraps focus by default
+alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
+alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
+alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Consider using 'join-with' command as a 'split' replacement if you want to enable normalizations
+alt-z = 'split horizontal'
+alt-v = 'split vertical'
+
+alt-f = 'fullscreen'
+
+alt-s = 'layout v_accordion' # 'layout stacking' in i3
+alt-w = 'layout h_accordion' # 'layout tabbed' in i3
+alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+
+alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
+
+# Not supported, because this command is redundant in AeroSpace mental model.
+# See: https://nikitabobko.github.io/AeroSpace/guide#floating-windows
+#alt-space = 'focus toggle_tiling_floating'
+
+# `focus parent`/`focus child` are not yet supported, and it's not clear whether they
+# should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
+# alt-a = 'focus parent'
+
+alt-1 = ['workspace 13', 'workspace 1']
+alt-2 = ['workspace 14', 'workspace 2']
+alt-3 = ['workspace 15', 'workspace 3']
+alt-4 = ['workspace 16', 'workspace 4']
+alt-5 = ['workspace 17', 'workspace 5']
+alt-6 = ['workspace 18', 'workspace 6']
+alt-7 = ['workspace 19', 'workspace 7']
+alt-8 = ['workspace 20', 'workspace 8']
+alt-9 = ['workspace 21', 'workspace 9']
+alt-0 = ['workspace 22', 'workspace 10']
+alt-minus = ['workspace 23', 'workspace 11']
+alt-equal = ['workspace 24', 'workspace 12']
+
+alt-ctrl-1 = 'workspace 13'
+alt-ctrl-2 = 'workspace 14'
+alt-ctrl-3 = 'workspace 15'
+alt-ctrl-4 = 'workspace 16'
+alt-ctrl-5 = 'workspace 17'
+alt-ctrl-6 = 'workspace 18'
+alt-ctrl-7 = 'workspace 19'
+alt-ctrl-8 = 'workspace 20'
+alt-ctrl-9 = 'workspace 21'
+alt-ctrl-0 = 'workspace 22'
+alt-ctrl-minus = 'workspace 23'
+alt-ctrl-equal = 'workspace 24'
+
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 10'
+alt-shift-minus = 'move-node-to-workspace 11'
+alt-shift-equal = 'move-node-to-workspace 12'
+alt-shift-ctrl-1 = 'move-node-to-workspace 13'
+alt-shift-ctrl-2 = 'move-node-to-workspace 14'
+alt-shift-ctrl-3 = 'move-node-to-workspace 15'
+alt-shift-ctrl-4 = 'move-node-to-workspace 16'
+alt-shift-ctrl-5 = 'move-node-to-workspace 17'
+alt-shift-ctrl-6 = 'move-node-to-workspace 18'
+alt-shift-ctrl-7 = 'move-node-to-workspace 19'
+alt-shift-ctrl-8 = 'move-node-to-workspace 20'
+alt-shift-ctrl-9 = 'move-node-to-workspace 21'
+alt-shift-ctrl-0 = 'move-node-to-workspace 22'
+alt-shift-ctrl-minus = 'move-node-to-workspace 23'
+alt-shift-ctrl-equal = 'move-node-to-workspace 24'
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = 'main'
+7 = 'main'
+8 = 'main'
+9 = 'main'
+10 = 'main'
+11 = 'main'
+12 = 'main'
+13 = 'secondary'
+14 = 'secondary'
+15 = 'secondary'
+16 = 'secondary'
+17 = 'secondary'
+18 = 'secondary'
+19 = 'secondary'
+20 = 'secondary'
+21 = 'secondary'
+22 = 'secondary'
+23 = 'secondary'
+24 = 'secondary'            
+
+# alt-shift-c = 'reload-config' # Doesn't seem to work            
+
+alt-r = 'mode resize'
+
+[mode.resize.binding]
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+enter = 'mode main'
+esc = 'mode main'
+
+[[on-window-detected]]
+if.app-id = 'org.keepassxc.keepassxc'
+run = 'layout floating'
+

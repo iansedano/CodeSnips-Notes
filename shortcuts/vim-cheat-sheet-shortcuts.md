@@ -1,5 +1,5 @@
 | Command        | Description                       |
-| -------------- | --------------------------------- |
+|----------------|-----------------------------------|
 | `:Vex`         | vertical split explorer           |
 | `:Ex`          | explorer                          |
 | `Ctrl + w`     | switch panes with `h`,`j`,`k`,`l` |
@@ -10,3 +10,8 @@
 | `:tabnext`     | ?                                 |
 | `:Ntree`       | open nerd tree explorer           |
 | `%`            | create new buffer                 |
+
+
+w next word
+b back word
+
