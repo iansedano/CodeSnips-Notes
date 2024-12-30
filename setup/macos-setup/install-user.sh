@@ -37,6 +37,7 @@ formulae=(
   ansible            # Install automation
   saulpw/vs/visidata # cli spreadsheet
   gnumeric           # Lightweight, fast spreadsheet app
+  pipx               # Python installer for standalone execs
 
   pyenv
   openssl
@@ -96,6 +97,8 @@ pyenv update
 pyenv rehash
 LATEST_PYTHON=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1)
 pyenv install $LATEST_PYTHON
+
+pipx install black
 
 # May need an exit and relog to work...
 mkdir "$HOME/.nvm"
