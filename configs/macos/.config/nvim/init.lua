@@ -15,8 +15,13 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.foldenable = false
+vim.wo.relativenumber = true
+
+
 vim.keymap.set("n", "<leader>p", ":FzfLua files<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>P", ":FzfLua commands<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>b", ":FzfLua buffers<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q", ":wqa<CR>", { noremap = true, silent = true })
 
 
 require('config.lazy')
@@ -44,8 +49,8 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
     lualine_c = { {'filename', path = 1}},
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    lualine_y = { 'progress' },
+    lualine_x = { 'filetype' },
+    lualine_y = { },
     lualine_z = { 'location' }
   },
   inactive_sections = {

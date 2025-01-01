@@ -38,6 +38,8 @@ formulae=(
   saulpw/vs/visidata # cli spreadsheet
   gnumeric           # Lightweight, fast spreadsheet app
   pipx               # Python installer for standalone execs
+  xonsh              # Python shell
+  ruff               # Python linter and formatter
 
   pyenv
   openssl

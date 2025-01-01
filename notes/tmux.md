@@ -5,29 +5,29 @@ tmux new -s "my session" -n "window 1"
 
 Multiple Windows
 
-tmux uses the keyboard in a similar fashion to screen, but rather than using Ctrl-a as the command prefix, tmux uses Ctrl-b. This is good since Ctrl-a is used when editing the command line in bash to move the cursor to the beginning of the line.
+tmux uses the keyboard in a similar fashion to screen, but rather than using Ctrl-a as the command prefix, tmux uses Ctrl+b by default. This is good since Ctrl-a is used when editing the command line in bash to move the cursor to the beginning of the line.
 
 Here are the basic commands for creating windows and navigating them:
 
 Command	Description
-Ctrl-b ?	Show the list of key bindings (i.e., help)
-Ctrl-b c	Create a new window
-Ctrl-b n	Go to next window
-Ctrl-b p	Go to previous window
-Ctrl-b 0	Go to window 0. Numbers 1-9 are similar.
-Ctrl-b w	Show window list. The status bar lists windows, too.
-Ctrl-b ,	Rename the current window
+LEADER ?	Show the list of key bindings (i.e., help)
+LEADER c	Create a new window
+LEADER n	Go to next window
+LEADER p	Go to previous window
+LEADER 0	Go to window 0. Numbers 1-9 are similar.
+LEADER w	Show window list. The status bar lists windows, too.
+LEADER ,	Rename the current window
 
 Multiple Panes
 Like screen, tmux can divide the terminal display into sections called panes. However, unlike the implementation of regions in screen , panes in tmux do not merely provide viewports to various windows. In tmux they are complete pseudo-terminals associated with the window. Thus a single tmux window can contain multiple terminals.
 
 Command	Description
-Ctrl-b "	Split pane horizontally
-Ctrl-b %	Split pane vertically
-Ctrl-b arrow	Move to adjoining pane
-Ctrl-b Ctrl-arrow	Resize pane by 1 character
-Ctrl-b Alt-arrow	Resize pane by 5 characters
-Ctrl-b x	Destroy current pane
+LEADER "	Split pane horizontally
+LEADER %	Split pane vertically
+LEADER arrow	Move to adjoining pane
+LEADER Ctrl-arrow	Resize pane by 1 character
+LEADER Alt-arrow	Resize pane by 5 characters
+LEADER x	Destroy current pane
 
 
 
@@ -78,19 +78,19 @@ https://gist.github.com/jonhattan/52d26f00e4e069b4ac67
 
 `$ tmux`
 
-`CTRL+B C` -> create new pane
+`LEADER c` -> create new pane
 
-`CTRL+B [num]` -> go to a pane
+`LEADER [num]` -> go to a pane
 
-`CTRL+D` -> finish bash session, closes the pane. Closing all panes will destroy the window and thus the tmux
+`CTRL+d` -> finish bash session, closes the pane. Closing all panes will destroy the window and thus the tmux
 
-`CTRL+B x` -> close pane (in case bash got stalled).
+`LEADER x` -> close pane (in case bash got stalled).
 
-`CTRL+B ,` -> rename a pane
+`LEADER ,` -> rename a pane
 
-`CTRL+B D` -> detach from the tmux (the tmux --all windows-- is still alive)
+`LEADER d` -> detach from the tmux (the tmux --all windows-- is still alive)
 
-`CTRL+B ALTGR+[` -> Enter "copy" mode. Move up/down in the window with cursors or PgUp/PgDown. Press `q` to quit copy mode.
+`LEADER ALTGR+[` -> Enter "copy" mode. Move up/down in the window with cursors or PgUp/PgDown. Press `q` to quit copy mode.
 
 # Reuse tmux
 

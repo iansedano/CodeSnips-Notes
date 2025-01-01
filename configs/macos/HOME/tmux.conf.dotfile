@@ -1,2 +1,4 @@
 set-option -g prefix C-Space
 unbind C-b # Unbind the default leader (Control-b)
+
+set-window-option -g mode-keys vi
