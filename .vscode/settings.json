@@ -6,6 +6,7 @@
   "cSpell.words": [
     "airblade",
     "autoindent",
+    "cmdline",
     "devicons",
     "endfunction",
     "expandtab",
@@ -16,6 +17,7 @@
     "hrsh",
     "ibhagwan",
     "ignorecase",
+    "lspconfig",
     "lualine",
     "mattn",
     "noremap",
