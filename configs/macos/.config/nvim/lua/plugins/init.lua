@@ -3,21 +3,20 @@ local vim = vim
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      settings = {
-        pyright = {
-          disableOrganizeImports = true,
-        },
-        python = {
-          analysis = {
-            useLibraryCodeForTypes = true,
-            typeCheckingMode = "basic",
+    config = function()
+      require("lspconfig").pyright.setup {
+        settings = {
+          pyright = {
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              useLibraryCodeForTypes = true,
+              typeCheckingMode = "basic",
+            },
           },
         },
-      },
-    },
-    
-    config = function ()
+      }
     end
   },
   {
@@ -31,14 +30,40 @@ return {
     config = function()
       local cmp = require("cmp")
       cmp.setup({
+        preselect = cmp.PreselectMode.Item,
         mapping = {
           ["<Tab>"] = cmp.mapping.select_next_item(),
           ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+          ['<C-p>'] = cmp.mapping.complete(),
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
         },
         sources = {
           { name = "nvim_lsp" },
-          { name = "buffer" },
+          -- { name = "buffer" },
         },
+        window = {
+          documentation = {
+              border = "rounded",
+          }
+      }
+      })
+      cmp.setup.cmdline({ '/', '?' }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        }
+      })
+
+      -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = 'path' }
+        }, {
+          { name = 'cmdline' }
+        }),
+        matching = { disallow_symbol_nonprefix_matching = false }
       })
     end,
   },
@@ -46,13 +71,31 @@ return {
   {
     'dense-analysis/ale',
     config = function()
-      -- Configuration goes here.
-      local g = vim.g
+      vim.cmd([[
+        function! FormatRuffImports(buffer) abort
+            return {
+                \ 'command': 'ruff',
+                \ 'args': ['--select', 'I', '--fix'],
+                \ }
+        endfunction
+        ]])
 
-      g.ale_linters = {
-        python = { 'ruff', 'pyright' },
+      -- Register the custom Ruff fixer
+      vim.fn["ale#fix#registry#Add"](
+          "ruff_imports",
+          "FormatRuffImports",
+          { "python" }, -- Specify languages this fixer applies to
+          "Ruff fixer for import sorting"
+      )
+
+      vim.g.ale_linters = {
+        python = { 'ruff' },
         lua = { 'lua_language_server' }
       }
+      vim.g.ale_fixers = {
+        python = { 'ruff', 'ruff_format', 'ruff_imports' },
+      }
+      vim.g.ale_fix_on_save = 1
     end
   },
   "mattn/emmet-vim",
