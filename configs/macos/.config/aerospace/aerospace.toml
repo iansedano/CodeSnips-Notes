@@ -12,6 +12,14 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 accordion-padding = 120
 
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.top = 5
+outer.right = 5
+outer.bottom = 5
+outer.left = 5
+
 [mode.main.binding]
 # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
 alt-enter = 'exec-and-forget kitty -1 -d ~/'
