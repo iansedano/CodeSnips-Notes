@@ -7,18 +7,18 @@ return {
     -- vim.keymap.set("n", "<leader>lR", "<cmd>LspRestart<cr>", { desc = "LSP | Restart", silent = true })
   end,
   config = function()
-    require("lspconfig").pyright.setup {
-      settings = {
-        pyright = {
-          disableOrganizeImports = true,
-        },
-        python = {
-          analysis = {
-            useLibraryCodeForTypes = true,
-            typeCheckingMode = "basic",
-          },
-        },
-      },
-    }
+    -- require("lspconfig").pyright.setup {
+    --   settings = {
+    --     pyright = {
+    --       disableOrganizeImports = true,
+    --     },
+    --     python = {
+    --       analysis = {
+    --         useLibraryCodeForTypes = true,
+    --         typeCheckingMode = "basic",
+    --       },
+    --     },
+    --   },
+    -- }
   end
 }
