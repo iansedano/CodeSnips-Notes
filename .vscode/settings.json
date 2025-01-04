@@ -2,5 +2,38 @@
   "files.associations": {
     "*.dotfile": "shellscript",
     "**/i3/config": "i3"
-  }
+  },
+  "cSpell.words": [
+    "airblade",
+    "autoindent",
+    "devicons",
+    "endfunction",
+    "expandtab",
+    "foldenable",
+    "gitgutter",
+    "globalstatus",
+    "hlsearch",
+    "hrsh",
+    "ibhagwan",
+    "ignorecase",
+    "lualine",
+    "mattn",
+    "noremap",
+    "nvim",
+    "Nvim",
+    "relativenumber",
+    "rmagatti",
+    "shiftwidth",
+    "smartcase",
+    "statusline",
+    "tabline",
+    "tanvirtin",
+    "tpope",
+    "vimdoc",
+    "visualbell",
+    "winbar"
+  ],
+  "Lua.diagnostics.globals": [
+    "vim"
+  ]
 }
