@@ -13,7 +13,7 @@ vim.g.mapleader = " "
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
 vim.opt.title = true
@@ -30,6 +30,8 @@ vim.wo.relativenumber = true
 vim.keymap.set("n", "<leader>p", ":FzfLua files<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>P", ":FzfLua commands<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>b", ":FzfLua buffers<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>z", ":FzfLua<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>F", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>q", ":wqa<CR>", { noremap = true, silent = true })
 
 
