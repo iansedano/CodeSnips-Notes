@@ -1,3 +1,4 @@
 return {
-  { import = "plugins.lsp.configs" },
+  require("plugins.lsp.mason"),
+  require("plugins.lsp.nvim-lspconfig"),
 }

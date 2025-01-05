@@ -131,6 +131,23 @@ return {
           },
         })
       end,
+      ["pyright"] = function()
+        -- configure pyright server (with special settings)
+        lspconfig["pyright"].setup({
+          capabilities = capabilities,
+          settings = {
+            pyright = {
+              disableOrganizeImports = true,
+            },
+            python = {
+              analysis = {
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = "basic",
+              },
+            },
+          },
+        })
+      end,
     })
   end,
 }
