@@ -19,6 +19,7 @@
 --   end
 -- }
 
+-- https://neovimcraft.com/plugin/polirritmico/monokai-nightasty.nvim/
 return {
   "polirritmico/monokai-nightasty.nvim",
   lazy = false,
