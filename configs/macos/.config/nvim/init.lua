@@ -1,5 +1,3 @@
-local vim = vim
-
 vim.g.mapleader = " "
 
 vim.opt.ignorecase = true
