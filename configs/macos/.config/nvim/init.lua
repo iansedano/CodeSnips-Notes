@@ -1,3 +1,14 @@
+--[[
+nvim config
+
+Author : @iansedano
+
+With help from:
+https://github.com/josean-dev/dev-environment-files
+https://www.ssp.sh/brain/neovim-setup/
+https://github.com/Alexis12119/nvim-config
+--]]
+
 vim.g.mapleader = " "
 
 vim.opt.ignorecase = true
