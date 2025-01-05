@@ -11,6 +11,7 @@ https://github.com/Alexis12119/nvim-config
 
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
+vim.hl = vim.highlight -- https://github.com/neovim/neovim/issues/31675
 
 local opts = {
   ignorecase = true,
