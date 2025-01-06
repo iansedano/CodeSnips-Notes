@@ -32,6 +32,18 @@ return {
 
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        -- set binding for go to definition
+        opts.desc = "Go to definition"
+        keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        -- set binding to show references
+        opts.desc = "Show references"
+        keymap.set("n", "gR", vim.lsp.buf.references, opts)
+        -- show line diagnostics
+        opts.desc = "Show line diagnostics"
+        keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
+        -- trigger completion
+        opts.desc = "Trigger completion"
+        keymap.set("i", "<C-p>", vim.lsp.buf.completion, opts)
       end,
     })
 
