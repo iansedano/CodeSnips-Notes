@@ -25,30 +25,22 @@ return {
       },
     })
 
+    -- use mason_lspconfig to install lsp
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        -- "tsserver",
-        -- "html",
-        -- "cssls",
-        -- "tailwindcss",
-        -- "svelte",
-        -- "lua_ls",
-        -- "graphql",
-        -- "emmet_ls",
-        -- "prismals",
+        "lua_ls",
         "pyright",
       },
+      automatic_installation = true
     })
 
+    -- use mason_tool_installer to install other non lsp tools
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
-        -- "stylua", -- lua formatter
-        -- "isort", -- python formatter
+        "stylua", -- lua formatter
         "ruff", -- python formatter
-        "pyright",
-        -- "eslint_d",
       },
     })
   end,
