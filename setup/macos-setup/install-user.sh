@@ -40,6 +40,7 @@ formulae=(
   pipx               # Python installer for standalone execs
   xonsh              # Python shell
   ruff               # Python linter and formatter
+  tre                # Modern tree command
 
   pyenv
   openssl
