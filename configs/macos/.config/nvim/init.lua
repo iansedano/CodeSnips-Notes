@@ -36,3 +36,5 @@ end
 vim.keymap.set("n", "<leader>q", ":wqa<CR>", { noremap = true, silent = true })
 
 require('config.lazy')
+require('config.commands')
+
