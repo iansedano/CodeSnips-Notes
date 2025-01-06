@@ -26,6 +26,7 @@ local opts = {
 	tabstop = 4,
 	shiftwidth = 4,
 	expandtab = true,
+	-- https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
 	foldenable = false,
 	foldmethod = "expr",
 	foldexpr = "v:lua.vim.treesitter.foldexpr()",
