@@ -19,6 +19,7 @@ return {
       },
       sources = {
         { name = "nvim_lsp" },
+        { name = "lazydev", group_index = 0 },
         -- { name = "buffer" },
       },
       window = {
@@ -42,7 +43,14 @@ return {
       }, {
         { name = 'cmdline' }
       }),
-      matching = { disallow_symbol_nonprefix_matching = false }
+      matching = {
+        disallow_symbol_nonprefix_matching = false,
+        disallow_fuzzy_matching = false,
+        disallow_partial_matching = false,
+        disallow_prefix_unmatching = false,
+        disallow_fullfuzzy_matching = false,
+        disallow_partial_fuzzy_matching = false
+      }
     })
   end,
 }
