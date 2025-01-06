@@ -25,6 +25,11 @@ Command  | Description
 `:bufdo bwipeout` close all buffers
 `:bufdo write` write all buffers
 
+`zR` open all folds
+`zM` close all open folds
+`za` toggle fold at cursor
+`zk` `zj` move between folds
+
 Here’s the updated table with **pane resizing motions and keybindings** included:
 
 `/`    Start searching for a pattern. Normal
