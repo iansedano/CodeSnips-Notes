@@ -5,7 +5,6 @@
                 "rules": [
                     {
                         "description": "Swap \"command + tab\" with \"control + tab\" optional shift.",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -181,10 +180,7 @@
                                     }
                                 ],
                                 "description": "fn to command - if not kitty",
-                                "from": {
-                                    "apple_vendor_top_case_key_code": "keyboard_fn",
-                                    "modifiers": { "optional": ["any"] }
-                                },
+                                "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
                                 "to": { "key_code": "left_command" },
                                 "type": "basic"
                             },
@@ -202,10 +198,7 @@
                                     }
                                 ],
                                 "description": "fn to control - if kitty",
-                                "from": {
-                                    "apple_vendor_top_case_key_code": "keyboard_fn",
-                                    "modifiers": { "optional": ["any"] }
-                                },
+                                "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
                                 "to": { "key_code": "left_control" },
                                 "type": "basic"
                             },
@@ -223,10 +216,7 @@
                                     }
                                 ],
                                 "description": "command to control - if not kitty. Don't need an inverse because want command key to stay command key if kitty",
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": { "optional": ["any"] }
-                                },
+                                "from": { "key_code": "left_command" },
                                 "to": { "key_code": "left_control" },
                                 "type": "basic"
                             },
@@ -238,10 +228,7 @@
                                     }
                                 ],
                                 "description": "control to fn",
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
+                                "from": { "key_code": "left_control" },
                                 "to": { "apple_vendor_top_case_key_code": "keyboard_fn" },
                                 "type": "basic"
                             }
@@ -264,8 +251,7 @@
                                     }
                                 ],
                                 "description": "command to control - if not kitty",
-                                "from": { "key_code": "left_command", "modifiers": { "optional": ["any"] }
- },
+                                "from": { "key_code": "left_command" },
                                 "to": { "key_code": "left_control" },
                                 "type": "basic"
                             },
@@ -283,8 +269,7 @@
                                     }
                                 ],
                                 "description": "control to commnand - if not kitty",
-                                "from": { "key_code": "left_control", "modifiers": { "optional": ["any"] }
- },
+                                "from": { "key_code": "left_control" },
                                 "to": { "key_code": "left_command" },
                                 "type": "basic"
                             }

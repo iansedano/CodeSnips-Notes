@@ -13,33 +13,31 @@ vim.g.mapleader = " "
 vim.wo.relativenumber = true
 vim.hl = vim.highlight -- https://github.com/neovim/neovim/issues/31675
 
-local opts = {
-	ignorecase = true,
-	smartcase = true,
-	hlsearch = true,
-	mouse = "a",
-	autoindent = true,
-	title = true,
-	visualbell = true,
-	number = true,
-	ruler = true,
-	tabstop = 4,
-	shiftwidth = 4,
-	expandtab = true,
-	-- https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
-	foldenable = false,
-	foldmethod = "expr",
-	foldexpr = "v:lua.vim.treesitter.foldexpr()",
-	foldcolumn = "1",
-	foldtext = "",
-	foldlevel = 99,
-	foldlevelstart = 1,
-	foldnestmax = 4,
-}
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
-for key, value in pairs(opts) do
-	vim.opt[key] = value
-end
+-- https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
+vim.opt.foldenable = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "1"
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
+vim.opt.foldnestmax = 4
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.mouse = "a"
+vim.opt.autoindent = true
+vim.opt.title = true
+vim.opt.visualbell = true
+vim.opt.number = true
+vim.opt.ruler = true
+
+vim.opt.autoread = true -- detect changes in files
 
 vim.keymap.set("n", "<leader>q", ":wqa<CR>", { noremap = true, silent = true })
 
