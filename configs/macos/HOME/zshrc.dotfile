@@ -162,6 +162,8 @@ idea() {
 compdef '_files' idea
 
 [[ -s "/home/cuse/.jabba/jabba.sh" ]] && source "/home/cuse/.jabba/jabba.sh"
+[ -s "$HOMEBREW_PREFIX/opt/jabba/jabba.sh" ] && . "$HOMEBREW_PREFIX/opt/jabba/jabba.sh"
+jabba use openjdk@17.0.2
 
 # ========================================
 # Rust
