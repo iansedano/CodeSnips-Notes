@@ -39,6 +39,9 @@ vim.opt.ruler = true
 
 vim.opt.autoread = true -- detect changes in files
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.keymap.set("n", "<leader>q", ":wqa<CR>", { noremap = true, silent = true })
 
 require("config.lazy")
