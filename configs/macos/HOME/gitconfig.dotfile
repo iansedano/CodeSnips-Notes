@@ -1,5 +1,5 @@
 [user]
-	email = iansedano@gmail.com
+	email =  ian.currie@bynder.com
 	name = Ian Currie
 
 [alias]
@@ -19,3 +19,6 @@
 	defaultBranch = main
 [core]
   editor = "$(command -v nvim || echo 'vi')"
+[push]
+  autoSetupRemote = true
+
