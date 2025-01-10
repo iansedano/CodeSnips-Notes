@@ -1,1 +1,0 @@
-CTRL + R for interactive history search

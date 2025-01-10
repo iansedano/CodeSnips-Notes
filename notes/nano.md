@@ -1,4 +1,0 @@
-Cutting and pasting
-To cut a single line, you use Ctrl + K. The line disappears. To paste it, you simply move the cursor to where you want to paste it and punch Ctrl + U. The line reappears. To move multiple lines, simply cut them with several Ctrl + K in a row, then paste them with a single Ctrl + U. The whole paragraph appears wherever you want it.
-
-If you need a little more fine-grained control, then you have to mark the text. Move the cursor to the beginning of the text you want to cut. Hit Ctrl + 6 (or Alt + A). Now move your cursor to the end of the text you want to cut: the marked text gets highlighted. If you need to cancel your text marking, simply hit Ctrl + 6 again. Press Ctrl + K to cut the marked text. Use Ctrl + U to paste it.
