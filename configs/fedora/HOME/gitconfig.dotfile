@@ -19,3 +19,5 @@
 	defaultBranch = main
 [core]
   editor = "$(command -v nvim || echo 'vi')"
+[push]
+  autoSetupRemote = true

@@ -5,10 +5,10 @@ DESKTOP="$DROPBOX/Desktop"
 DEV="$HOME/dev"
 DROPBOX_DEV="$DROPBOX/dev"
 NOTEBOOK="$DROPBOX/notebook"
-CODESNIP="$DEV/CodeSnips-Notes"
-POSH_CONFIG="$CODESNIP/configs/common/posh.omp.json"
-SNIPPETS="$CODESNIP/snippets"
-SCRIPTS="$CODESNIP/scripts"
+CONFIG="$DEV/iansedano/config"
+POSH_CONFIG="$CONFIG/configs/common/posh.omp.json"
+SNIPPETS="$DEV/iansedano/wtf/snippets"
+SCRIPTS="$CONFIG/scripts"
 
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
@@ -46,8 +46,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
   PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 
-if ! [[ "$PATH" =~ (^|:)"$CODESNIP/scripts"(:|$) ]]; then
-  PATH="$CODESNIP/scripts:$PATH"
+if ! [[ "$PATH" =~ (^|:)"$CONFIG/scripts"(:|$) ]]; then
+  PATH="$CONFIG/scripts:$PATH"
 fi
 
 export PATH
@@ -99,7 +99,7 @@ dark() {
 alias desktop="cd \$DESKTOP"
 alias dev="cd \$DEV"
 alias dropdev="cd \$DROPBOX_DEV"
-alias codesnip="cd \$CODESNIP"
+alias config="cd \$CONFIG"
 alias notebook="cd \$NOTEBOOK"
 
 # ========================================
