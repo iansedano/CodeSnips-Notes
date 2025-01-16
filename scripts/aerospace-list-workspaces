@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+import subprocess
+
+for i in range(25):
+    list_output = subprocess.run(
+        ["aerospace", "list-windows", "--workspace", str(i)],
+        capture_output=True,
+        encoding="utf-8",
+    )
+
+    if output := list_output.stdout.strip():
+        print(f"{i}")
+        print(output, end="\n")
+    else:
+        print(f"{i} empty")
