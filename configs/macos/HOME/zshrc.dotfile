@@ -72,6 +72,10 @@ alias dev="cd $DEV"
 alias dropdev="cd $DROPBOX_DEV"
 alias config="cd $CONFIG"
 alias notebook="cd $NOTEBOOK"
+alias wtf="cd $WTF"
+alias openconfig="nvim $CONFIG"
+alias openwtf="nvim $WTF"
+alias opennotebook="nvim $NOTEBOOK"
 
 # ========================================
 # Utils
