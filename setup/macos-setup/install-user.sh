@@ -40,7 +40,9 @@ formulae=(
   pipx               # Python installer for standalone execs
   xonsh              # Python shell
   ruff               # Python linter and formatter
-  tre                # Modern tree command
+  tre-command        # Modern tree command
+  saml2aws           # AWS SAML CLI
+  awscli             # AWS CLI
 
   pyenv
   openssl
