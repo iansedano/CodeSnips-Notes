@@ -17,6 +17,9 @@ SCRIPTS="$CONFIG/scripts"
 
 export PATH="$HOME/.local/bin:$HOME/bin:$CONFIG/scripts:$PATH"
 
+export VISUAL=nvim
+export EDITOR=nvim
+
 # ========================================
 # Prompt
 # ========================================

@@ -52,6 +52,9 @@ fi
 
 export PATH
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # ========================================
 # Prompt
 # ========================================
