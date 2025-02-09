@@ -30,7 +30,7 @@ On local machine with `ansible` installed:
 
 ```bash
 cd setup/ubuntu-vps-setup/ansible-playbook
-ansible-playbook -i hosts.yml provision.yml
+ansible-playbook provision.yml
 ```
 
 Insert the passwords when prompted

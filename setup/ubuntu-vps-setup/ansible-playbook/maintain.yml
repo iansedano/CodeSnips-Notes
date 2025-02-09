@@ -7,15 +7,16 @@
   hosts: zu1
   become: true
   vars_prompt:
-    - name: ansible_sudo_pass
+    - name: ansible_password
       prompt: enter remote password
       private: true
       confirm: false
   vars:
-    ansible_user: cuse
+    ansible_ssh_user: cuse
+    ansible_sudo_pass: "{{ ansible_password }}"
     username: cuse
-    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa_vps.pub') }}"
-    ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa_vps"
+    public_key: "{{ lookup('file', '/home/cuse/.ssh/id_rsa.pub') }}"
+    ansible_ssh_private_key_file: "/home/cuse/.ssh/id_rsa"
     docker_edition: 'ce'
   roles:
     - packages

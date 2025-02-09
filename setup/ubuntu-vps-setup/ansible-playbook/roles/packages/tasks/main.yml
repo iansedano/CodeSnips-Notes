@@ -1,6 +1,6 @@
 - name: Update apt cache
   ansible.builtin.apt:
-    update_cache: yes
+    update_cache: true
 
 - name: Install the unattended-upgrades package
   ansible.builtin.apt:
@@ -36,3 +36,7 @@
       - fzf
       - fd-find
       - ca-certificates
+      - gpg
+
+- name: Import eza tasks
+  ansible.builtin.import_tasks: eza.yml
