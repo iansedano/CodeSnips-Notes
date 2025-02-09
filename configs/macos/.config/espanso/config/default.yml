@@ -8,3 +8,4 @@ backend: Clipboard
 auto_restart: true
 
 undo_backspace: false
+show_icon: false

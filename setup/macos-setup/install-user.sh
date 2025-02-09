@@ -43,6 +43,10 @@ formulae=(
   tre-command        # Modern tree command
   saml2aws           # AWS SAML CLI
   awscli             # AWS CLI
+  just               # Justfile runner (like Makefile)
+  # autoenv            # Directory based environment activation, not used because interferes with ZOxide
+  docker
+  docker-compose
 
   pyenv
   openssl
@@ -75,6 +79,7 @@ casks=(
   scroll-reverser       # Independent mouse settings for mouse and trackpad
   kitty                 # Terminal emulator
   karabiner-elements    # Keyboard remapper
+  docker
 )
 
 #  ripcord                 # Light and fast app for Discord and Slack
