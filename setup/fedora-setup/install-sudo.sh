@@ -78,6 +78,7 @@ packages=(
   libjpeg-turbo-utils # JPEG manipulation
   pipx                # Python installer for standalone execs
   mycli               # MySQL CLI
+  awscli2             # AWS CLI
 
   # ==========
   # X11 Tools
