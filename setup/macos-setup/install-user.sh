@@ -47,6 +47,7 @@ formulae=(
   # autoenv            # Directory based environment activation, not used because interferes with ZOxide
   docker
   docker-compose
+  mkcert
 
   pyenv
   openssl
