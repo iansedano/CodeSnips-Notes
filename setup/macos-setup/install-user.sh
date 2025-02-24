@@ -81,6 +81,7 @@ casks=(
   kitty                 # Terminal emulator
   karabiner-elements    # Keyboard remapper
   docker
+  maccy                 # Clipboard manager
 )
 
 #  ripcord                 # Light and fast app for Discord and Slack
